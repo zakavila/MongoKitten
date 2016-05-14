@@ -13,7 +13,7 @@
     <a title="MongoKitten  Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="index.html">MongoKitten Docs</a> (64% documented)</p>
+        <p><a href="index.html">MongoKitten Docs</a> (89% documented)</p>
         <p class="header-right"><a href="https://github.com/PlanTeam/MongoKitten"><img src="img/gh.png"/>View on GitHub</a></p>
         <p class="header-right"><a href="dash-feed://http%3A%2F%2Fplanteam%2Egithub%2Eio%2FMongoKitten%2FMongoKitten%2Exml"><img src="img/dash.png"/>Install in Dash</a></p>
       </div>
@@ -77,13 +77,13 @@
             <a href="Functions.html">Functions</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="Functions.html#/s:ZF11MongoKittenop1nFVS_8AQTQueryS0_">!(_:)</a>
+                <a href="Functions.html#/s:ZF11MongoKittenop1nFVS_5QueryS0_">!(_:)</a>
               </li>
               <li class="nav-group-task">
                 <a href="Functions.html#/s:ZF11MongoKittenoi2neERR">!=(_:_:)</a>
               </li>
               <li class="nav-group-task">
-                <a href="Functions.html#/s:ZF11MongoKittenoi2aaFTVS_8AQTQueryS0__S0_">&amp;&amp;(_:_:)</a>
+                <a href="Functions.html#/s:ZF11MongoKittenoi2aaFTVS_5QueryS0__S0_">&amp;&amp;(_:_:)</a>
               </li>
               <li class="nav-group-task">
                 <a href="Functions.html#/s:ZF11MongoKittenoi2aeERR">&amp;=(_:_:)</a>
@@ -104,7 +104,7 @@
                 <a href="Functions.html#/s:ZF11MongoKittenoi2geERR">&gt;=(_:_:)</a>
               </li>
               <li class="nav-group-task">
-                <a href="Functions.html#/s:ZF11MongoKittenoi2ooFTVS_8AQTQueryS0__S0_">||(_:_:)</a>
+                <a href="Functions.html#/s:ZF11MongoKittenoi2ooFTVS_5QueryS0__S0_">||(_:_:)</a>
               </li>
             </ul>
           </li>
@@ -112,13 +112,13 @@
             <a href="Protocols.html">Protocols</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="Protocols/AQTValue.html">AQTValue</a>
-              </li>
-              <li class="nav-group-task">
                 <a href="Protocols/MongoTCP.html">MongoTCP</a>
               </li>
               <li class="nav-group-task">
-                <a href="Protocols/Query.html">Query</a>
+                <a href="Protocols/QueryProtocol.html">QueryProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/ValueProtocol.html">ValueProtocol</a>
               </li>
             </ul>
           </li>
@@ -126,13 +126,13 @@
             <a href="Structs.html">Structs</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="Structs/AQTQuery.html">AQTQuery</a>
-              </li>
-              <li class="nav-group-task">
                 <a href="Structs/DeleteFlags.html">DeleteFlags</a>
               </li>
               <li class="nav-group-task">
                 <a href="Structs/InsertFlags.html">InsertFlags</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/Query.html">Query</a>
               </li>
               <li class="nav-group-task">
                 <a href="Structs/QueryFlags.html">QueryFlags</a>
@@ -157,13 +157,20 @@
 <p>Native MongoDB driver for Swift, written in Swift. This library does not wrap around the mongoc driver. It uses:</p>
 
 <ul>
-<li><a href="https://github.com/qutheory/Hummingbird">Hummingbird</a> for TCP connections</li>
+<li><a href="https://github.com/qutheory/Strand">Strand</a> for fetching server responses without blocking the thread</li>
 <li>Our own <a href="https://github.com/PlanTeam/BSON">BSON</a> library, which is also 100% native Swift</li>
+<li>Our own <a href="https://github.com/PlanTeam/MD5">MD5</a>, <a href="https://github.com/PlanTeam/SHA1">SHA1</a> and <a href="https://github.com/PlanTeam/SCRAM">SCRAM</a> libraries in 100% Swift</li>
 </ul>
+<a href='#documentation' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='documentation'>Documentation</h2>
+
+<p>This can be found <a href="http://planteam.github.io/MongoKitten/docs/">here</a>.</p>
+
+<p>We have our own Dash documentation for MongoKitten which can be found in the top-right corner of the Documentation.</p>
 <a href='#requirements' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='requirements'>Requirements</h2>
 
 <ul>
-<li>A mongoDB server</li>
+<li>A MongoDB server</li>
+<li>Some basic knowledge of MongoDB or time to research about MongoDB</li>
 <li>The swift version described in <code>.swift-version</code>, see <a href="http://swiftenv.fuller.li/en/latest/">swiftenv</a>.</li>
 </ul>
 
@@ -182,21 +189,17 @@
 <span class="k">let</span> <span class="nv">package</span> <span class="o">=</span> <span class="kt">Package</span><span class="p">(</span>
     <span class="nv">name</span><span class="p">:</span> <span class="s">"MyApp"</span><span class="p">,</span>
     <span class="nv">dependencies</span><span class="p">:</span> <span class="p">[</span>
-        <span class="o">.</span><span class="kt">Package</span><span class="p">(</span><span class="nv">url</span><span class="p">:</span> <span class="s">"https://github.com/PlanTeam/MongoKitten.git"</span><span class="p">,</span> <span class="nv">majorVersion</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="nv">minor</span><span class="p">:</span> <span class="mi">8</span><span class="p">)</span>
+        <span class="o">.</span><span class="kt">Package</span><span class="p">(</span><span class="nv">url</span><span class="p">:</span> <span class="s">"https://github.com/PlanTeam/MongoKitten.git"</span><span class="p">,</span> <span class="nv">majorVersion</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="nv">minor</span><span class="p">:</span> <span class="mi">10</span><span class="p">)</span>
     <span class="p">]</span>
 <span class="p">)</span>
 </code></pre>
 
-<p>Or for Swift 04-12 users:</p>
-<pre class="highlight swift"><code><span class="kd">import</span> <span class="kt">PackageDescription</span>
+<p>This is for Swift 3 snapshot 05-09.</p>
 
-<span class="k">let</span> <span class="nv">package</span> <span class="o">=</span> <span class="kt">Package</span><span class="p">(</span>
-    <span class="nv">name</span><span class="p">:</span> <span class="s">"MyApp"</span><span class="p">,</span>
-    <span class="nv">dependencies</span><span class="p">:</span> <span class="p">[</span>
-        <span class="o">.</span><span class="kt">Package</span><span class="p">(</span><span class="nv">url</span><span class="p">:</span> <span class="s">"https://github.com/PlanTeam/MongoKitten.git"</span><span class="p">,</span> <span class="nv">majorVersion</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="nv">minor</span><span class="p">:</span> <span class="mi">7</span><span class="p">)</span>
-    <span class="p">]</span>
-<span class="p">)</span>
-</code></pre>
+<p>For Swift 05-03 we have MongoKitten&rsquo;s minor <code>9</code>.. for 04-25 we have MongoKitten minor <code>8</code>. ANd for 04-12 we have MongoKitten minor <code>7</code>.</p>
+
+<p>Older versions miss features. And most newer minor versions break at least a part of the API. The Documentation belongs to the latest MongoKitten version.</p>
+<a href='#basic_usage' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='basic_usage'>Basic usage</h2>
 
 <p>Import the MongoKitten library:</p>
 <pre class="highlight swift"><code><span class="kd">import</span> <span class="kt">MongoKitten</span>
@@ -401,7 +404,7 @@ They can be used to execute <a href="https://docs.mongodb.org/manual/reference/c
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2016 <a class="link" href="" target="_blank" rel="external">Robbert Brandsma &amp; Joannis Orlandos</a>. All rights reserved. (Last updated: 2016-05-13)</p>
+          <p>&copy; 2016 <a class="link" href="" target="_blank" rel="external">Robbert Brandsma &amp; Joannis Orlandos</a>. All rights reserved. (Last updated: 2016-05-14)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.6.0</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

@@ -14,7 +14,7 @@
     <a title="Server Class Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">MongoKitten Docs</a> (64% documented)</p>
+        <p><a href="../index.html">MongoKitten Docs</a> (89% documented)</p>
         <p class="header-right"><a href="https://github.com/PlanTeam/MongoKitten"><img src="../img/gh.png"/>View on GitHub</a></p>
         <p class="header-right"><a href="dash-feed://http%3A%2F%2Fplanteam%2Egithub%2Eio%2FMongoKitten%2FMongoKitten%2Exml"><img src="../img/dash.png"/>Install in Dash</a></p>
       </div>
@@ -78,13 +78,13 @@
             <a href="../Functions.html">Functions</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="../Functions.html#/s:ZF11MongoKittenop1nFVS_8AQTQueryS0_">!(_:)</a>
+                <a href="../Functions.html#/s:ZF11MongoKittenop1nFVS_5QueryS0_">!(_:)</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Functions.html#/s:ZF11MongoKittenoi2neERR">!=(_:_:)</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Functions.html#/s:ZF11MongoKittenoi2aaFTVS_8AQTQueryS0__S0_">&amp;&amp;(_:_:)</a>
+                <a href="../Functions.html#/s:ZF11MongoKittenoi2aaFTVS_5QueryS0__S0_">&amp;&amp;(_:_:)</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Functions.html#/s:ZF11MongoKittenoi2aeERR">&amp;=(_:_:)</a>
@@ -105,7 +105,7 @@
                 <a href="../Functions.html#/s:ZF11MongoKittenoi2geERR">&gt;=(_:_:)</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Functions.html#/s:ZF11MongoKittenoi2ooFTVS_8AQTQueryS0__S0_">||(_:_:)</a>
+                <a href="../Functions.html#/s:ZF11MongoKittenoi2ooFTVS_5QueryS0__S0_">||(_:_:)</a>
               </li>
             </ul>
           </li>
@@ -113,13 +113,13 @@
             <a href="../Protocols.html">Protocols</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="../Protocols/AQTValue.html">AQTValue</a>
-              </li>
-              <li class="nav-group-task">
                 <a href="../Protocols/MongoTCP.html">MongoTCP</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Protocols/Query.html">Query</a>
+                <a href="../Protocols/QueryProtocol.html">QueryProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/ValueProtocol.html">ValueProtocol</a>
               </li>
             </ul>
           </li>
@@ -127,13 +127,13 @@
             <a href="../Structs.html">Structs</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="../Structs/AQTQuery.html">AQTQuery</a>
-              </li>
-              <li class="nav-group-task">
                 <a href="../Structs/DeleteFlags.html">DeleteFlags</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Structs/InsertFlags.html">InsertFlags</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Query.html">Query</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Structs/QueryFlags.html">QueryFlags</a>
@@ -155,7 +155,8 @@
 
                 </div>
               </div>
-            <p>A server object is the core of MongoKitten. From this you can get databases which can provide you with collections from where you can do actions</p>
+            <p>A server object is the core of MongoKitten as it&rsquo;s used to communicate to the server.
+You can select a <code><a href="../Classes/Database.html">Database</a></code> by subscripting an instance of this Server with a <code>String</code>.</p>
 
           </section>
           <section class="section task-group-section">
@@ -174,9 +175,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>This subscript returns a Database struct given a String
-- parameter database: The database&rsquo;s name
-- returns: A database instance for the requested database</p>
+                        <p>Returns a <code><a href="../Classes/Database.html">Database</a></code> instance referring to the database with the provided database name</p>
 
                       </div>
                       <div class="declaration">
@@ -282,16 +281,71 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Sets up the <code><a href="../Classes/Server.html">Server</a></code> to connect to the specified URL.
+The <code>mongodb://</code> scheme is required as well as the host. Optionally youc an provide ausername + password. And if no port is specified <code>27017</code> is used.
+You can provide an alternative TCP Driver that complies to <code><a href="../Protocols/MongoTCP.html">MongoTCP</a></code>.
+This Server doesn&rsquo;t connect automatically. You need to either use the <code>connect</code> function yourself or specify the <code>automatically</code> parameter to be true.</p>
+
+<div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    <p>When we can&rsquo;t connect automatically, when the scheme/host is invalid and when we can&rsquo;t connect automatically</p>
+
+</div>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">Server</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="n">convenience</span> <span class="nf">init</span><span class="p">(</span><span class="n">_</span> <span class="nv">url</span><span class="p">:</span> <span class="kt">NSURL</span><span class="p">,</span> <span class="n">using</span> <span class="nv">tcpDriver</span><span class="p">:</span> <span class="kt">MongoTCP</span><span class="o">.</span><span class="k">Type</span> <span class="o">=</span> <span class="kt">CSocket</span><span class="o">.</span><span class="k">self</span><span class="p">,</span> <span class="n">automatically</span> <span class="nv">connecting</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">true</span><span class="p">)</span> <span class="k">throws</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>url</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The MongoDB connection String.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>tcpDriver</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The TCP Driver to be used to connect to the server. Recommended to change to an SSL supporting socket when connnecting over the public internet.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>automatically</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Whether to connect automatically</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
                       </div>
                     </section>
                   </div>
@@ -309,16 +363,71 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Sets up the <code><a href="../Classes/Server.html">Server</a></code> to connect to the specified URL.
+The <code>mongodb://</code> scheme is required as well as the host. Optionally youc an provide ausername + password. And if no port is specified <q>27017</q> is used.
+You can provide an alternative TCP Driver that complies to <code><a href="../Protocols/MongoTCP.html">MongoTCP</a></code>.
+This Server doesn&rsquo;t connect automatically. You need to either use the <code>connect</code> function yourself or specify the <code>automatically</code> parameter to be true.</p>
+
+<div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    <p>Throws when we can&rsquo;t connect automatically, when the scheme/host is invalid and when we can&rsquo;t connect automatically</p>
+
+</div>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">Server</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="n">convenience</span> <span class="nf">init</span><span class="p">(</span><span class="n">_</span> <span class="nv">uri</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">using</span> <span class="nv">tcpDriver</span><span class="p">:</span> <span class="kt">MongoTCP</span><span class="o">.</span><span class="k">Type</span> <span class="o">=</span> <span class="kt">CSocket</span><span class="o">.</span><span class="k">self</span><span class="p">,</span> <span class="n">automatically</span> <span class="nv">connecting</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">true</span><span class="p">)</span> <span class="k">throws</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>url</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The MongoDB connection String.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>using</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The TCP Driver to be used to connect to the server. Recommended to change to an SSL supporting socket when connnecting over the public internet.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>automatically</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Whether to connect automatically</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
                       </div>
                     </section>
                   </div>
@@ -336,11 +445,18 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Initializes a MongoDB Client Instance on a given port with a given host
-- parameter at: The host we&rsquo;ll connect to
-- parameter port: The port we&rsquo;ll connect on
+                        <p>Sets up the <code><a href="../Classes/Server.html">Server</a></code> to connect to the specified location.<code><a href="../Classes/Server.html">Server</a></code>
+You need to provide a host as IP address or as a hostname recognized by the client&rsquo;s DNS.
+- parameter at: The hostname/IP address of the MongoDB server
+- parameter port: The port we&rsquo;ll connect on. Defaults to 27017
 - parameter authentication: The optional authentication details we&rsquo;ll use when connecting to the server
 - parameter automatically: Connect automatically</p>
+
+<div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    When we can’t connect automatically, when the scheme/host is invalid and when we can’t connect automatically
+
+</div>
 
                       </div>
                       <div class="declaration">
@@ -363,7 +479,7 @@
                               </td>
                               <td>
                                 <div>
-                                  <p>The host we&rsquo;ll connect to</p>
+                                  <p>The hostname/IP address of the MongoDB server</p>
 
                                 </div>
                               </td>
@@ -376,7 +492,7 @@
                               </td>
                               <td>
                                 <div>
-                                  <p>The port we&rsquo;ll connect on</p>
+                                  <p>The port we&rsquo;ll connect on. Defaults to 27017</p>
 
                                 </div>
                               </td>
@@ -426,14 +542,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Are we currently connected?</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">Server</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">private(set)</span> <span class="k">var</span> <span class="nv">isConnected</span> <span class="o">=</span> <span class="kc">false</span></code></pre>
 
                         </div>
                       </div>
@@ -454,6 +570,12 @@
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Connects with the MongoDB Server using the given information in the initializer</p>
+
+<div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    Unable to connect
+
+</div>
 
                       </div>
                       <div class="declaration">
@@ -482,6 +604,12 @@
                       <div class="abstract">
                         <p>Disconnects from the MongoDB server</p>
 
+<div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    Unable to disconnect
+
+</div>
+
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -507,7 +635,15 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Provides a list of all existing databases along with basic statistics about them.</p>
+                        <p>Provides a list of all existing databases along with basic statistics about them</p>
+
+<p>For more information: <a href="https://docs.mongodb.com/manual/reference/command/listDatabases/#dbcmd.listDatabases">https://docs.mongodb.com/manual/reference/command/listDatabases/#dbcmd.listDatabases</a></p>
+
+<div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    When we can&rsquo;t send the request/receive the response, you don&rsquo;t have sufficient permissions or an error occurred
+
+</div>
 
                       </div>
                       <div class="declaration">
@@ -536,6 +672,12 @@
                       <div class="abstract">
                         <p>Returns all existing databases on this server. <strong>Requires access to the <code>admin</code> database</strong></p>
 
+<div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    <p>When we can&rsquo;t send the request/receive the response, you don&rsquo;t have sufficient permissions or an error occurred</p>
+
+</div>
+
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -544,6 +686,11 @@
                           <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">getDatabases</span><span class="p">()</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt">Database</span><span class="p">]</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>All databases</p>
+
                       </div>
                     </section>
                   </div>
@@ -561,11 +708,15 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Copies a database (optionally from a remote host)
-- parameter database: The database to copy
-- parameter to: The other database
-- parameter as: The database&rsquo;s credentials
-- parameter at: The optional remote host to copy from</p>
+                        <p>Copies a database either from one mongod instance to the current mongod instance or within the current mongod</p>
+
+<p>For more information: <a href="https://docs.mongodb.com/manual/reference/command/copydb/#dbcmd.copydb">https://docs.mongodb.com/manual/reference/command/copydb/#dbcmd.copydb</a></p>
+
+<div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    <p>When we can&rsquo;t send the request/receive the response, you don&rsquo;t have sufficient permissions or an error occurred</p>
+
+</div>
 
                       </div>
                       <div class="declaration">
@@ -596,7 +747,7 @@
                             <tr>
                               <td>
                                 <code>
-                                <em>to</em>
+                                <em>otherDatabase</em>
                                 </code>
                               </td>
                               <td>
@@ -609,7 +760,7 @@
                             <tr>
                               <td>
                                 <code>
-                                <em>as</em>
+                                <em>user</em>
                                 </code>
                               </td>
                               <td>
@@ -622,7 +773,7 @@
                             <tr>
                               <td>
                                 <code>
-                                <em>at</em>
+                                <em>remoteHost</em>
                                 </code>
                               </td>
                               <td>
@@ -651,8 +802,15 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Clones a database from a URL
-- parameter from: The URL</p>
+                        <p>Clones a database from the specified MongoDB Connection URI</p>
+
+<p>For more information: <a href="https://docs.mongodb.com/manual/reference/command/shutdown/#dbcmd.clone">https://docs.mongodb.com/manual/reference/command/shutdown/#dbcmd.clone</a></p>
+
+<div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    <p>When we can&rsquo;t send the request/receive the response, you don&rsquo;t have sufficient permissions or an error occurred</p>
+
+</div>
 
                       </div>
                       <div class="declaration">
@@ -670,7 +828,7 @@
                             <tr>
                               <td>
                                 <code>
-                                <em>from</em>
+                                <em>url</em>
                                 </code>
                               </td>
                               <td>
@@ -699,8 +857,15 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Clones a database from a URL
-- parameter from: The URL</p>
+                        <p>Clones a database from the specified MongoDB Connection URI</p>
+
+<p>For more information: <a href="https://docs.mongodb.com/manual/reference/command/clone/#dbcmd.clone">https://docs.mongodb.com/manual/reference/command/clone/#dbcmd.clone</a></p>
+
+<div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    <p>When we can&rsquo;t send the request/receive the response, you don&rsquo;t have sufficient permissions or an error occurred</p>
+
+</div>
 
                       </div>
                       <div class="declaration">
@@ -718,7 +883,7 @@
                             <tr>
                               <td>
                                 <code>
-                                <em>from</em>
+                                <em>url</em>
                                 </code>
                               </td>
                               <td>
@@ -747,16 +912,44 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Shuts down the MongoDB server</p>
+
+<p>For more information: <a href="https://docs.mongodb.com/manual/reference/command/shutdown/#dbcmd.shutdown">https://docs.mongodb.com/manual/reference/command/shutdown/#dbcmd.shutdown</a></p>
+
+<div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    <p>When we can&rsquo;t send the request/receive the response, you don&rsquo;t have sufficient permissions or an error occurred</p>
+
+</div>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">Server</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">shutdown</span><span class="p">(</span><span class="n">forced</span> <span class="nv">force</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span> <span class="k">throws</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>force</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Force the s</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
                       </div>
                     </section>
                   </div>
@@ -774,9 +967,9 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Flushes all pending writes serverside
-- parameter async: Do we run this async?
-- parameter blocking: Do we block writing in the meanwhile?</p>
+                        <p>Flushes all pending writes serverside</p>
+
+<p>For more information: <a href="https://docs.mongodb.com/manual/reference/command/fsync/#dbcmd.fsync">https://docs.mongodb.com/manual/reference/command/fsync/#dbcmd.fsync</a></p>
 
                       </div>
                       <div class="declaration">
@@ -807,7 +1000,7 @@
                             <tr>
                               <td>
                                 <code>
-                                <em>blocking</em>
+                                <em>block</em>
                                 </code>
                               </td>
                               <td>
@@ -836,12 +1029,15 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Gets the info from the user
-- parameter for: The user&rsquo;s username
-- parameter in: The database to get the user from&hellip; otherwise uses admin
-- parameter showCredentials: Makes sense.. right?
-- parameter showPrivileges: Makes sense.. right?
-- returns: The user&rsquo;s information (plus optionally the credentials and privileges)</p>
+                        <p>Gets the info from the user</p>
+
+<p>For more information: <a href="https://docs.mongodb.com/manual/reference/command/usersInfo/#dbcmd.usersInfo">https://docs.mongodb.com/manual/reference/command/usersInfo/#dbcmd.usersInfo</a></p>
+
+<div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    <p>When we can&rsquo;t send the request/receive the response, you don&rsquo;t have sufficient permissions or an error occurred</p>
+
+</div>
 
                       </div>
                       <div class="declaration">
@@ -859,7 +1055,7 @@
                             <tr>
                               <td>
                                 <code>
-                                <em>for</em>
+                                <em>user</em>
                                 </code>
                               </td>
                               <td>
@@ -872,7 +1068,7 @@
                             <tr>
                               <td>
                                 <code>
-                                <em>in</em>
+                                <em>database</em>
                                 </code>
                               </td>
                               <td>
@@ -890,7 +1086,7 @@
                               </td>
                               <td>
                                 <div>
-                                  <p>Makes sense.. right?</p>
+                                  <p>Do you want to fetch the user&rsquo;s credentials</p>
 
                                 </div>
                               </td>
@@ -903,7 +1099,7 @@
                               </td>
                               <td>
                                 <div>
-                                  <p>Makes sense.. right?</p>
+                                  <p>Do you want to fetch the user&rsquo;s privileges</p>
 
                                 </div>
                               </td>
@@ -924,7 +1120,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2016 <a class="link" href="" target="_blank" rel="external">Robbert Brandsma &amp; Joannis Orlandos</a>. All rights reserved. (Last updated: 2016-05-13)</p>
+          <p>&copy; 2016 <a class="link" href="" target="_blank" rel="external">Robbert Brandsma &amp; Joannis Orlandos</a>. All rights reserved. (Last updated: 2016-05-14)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.6.0</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

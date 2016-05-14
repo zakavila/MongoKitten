@@ -13,7 +13,7 @@
     <a title="Protocols  Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="index.html">MongoKitten Docs</a> (64% documented)</p>
+        <p><a href="index.html">MongoKitten Docs</a> (89% documented)</p>
         <p class="header-right"><a href="https://github.com/PlanTeam/MongoKitten"><img src="img/gh.png"/>View on GitHub</a></p>
         <p class="header-right"><a href="dash-feed://http%3A%2F%2Fplanteam%2Egithub%2Eio%2FMongoKitten%2FMongoKitten%2Exml"><img src="img/dash.png"/>Install in Dash</a></p>
       </div>
@@ -77,13 +77,13 @@
             <a href="Functions.html">Functions</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="Functions.html#/s:ZF11MongoKittenop1nFVS_8AQTQueryS0_">!(_:)</a>
+                <a href="Functions.html#/s:ZF11MongoKittenop1nFVS_5QueryS0_">!(_:)</a>
               </li>
               <li class="nav-group-task">
                 <a href="Functions.html#/s:ZF11MongoKittenoi2neERR">!=(_:_:)</a>
               </li>
               <li class="nav-group-task">
-                <a href="Functions.html#/s:ZF11MongoKittenoi2aaFTVS_8AQTQueryS0__S0_">&amp;&amp;(_:_:)</a>
+                <a href="Functions.html#/s:ZF11MongoKittenoi2aaFTVS_5QueryS0__S0_">&amp;&amp;(_:_:)</a>
               </li>
               <li class="nav-group-task">
                 <a href="Functions.html#/s:ZF11MongoKittenoi2aeERR">&amp;=(_:_:)</a>
@@ -104,7 +104,7 @@
                 <a href="Functions.html#/s:ZF11MongoKittenoi2geERR">&gt;=(_:_:)</a>
               </li>
               <li class="nav-group-task">
-                <a href="Functions.html#/s:ZF11MongoKittenoi2ooFTVS_8AQTQueryS0__S0_">||(_:_:)</a>
+                <a href="Functions.html#/s:ZF11MongoKittenoi2ooFTVS_5QueryS0__S0_">||(_:_:)</a>
               </li>
             </ul>
           </li>
@@ -112,13 +112,13 @@
             <a href="Protocols.html">Protocols</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="Protocols/AQTValue.html">AQTValue</a>
-              </li>
-              <li class="nav-group-task">
                 <a href="Protocols/MongoTCP.html">MongoTCP</a>
               </li>
               <li class="nav-group-task">
-                <a href="Protocols/Query.html">Query</a>
+                <a href="Protocols/QueryProtocol.html">QueryProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/ValueProtocol.html">ValueProtocol</a>
               </li>
             </ul>
           </li>
@@ -126,13 +126,13 @@
             <a href="Structs.html">Structs</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="Structs/AQTQuery.html">AQTQuery</a>
-              </li>
-              <li class="nav-group-task">
                 <a href="Structs/DeleteFlags.html">DeleteFlags</a>
               </li>
               <li class="nav-group-task">
                 <a href="Structs/InsertFlags.html">InsertFlags</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/Query.html">Query</a>
               </li>
               <li class="nav-group-task">
                 <a href="Structs/QueryFlags.html">QueryFlags</a>
@@ -164,9 +164,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:P11MongoKitten8AQTValue"></a>
-                    <a name="//apple_ref/swift/Protocol/AQTValue" class="dashAnchor"></a>
-                    <a class="token" href="#/s:P11MongoKitten8AQTValue">AQTValue</a>
+                    <a name="/s:P11MongoKitten13ValueProtocol"></a>
+                    <a name="//apple_ref/swift/Protocol/ValueProtocol" class="dashAnchor"></a>
+                    <a class="token" href="#/s:P11MongoKitten13ValueProtocol">ValueProtocol</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -174,9 +174,17 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>A protocol that allows other types to be used as a <code><a href="Extensions/Value.html">Value</a></code> replacement</p>
 
-                        <a href="Protocols/AQTValue.html" class="slightly-smaller">See more</a>
+                        <a href="Protocols/ValueProtocol.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">ValueProtocol</span></code></pre>
+
+                        </div>
                       </div>
                     </section>
                   </div>
@@ -184,9 +192,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:P11MongoKitten5Query"></a>
-                    <a name="//apple_ref/swift/Protocol/Query" class="dashAnchor"></a>
-                    <a class="token" href="#/s:P11MongoKitten5Query">Query</a>
+                    <a name="/s:P11MongoKitten13QueryProtocol"></a>
+                    <a name="//apple_ref/swift/Protocol/QueryProtocol" class="dashAnchor"></a>
+                    <a class="token" href="#/s:P11MongoKitten13QueryProtocol">QueryProtocol</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -194,9 +202,17 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>The protocol all queries need to comply to</p>
 
-                        <a href="Protocols/Query.html" class="slightly-smaller">See more</a>
+                        <a href="Protocols/QueryProtocol.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">QueryProtocol</span></code></pre>
+
+                        </div>
                       </div>
                     </section>
                   </div>
@@ -204,6 +220,13 @@
               </ul>
             </div>
             <div class="task-group">
+              <div class="task-name-container">
+                <a name="/TODO:%20Replace%20with%20C7%20sockets"></a>
+                <a name="//apple_ref/swift/Section/TODO: Replace with C7 sockets" class="dashAnchor"></a>
+                <a href="#/TODO:%20Replace%20with%20C7%20sockets">
+                  <h3 class="section-name">TODO: Replace with C7 sockets</h3>
+                </a>
+              </div>
               <ul>
                 <li class="item">
                   <div>
@@ -230,7 +253,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2016 <a class="link" href="" target="_blank" rel="external">Robbert Brandsma &amp; Joannis Orlandos</a>. All rights reserved. (Last updated: 2016-05-13)</p>
+          <p>&copy; 2016 <a class="link" href="" target="_blank" rel="external">Robbert Brandsma &amp; Joannis Orlandos</a>. All rights reserved. (Last updated: 2016-05-14)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.6.0</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

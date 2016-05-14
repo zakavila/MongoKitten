@@ -14,7 +14,7 @@
     <a title="Collection Class Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">MongoKitten Docs</a> (64% documented)</p>
+        <p><a href="../index.html">MongoKitten Docs</a> (89% documented)</p>
         <p class="header-right"><a href="https://github.com/PlanTeam/MongoKitten"><img src="../img/gh.png"/>View on GitHub</a></p>
         <p class="header-right"><a href="dash-feed://http%3A%2F%2Fplanteam%2Egithub%2Eio%2FMongoKitten%2FMongoKitten%2Exml"><img src="../img/dash.png"/>Install in Dash</a></p>
       </div>
@@ -78,13 +78,13 @@
             <a href="../Functions.html">Functions</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="../Functions.html#/s:ZF11MongoKittenop1nFVS_8AQTQueryS0_">!(_:)</a>
+                <a href="../Functions.html#/s:ZF11MongoKittenop1nFVS_5QueryS0_">!(_:)</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Functions.html#/s:ZF11MongoKittenoi2neERR">!=(_:_:)</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Functions.html#/s:ZF11MongoKittenoi2aaFTVS_8AQTQueryS0__S0_">&amp;&amp;(_:_:)</a>
+                <a href="../Functions.html#/s:ZF11MongoKittenoi2aaFTVS_5QueryS0__S0_">&amp;&amp;(_:_:)</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Functions.html#/s:ZF11MongoKittenoi2aeERR">&amp;=(_:_:)</a>
@@ -105,7 +105,7 @@
                 <a href="../Functions.html#/s:ZF11MongoKittenoi2geERR">&gt;=(_:_:)</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Functions.html#/s:ZF11MongoKittenoi2ooFTVS_8AQTQueryS0__S0_">||(_:_:)</a>
+                <a href="../Functions.html#/s:ZF11MongoKittenoi2ooFTVS_5QueryS0__S0_">||(_:_:)</a>
               </li>
             </ul>
           </li>
@@ -113,13 +113,13 @@
             <a href="../Protocols.html">Protocols</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="../Protocols/AQTValue.html">AQTValue</a>
-              </li>
-              <li class="nav-group-task">
                 <a href="../Protocols/MongoTCP.html">MongoTCP</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Protocols/Query.html">Query</a>
+                <a href="../Protocols/QueryProtocol.html">QueryProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/ValueProtocol.html">ValueProtocol</a>
               </li>
             </ul>
           </li>
@@ -127,13 +127,13 @@
             <a href="../Structs.html">Structs</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="../Structs/AQTQuery.html">AQTQuery</a>
-              </li>
-              <li class="nav-group-task">
                 <a href="../Structs/DeleteFlags.html">DeleteFlags</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Structs/InsertFlags.html">InsertFlags</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Query.html">Query</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Structs/QueryFlags.html">QueryFlags</a>
@@ -155,8 +155,11 @@
 
                 </div>
               </div>
-            <p>///////////////////////////////////////////////////////////////////////////////////////////////////////
- A Mongo Collection. Cannot be publically initialized. But you can get a collection object by subscripting a Database with a String</p>
+            <p>Represents a single MongoDB collection.</p>
+
+<p><strong>### Definition ###</strong></p>
+
+<p>A grouping of MongoDB documents. A collection is the equivalent of an RDBMS table. A collection exists within a single database. Collections do not enforce a schema. Documents within a collection can have different fields. Typically, all documents in a collection have a similar or related purpose. See Namespaces.</p>
 
           </section>
           <section class="section task-group-section">
@@ -183,6 +186,33 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight"><code><span class="kd">public</span> <span class="kd">private(set)</span> <span class="k">var</span> <span class="nv">database</span><span class="p">:</span> <span class="kt">Database</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:C11MongoKitten10Collection8Callback"></a>
+                    <a name="//apple_ref/swift/Alias/Callback" class="dashAnchor"></a>
+                    <a class="token" href="#/s:C11MongoKitten10Collection8Callback">Callback</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A callback that will be executed when a Document is found matching the provided <code><a href="../Structs/Query.html">Query</a></code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">Callback</span> <span class="o">=</span> <span class="p">(</span><span class="nv">query</span><span class="p">:</span> <span class="kt">Query</span><span class="p">,</span> <span class="nv">failure</span><span class="p">:</span> <span class="kt">CallbackFailure</span> <span class="p">,</span> <span class="nv">callback</span><span class="p">:</span> <span class="p">(</span><span class="kt">Document</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="p">())</span></code></pre>
 
                         </div>
                       </div>
@@ -284,7 +314,7 @@ Will be empty</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>The action that will be done when a allback fails to execute</p>
 
                         <a href="../Classes/Collection/CallbackFailure.html" class="slightly-smaller">See more</a>
                       </div>
@@ -292,7 +322,7 @@ Will be empty</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">Collection</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">CallbackFailure</span></code></pre>
 
                         </div>
                       </div>
@@ -312,7 +342,7 @@ Will be empty</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>What kind of operation the <code><a href="../Classes/Collection.html#/s:C11MongoKitten10Collection8Callback">Callback</a></code> will be applied to</p>
 
                         <a href="../Classes/Collection/Operation.html" class="slightly-smaller">See more</a>
                       </div>
@@ -320,7 +350,7 @@ Will be empty</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">Collection</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">Operation</span></code></pre>
 
                         </div>
                       </div>
@@ -340,16 +370,75 @@ Will be empty</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Callback storage</p>
+                        <p>Registers a trigger for the given operation.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">on</span><span class="p">(</span><span class="n">_</span> <span class="nv">op</span><span class="p">:</span> <span class="kt">Operation</span><span class="p">,</span> <span class="n">matching</span> <span class="nv">query</span><span class="p">:</span> <span class="kt">AQTQuery</span><span class="p">,</span> <span class="n">onFailure</span> <span class="nv">failure</span><span class="p">:</span> <span class="kt">CallbackFailure</span> <span class="o">=</span> <span class="o">.</span><span class="k">throw</span><span class="p">,</span> <span class="nv">callback</span><span class="p">:</span> <span class="p">(</span><span class="kt">Document</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="p">())</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">on</span><span class="p">(</span><span class="n">_</span> <span class="nv">op</span><span class="p">:</span> <span class="kt">Operation</span><span class="p">,</span> <span class="n">matching</span> <span class="nv">query</span><span class="p">:</span> <span class="kt">Query</span><span class="p">,</span> <span class="n">onFailure</span> <span class="nv">failure</span><span class="p">:</span> <span class="kt">CallbackFailure</span> <span class="o">=</span> <span class="o">.</span><span class="k">throw</span><span class="p">,</span> <span class="nv">callback</span><span class="p">:</span> <span class="p">(</span><span class="kt">Document</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="p">())</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>op</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The operation (insert, find, update or delete) to register for.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>query</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The query to filter operations on.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>failure</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Describes how errors thrown from the trigger callback will be handled.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>callback</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The method that will be called for this trigger.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
                       </div>
                     </section>
                   </div>
@@ -378,9 +467,15 @@ Will be empty</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Insert a single document in this collection and adds a BSON ObjectId if none is present
-- parameter document: The BSON Document to be inserted
-- returns: The inserted document. The document will have a value for the <q>_id</q>-field.</p>
+                        <p>Insert a single document in this collection</p>
+
+<p>For more information: <a href="https://docs.mongodb.com/manual/reference/command/insert/#dbcmd.insert">https://docs.mongodb.com/manual/reference/command/insert/#dbcmd.insert</a></p>
+
+<div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    <p>When we can&rsquo;t send the request/receive the response, you don&rsquo;t have sufficient permissions or an error occurred</p>
+
+</div>
 
                       </div>
                       <div class="declaration">
@@ -413,7 +508,7 @@ Will be empty</p>
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p>The inserted document. The document will have a value for the <q>_id</q>-field.</p>
+                        <p>The inserted document</p>
 
                       </div>
                     </section>
@@ -432,12 +527,17 @@ Will be empty</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>TODO: Detect how many bytes are being sent. Max is 48000000 bytes or 48MB
-Inserts multiple documents in this collection and adds a BSON ObjectId to documents that do not have an <q>_id</q> field
-- parameter documents: The BSON Documents that should be inserted
-- parameter ordered: On true we&rsquo;ll stop inserting when one document fails. On false we&rsquo;ll ignore failed inserts
-- parameter timeout: A custom timeout. The default timeout is 60 seconds + 1 second for every 50 documents, so when inserting 5000 documents at once, the timeout is 560 seconds.
-- returns: The documents with their (if applicable) updated ObjectIds</p>
+                        <p>TODO: Detect how many bytes are being sent. Max is 48000000 bytes or 48MB</p>
+
+<p>Inserts multiple documents in this collection and adds a BSON ObjectId to documents that do not have an <q>_id</q> field</p>
+
+<p>For more information: <a href="https://docs.mongodb.com/manual/reference/command/insert/#dbcmd.insert">https://docs.mongodb.com/manual/reference/command/insert/#dbcmd.insert</a></p>
+
+<div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    <p>When we can&rsquo;t send the request/receive the response, you don&rsquo;t have sufficient permissions or an error occurred</p>
+
+</div>
 
                       </div>
                       <div class="declaration">
@@ -515,13 +615,17 @@ Inserts multiple documents in this collection and adds a BSON ObjectId to docume
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Queries this collection with a Document
-Can be used for DBCommands as well as find commands.
-For MongoDB server 3.2 and higher we&rsquo;d recommend using the <code>find</code> method in this Collection for security.
-- parameter query: The document that we&rsquo;re matching against in this collection
-- parameter flags: The Query Flags that we&rsquo;ll use for this query
-- parameter fetchChunkSize: The initial amount of returned Documents. We recommend at least one Document.
-- returns: A Cursor pointing to the response Documents.</p>
+                        <p>Queries this <code><a href="../Classes/Collection.html">Collection</a></code> with a <code><a href="../Extensions/Document.html">Document</a></code></p>
+
+<p>This is used to execute DBCommands. For finding <code><a href="../Extensions/Document.html">Document</a></code>s we recommend the <code>find</code> command</p>
+
+<p>For more information: <a href="https://docs.mongodb.com/manual/reference/mongodb-wire-protocol/">https://docs.mongodb.com/manual/reference/mongodb-wire-protocol/</a></p>
+
+<div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    <p>When we can&rsquo;t send the request/receive the response, you don&rsquo;t have sufficient permissions or an error occurred</p>
+
+</div>
 
                       </div>
                       <div class="declaration">
@@ -599,13 +703,17 @@ For MongoDB server 3.2 and higher we&rsquo;d recommend using the <code>find</cod
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Queries this collection with a Document and returns the first result
-Can be used for DBCommands as well as find commands.
-For MongoDB server 3.2 and higher we&rsquo;d recommend using the <code>find</code> method in this Collection for security.
-- parameter query: The document that we&rsquo;re matching against in this collection
-- parameter flags: The Query Flags that we&rsquo;ll use for this query
-- parameter fetchChunkSize: The initial amount of returned Documents. We recommend at least one Document.
-- returns: The first Document in the Response</p>
+                        <p>Queries this <code><a href="../Classes/Collection.html">Collection</a></code> with a <code><a href="../Extensions/Document.html">Document</a></code> and returns the first result</p>
+
+<p>This is used to execute DBCommands. For finding <code><a href="../Extensions/Document.html">Document</a></code>s we recommend the <code>find</code> command</p>
+
+<p>For more information: <a href="https://docs.mongodb.com/manual/reference/mongodb-wire-protocol/">https://docs.mongodb.com/manual/reference/mongodb-wire-protocol/</a></p>
+
+<div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    <p>When we can&rsquo;t send the request/receive the response, you don&rsquo;t have sufficient permissions or an error occurred</p>
+
+</div>
 
                       </div>
                       <div class="declaration">
@@ -628,7 +736,7 @@ For MongoDB server 3.2 and higher we&rsquo;d recommend using the <code>find</cod
                               </td>
                               <td>
                                 <div>
-                                  <p>The document that we&rsquo;re matching against in this collection</p>
+                                  <p>The <code>Document</code> that we&rsquo;re matching against in this <code>Collection</code></p>
 
                                 </div>
                               </td>
@@ -664,7 +772,7 @@ For MongoDB server 3.2 and higher we&rsquo;d recommend using the <code>find</cod
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p>The first Document in the Response</p>
+                        <p>The first <code><a href="../Extensions/Document.html">Document</a></code> in the Response</p>
 
                       </div>
                     </section>
@@ -683,15 +791,17 @@ For MongoDB server 3.2 and higher we&rsquo;d recommend using the <code>find</cod
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Finds Documents in this collection
-Cannot be used for DBCommands when using MongoDB 3.2 or higher
-- parameter filter: The filter we&rsquo;re using to match Documents in this collection against
-- parameter sort: The Sort Specification used to sort the found Documents
-- parameter projection: The Projection Specification used to filter which fields to return
-- parameter skip: The amount of Documents to skip before returning the matching Documents
-- parameter limit: The maximum amount of matching documents to return
-- parameter batchSize: The initial amount of Documents to return.
-- returns: A cursor pointing to the found Documents</p>
+                        <p>Finds <code><a href="../Extensions/Document.html">Document</a></code>s in this <code><a href="../Classes/Collection.html">Collection</a></code></p>
+
+<p>Can be used to execute DBCommands in MongoDB 2.6 and below. Be careful!</p>
+
+<p>For more information: <a href="https://docs.mongodb.com/manual/reference/command/find/#dbcmd.find">https://docs.mongodb.com/manual/reference/command/find/#dbcmd.find</a></p>
+
+<div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    <p>When we can&rsquo;t send the request/receive the response, you don&rsquo;t have sufficient permissions or an error occurred</p>
+
+</div>
 
                       </div>
                       <div class="declaration">
@@ -808,13 +918,17 @@ Cannot be used for DBCommands when using MongoDB 3.2 or higher
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Finds Documents in this collection
-Cannot be used for DBCommands when using MongoDB 3.2 or higher
-- parameter filter: The Document filter we&rsquo;re using to match Documents in this collection against
-- parameter sort: The Sort Specification used to sort the found Documents
-- parameter projection: The Projection Specification used to filter which fields to return
-- parameter skip: The amount of Documents to skip before returning the matching Documents
-- returns: The found Document</p>
+                        <p>Finds Documents in this collection</p>
+
+<p>Can be used to execute DBCommands in MongoDB 2.6 and below</p>
+
+<p>For more information: <a href="https://docs.mongodb.com/manual/reference/command/find/#dbcmd.find">https://docs.mongodb.com/manual/reference/command/find/#dbcmd.find</a></p>
+
+<div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    <p>When we can&rsquo;t send the request/receive the response, you don&rsquo;t have sufficient permissions or an error occurred</p>
+
+</div>
 
                       </div>
                       <div class="declaration">
@@ -905,14 +1019,20 @@ Cannot be used for DBCommands when using MongoDB 3.2 or higher
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Updates a list of Documents using a counterpart Document.
-- parameter updates: A list of updates to be executed.
-    <code>query</code>: A filter to narrow down which Documents you want to update
-    <code>update</code>: The fields and values to update
-    <code>upsert</code>: If there isn&rsquo;t anything to update.. insert?
-    <code>multi</code>: Update all matching Documents instead of just one?
-- parameter ordered: If true, stop updating when one operation fails - defaults to true
-TODO: Work on improving the updatefailure.  We don&rsquo;t handle writerrrors. Try using a normal query with multiple on true</p>
+                        <p>Updates a list of <code><a href="../Extensions/Document.html">Document</a></code>s using a counterpart <code><a href="../Extensions/Document.html">Document</a></code>.</p>
+
+<p>In most cases the <code>$set</code> operator is useful for updating only parts of a <code><a href="../Extensions/Document.html">Document</a></code>
+As described here: <a href="https://docs.mongodb.com/manual/reference/operator/update/set/#up._S_set">https://docs.mongodb.com/manual/reference/operator/update/set/#up._S_set</a></p>
+
+<p>For more information about this command: <a href="https://docs.mongodb.com/manual/reference/command/update/#dbcmd.update">https://docs.mongodb.com/manual/reference/command/update/#dbcmd.update</a></p>
+
+<p>TODO: Work on improving the updatefailure.  We don&rsquo;t handle writerrrors. Try using a normal query with multiple on true</p>
+
+<div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    <p>When we can&rsquo;t send the request/receive the response, you don&rsquo;t have sufficient permissions or an error occurred</p>
+
+</div>
 
                       </div>
                       <div class="declaration">
@@ -948,7 +1068,7 @@ TODO: Work on improving the updatefailure.  We don&rsquo;t handle writerrrors. T
                               </td>
                               <td>
                                 <div>
-                                  <p>If true, stop updating when one operation fails - defaults to true TODO: Work on improving the updatefailure.  We don&rsquo;t handle writerrrors. Try using a normal query with multiple on true</p>
+                                  <p>If true, stop updating when one operation fails - defaults to true</p>
 
                                 </div>
                               </td>
@@ -972,12 +1092,18 @@ TODO: Work on improving the updatefailure.  We don&rsquo;t handle writerrrors. T
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Updates a Document with some new Keys and Values
-- parameter query: The filter to use when searching for Documents to update
-- parameter updated: The data to update these Documents with
-- parameter upsert: Insert when we can&rsquo;t find anything to update
-- parameter multi: Updates more than one result if true
-- parameter ordered: If true, stop updating when one operation fails - defaults to true</p>
+                        <p>Updates a <code><a href="../Extensions/Document.html">Document</a></code> using a counterpart <code><a href="../Extensions/Document.html">Document</a></code>.</p>
+
+<p>In most cases the <code>$set</code> operator is useful for updating only parts of a <code><a href="../Extensions/Document.html">Document</a></code>
+As described here: <a href="https://docs.mongodb.com/manual/reference/operator/update/set/#up._S_set">https://docs.mongodb.com/manual/reference/operator/update/set/#up._S_set</a></p>
+
+<p>For more information about this command: <a href="https://docs.mongodb.com/manual/reference/command/update/#dbcmd.update">https://docs.mongodb.com/manual/reference/command/update/#dbcmd.update</a></p>
+
+<div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    <p>When we can&rsquo;t send the request/receive the response, you don&rsquo;t have sufficient permissions or an error occurred</p>
+
+</div>
 
                       </div>
                       <div class="declaration">
@@ -995,7 +1121,7 @@ TODO: Work on improving the updatefailure.  We don&rsquo;t handle writerrrors. T
                             <tr>
                               <td>
                                 <code>
-                                <em>query</em>
+                                <em>filter</em>
                                 </code>
                               </td>
                               <td>
@@ -1076,9 +1202,15 @@ TODO: Work on improving the updatefailure.  We don&rsquo;t handle writerrrors. T
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Removes all Documents matching the filter if they&rsquo;re within limit
-- parameter matching: A list of filters to match documents against. Any given filter can be used infinite amount of removals if <code>0</code> or otherwise as often as specified in the limit
-- parameter stoppingOnError: If true, stop removing when one operation fails - defaults to true</p>
+                        <p>Removes all <code><a href="../Extensions/Document.html">Document</a></code>s matching the <code>filter</code> until the <code>limit</code> is reached</p>
+
+<p>For more information: <a href="https://docs.mongodb.com/manual/reference/command/delete/#dbcmd.delete">https://docs.mongodb.com/manual/reference/command/delete/#dbcmd.delete</a></p>
+
+<div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    <p>When we can&rsquo;t send the request/receive the response, you don&rsquo;t have sufficient permissions or an error occurred</p>
+
+</div>
 
                       </div>
                       <div class="declaration">
@@ -1096,7 +1228,7 @@ TODO: Work on improving the updatefailure.  We don&rsquo;t handle writerrrors. T
                             <tr>
                               <td>
                                 <code>
-                                <em>matching</em>
+                                <em>removals</em>
                                 </code>
                               </td>
                               <td>
@@ -1128,9 +1260,9 @@ TODO: Work on improving the updatefailure.  We don&rsquo;t handle writerrrors. T
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:FC11MongoKitten10Collection6removeFzT8matchingGSaT6filterPS_5Query_5limitVs5Int32__15stoppingOnErrorGSqSb__T_"></a>
+                    <a name="/s:FC11MongoKitten10Collection6removeFzT8matchingGSaT6filterPS_13QueryProtocol_5limitVs5Int32__15stoppingOnErrorGSqSb__T_"></a>
                     <a name="//apple_ref/swift/Method/remove(matching:stoppingOnError:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FC11MongoKitten10Collection6removeFzT8matchingGSaT6filterPS_5Query_5limitVs5Int32__15stoppingOnErrorGSqSb__T_">remove(matching:stoppingOnError:)</a>
+                    <a class="token" href="#/s:FC11MongoKitten10Collection6removeFzT8matchingGSaT6filterPS_13QueryProtocol_5limitVs5Int32__15stoppingOnErrorGSqSb__T_">remove(matching:stoppingOnError:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1138,16 +1270,22 @@ TODO: Work on improving the updatefailure.  We don&rsquo;t handle writerrrors. T
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Removes all Documents matching the filter if they&rsquo;re within limit
-- parameter matching: A list of QueryBuilder filters to match documents against. Any given filter can be used infinite amount of removals if <code>0</code> or otherwise as often as specified in the limit
-- parameter stoppingOnError: If true, stop removing when one operation fails - defaults to true</p>
+                        <p>Removes all <code><a href="../Extensions/Document.html">Document</a></code>s matching the <code>filter</code> until the <code>limit</code> is reached</p>
+
+<p>For more information: <a href="https://docs.mongodb.com/manual/reference/command/delete/#dbcmd.delete">https://docs.mongodb.com/manual/reference/command/delete/#dbcmd.delete</a></p>
+
+<div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    <p>When we can&rsquo;t send the request/receive the response, you don&rsquo;t have sufficient permissions or an error occurred</p>
+
+</div>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">remove</span><span class="p">(</span><span class="n">matching</span> <span class="nv">removals</span><span class="p">:</span> <span class="p">[(</span><span class="nv">filter</span><span class="p">:</span> <span class="kt">Query</span><span class="p">,</span> <span class="nv">limit</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">)],</span> <span class="n">stoppingOnError</span> <span class="nv">ordered</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span> <span class="k">throws</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">remove</span><span class="p">(</span><span class="n">matching</span> <span class="nv">removals</span><span class="p">:</span> <span class="p">[(</span><span class="nv">filter</span><span class="p">:</span> <span class="kt">QueryProtocol</span><span class="p">,</span> <span class="nv">limit</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">)],</span> <span class="n">stoppingOnError</span> <span class="nv">ordered</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span> <span class="k">throws</span></code></pre>
 
                         </div>
                       </div>
@@ -1158,7 +1296,7 @@ TODO: Work on improving the updatefailure.  We don&rsquo;t handle writerrrors. T
                             <tr>
                               <td>
                                 <code>
-                                <em>matching</em>
+                                <em>removals</em>
                                 </code>
                               </td>
                               <td>
@@ -1200,10 +1338,15 @@ TODO: Work on improving the updatefailure.  We don&rsquo;t handle writerrrors. T
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Removes all Documents matching the filter if they&rsquo;re within limit
-- parameter matching: The Document filter to use when finding Documents that are going to be removed
-- parameter limitedTo: The amount of times this filter can be used to find and remove a Document (0 is every document)
-- parameter stoppingOnError: If true, stop removing when one operation fails - defaults to true</p>
+                        <p>Removes <code><a href="../Extensions/Document.html">Document</a></code>s matching the <code>filter</code> until the <code>limit</code> is reached</p>
+
+<p>For more information: <a href="https://docs.mongodb.com/manual/reference/command/delete/#dbcmd.delete">https://docs.mongodb.com/manual/reference/command/delete/#dbcmd.delete</a></p>
+
+<div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    <p>When we can&rsquo;t send the request/receive the response, you don&rsquo;t have sufficient permissions or an error occurred</p>
+
+</div>
 
                       </div>
                       <div class="declaration">
@@ -1221,7 +1364,7 @@ TODO: Work on improving the updatefailure.  We don&rsquo;t handle writerrrors. T
                             <tr>
                               <td>
                                 <code>
-                                <em>matching</em>
+                                <em>fitler</em>
                                 </code>
                               </td>
                               <td>
@@ -1234,7 +1377,7 @@ TODO: Work on improving the updatefailure.  We don&rsquo;t handle writerrrors. T
                             <tr>
                               <td>
                                 <code>
-                                <em>limitedTo</em>
+                                <em>limit</em>
                                 </code>
                               </td>
                               <td>
@@ -1266,9 +1409,9 @@ TODO: Work on improving the updatefailure.  We don&rsquo;t handle writerrrors. T
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:FC11MongoKitten10Collection6removeFzT8matchingPS_5Query_9limitedToVs5Int3215stoppingOnErrorGSqSb__T_"></a>
+                    <a name="/s:FC11MongoKitten10Collection6removeFzT8matchingPS_13QueryProtocol_9limitedToVs5Int3215stoppingOnErrorGSqSb__T_"></a>
                     <a name="//apple_ref/swift/Method/remove(matching:limitedTo:stoppingOnError:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FC11MongoKitten10Collection6removeFzT8matchingPS_5Query_9limitedToVs5Int3215stoppingOnErrorGSqSb__T_">remove(matching:limitedTo:stoppingOnError:)</a>
+                    <a class="token" href="#/s:FC11MongoKitten10Collection6removeFzT8matchingPS_13QueryProtocol_9limitedToVs5Int3215stoppingOnErrorGSqSb__T_">remove(matching:limitedTo:stoppingOnError:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1276,17 +1419,22 @@ TODO: Work on improving the updatefailure.  We don&rsquo;t handle writerrrors. T
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Removes all Documents matching the filter if they&rsquo;re within limit
-- parameter matching: The QueryBuilder filter to use when finding Documents that are going to be removed
-- parameter limitedTo: The amount of times this filter can be used to find and remove a Document (0 is every document)
-- parameter stoppingOnError: If true, stop removing when one operation fails - defaults to true</p>
+                        <p>Removes <code><a href="../Extensions/Document.html">Document</a></code>s matching the <code>filter</code> until the <code>limit</code> is reached</p>
+
+<p>For more information: <a href="https://docs.mongodb.com/manual/reference/command/delete/#dbcmd.delete">https://docs.mongodb.com/manual/reference/command/delete/#dbcmd.delete</a></p>
+
+<div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    <p>When we can&rsquo;t send the request/receive the response, you don&rsquo;t have sufficient permissions or an error occurred</p>
+
+</div>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">remove</span><span class="p">(</span><span class="n">matching</span> <span class="nv">filter</span><span class="p">:</span> <span class="kt">Query</span><span class="p">,</span> <span class="n">limitedTo</span> <span class="nv">limit</span><span class="p">:</span> <span class="kt">Int32</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">stoppingOnError</span> <span class="nv">ordered</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span> <span class="k">throws</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">remove</span><span class="p">(</span><span class="n">matching</span> <span class="nv">filter</span><span class="p">:</span> <span class="kt">QueryProtocol</span><span class="p">,</span> <span class="n">limitedTo</span> <span class="nv">limit</span><span class="p">:</span> <span class="kt">Int32</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">stoppingOnError</span> <span class="nv">ordered</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span> <span class="k">throws</span></code></pre>
 
                         </div>
                       </div>
@@ -1354,6 +1502,14 @@ TODO: Work on improving the updatefailure.  We don&rsquo;t handle writerrrors. T
                       <div class="abstract">
                         <p>The drop command removes an entire collection from a database. This command also removes any indexes associated with the dropped collection.</p>
 
+<p>For more information: <a href="https://docs.mongodb.com/manual/reference/command/drop/#dbcmd.drop">https://docs.mongodb.com/manual/reference/command/drop/#dbcmd.drop</a></p>
+
+<div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    When we can&rsquo;t send the request/receive the response, you don&rsquo;t have sufficient permissions or an error occurred
+
+</div>
+
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -1379,8 +1535,15 @@ TODO: Work on improving the updatefailure.  We don&rsquo;t handle writerrrors. T
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Changes the name of an existing collection. This method supports renames within a single database only. To move the collection to a different database, use the <code>move</code> method on <code><a href="../Classes/Collection.html">Collection</a></code>.
-- parameter to: The new name for this collection</p>
+                        <p>Changes the name of an existing collection. This method supports renames within a single database only. To move the collection to a different database, use the <code>move</code> method on <code><a href="../Classes/Collection.html">Collection</a></code>.</p>
+
+<p>For more information: <a href="https://docs.mongodb.com/manual/reference/command/renameCollection/#dbcmd.renameCollection">https://docs.mongodb.com/manual/reference/command/renameCollection/#dbcmd.renameCollection</a></p>
+
+<div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    <p>When we can&rsquo;t send the request/receive the response, you don&rsquo;t have sufficient permissions or an error occurred</p>
+
+</div>
 
                       </div>
                       <div class="declaration">
@@ -1427,10 +1590,17 @@ TODO: Work on improving the updatefailure.  We don&rsquo;t handle writerrrors. T
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Move this collection to another database. Can also rename the collection in one go.
-<strong>Users must have access to the admin database to run this command.</strong>
-- parameter to: The database to move this collection to
-- parameter named: The new name for this collection</p>
+                        <p>Move this collection to another database. Can also rename the collection in one go.</p>
+
+<p><strong>Users must have access to the admin database to run this command.</strong></p>
+
+<p>For more information: <a href="https://docs.mongodb.com/manual/reference/command/renameCollection/#dbcmd.renameCollection">https://docs.mongodb.com/manual/reference/command/renameCollection/#dbcmd.renameCollection</a></p>
+
+<div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    <p>When we can&rsquo;t send the request/receive the response, you don&rsquo;t have sufficient permissions or an error occurred</p>
+
+</div>
 
                       </div>
                       <div class="declaration">
@@ -1490,10 +1660,15 @@ TODO: Work on improving the updatefailure.  We don&rsquo;t handle writerrrors. T
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Returns the amount of Documents in this collection
-- parameter filteringBy: Optional. If specified limits the returned amount to anything matching this query
-- parameter limitedTo: Optional. Limits the returned amount as specified
-- parameter skipping: Optional. The amount of Documents to skip before counting</p>
+                        <p>Counts the amount of <code><a href="../Extensions/Document.html">Document</a></code>s matching the <code>filter</code>. Stops counting when the <code>limit</code> it reached</p>
+
+<p>For more information: <a href="https://docs.mongodb.com/manual/reference/command/count/#dbcmd.count">https://docs.mongodb.com/manual/reference/command/count/#dbcmd.count</a></p>
+
+<div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    <p>When we can&rsquo;t send the request/receive the response, you don&rsquo;t have sufficient permissions or an error occurred</p>
+
+</div>
 
                       </div>
                       <div class="declaration">
@@ -1511,7 +1686,7 @@ TODO: Work on improving the updatefailure.  We don&rsquo;t handle writerrrors. T
                             <tr>
                               <td>
                                 <code>
-                                <em>filteringBy</em>
+                                <em>filter</em>
                                 </code>
                               </td>
                               <td>
@@ -1524,12 +1699,12 @@ TODO: Work on improving the updatefailure.  We don&rsquo;t handle writerrrors. T
                             <tr>
                               <td>
                                 <code>
-                                <em>limitedTo</em>
+                                <em>limit</em>
                                 </code>
                               </td>
                               <td>
                                 <div>
-                                  <p>Optional. Limits the returned amount as specified</p>
+                                  <p>Optional. Limits the amount of scanned <code>Document</code>s as specified</p>
 
                                 </div>
                               </td>
@@ -1537,7 +1712,7 @@ TODO: Work on improving the updatefailure.  We don&rsquo;t handle writerrrors. T
                             <tr>
                               <td>
                                 <code>
-                                <em>skipping</em>
+                                <em>skip</em>
                                 </code>
                               </td>
                               <td>
@@ -1550,15 +1725,20 @@ TODO: Work on improving the updatefailure.  We don&rsquo;t handle writerrrors. T
                           </tbody>
                         </table>
                       </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The amount of matching <code><a href="../Extensions/Document.html">Document</a></code>s</p>
+
+                      </div>
                     </section>
                   </div>
                 </li>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:FC11MongoKitten10Collection5countFzT8matchingPS_5Query_9limitedToGSqVs5Int32_8skippingGSqS2___Si"></a>
+                    <a name="/s:FC11MongoKitten10Collection5countFzT8matchingPS_13QueryProtocol_9limitedToGSqVs5Int32_8skippingGSqS2___Si"></a>
                     <a name="//apple_ref/swift/Method/count(matching:limitedTo:skipping:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FC11MongoKitten10Collection5countFzT8matchingPS_5Query_9limitedToGSqVs5Int32_8skippingGSqS2___Si">count(matching:limitedTo:skipping:)</a>
+                    <a class="token" href="#/s:FC11MongoKitten10Collection5countFzT8matchingPS_13QueryProtocol_9limitedToGSqVs5Int32_8skippingGSqS2___Si">count(matching:limitedTo:skipping:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1566,17 +1746,22 @@ TODO: Work on improving the updatefailure.  We don&rsquo;t handle writerrrors. T
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Returns the amount of Documents in this collection
-- parameter filteringBy: Optional. If specified limits the returned amount to anything matching this query
-- parameter limitedTo: Optional. Limits the returned amount as specified
-- parameter skipping: Optional. The amount of Documents to skip before counting</p>
+                        <p>Counts the amount of <code><a href="../Extensions/Document.html">Document</a></code>s matching the <code>filter</code>. Stops counting when the <code>limit</code> it reached</p>
+
+<p>For more information: <a href="https://docs.mongodb.com/manual/reference/command/count/#dbcmd.count">https://docs.mongodb.com/manual/reference/command/count/#dbcmd.count</a></p>
+
+<div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    <p>When we can&rsquo;t send the request/receive the response, you don&rsquo;t have sufficient permissions or an error occurred</p>
+
+</div>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">count</span><span class="p">(</span><span class="n">matching</span> <span class="nv">query</span><span class="p">:</span> <span class="kt">Query</span><span class="p">,</span> <span class="n">limitedTo</span> <span class="nv">limit</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="n">skipping</span> <span class="nv">skip</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Int</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">count</span><span class="p">(</span><span class="n">matching</span> <span class="nv">query</span><span class="p">:</span> <span class="kt">QueryProtocol</span><span class="p">,</span> <span class="n">limitedTo</span> <span class="nv">limit</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="n">skipping</span> <span class="nv">skip</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Int</span></code></pre>
 
                         </div>
                       </div>
@@ -1587,7 +1772,7 @@ TODO: Work on improving the updatefailure.  We don&rsquo;t handle writerrrors. T
                             <tr>
                               <td>
                                 <code>
-                                <em>filteringBy</em>
+                                <em>filter</em>
                                 </code>
                               </td>
                               <td>
@@ -1600,12 +1785,12 @@ TODO: Work on improving the updatefailure.  We don&rsquo;t handle writerrrors. T
                             <tr>
                               <td>
                                 <code>
-                                <em>limitedTo</em>
+                                <em>limit</em>
                                 </code>
                               </td>
                               <td>
                                 <div>
-                                  <p>Optional. Limits the returned amount as specified</p>
+                                  <p>Optional. Limits the amount of scanned <code>Document</code>s as specified</p>
 
                                 </div>
                               </td>
@@ -1613,7 +1798,7 @@ TODO: Work on improving the updatefailure.  We don&rsquo;t handle writerrrors. T
                             <tr>
                               <td>
                                 <code>
-                                <em>skipping</em>
+                                <em>skip</em>
                                 </code>
                               </td>
                               <td>
@@ -1625,6 +1810,11 @@ TODO: Work on improving the updatefailure.  We don&rsquo;t handle writerrrors. T
                             </tr>
                           </tbody>
                         </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The amount of matching <code><a href="../Extensions/Document.html">Document</a></code>s</p>
+
                       </div>
                     </section>
                   </div>
@@ -1642,10 +1832,13 @@ TODO: Work on improving the updatefailure.  We don&rsquo;t handle writerrrors. T
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Returns all distinct values for a key in this collection. Allows filtering using query
-- parameter on: The key that we distinct on
-- parameter query: The Document query used to filter through the returned results
-- returns: A list of all distinct values for this key</p>
+                        <p>Returns all distinct values for a key in this collection. Allows filtering using query</p>
+
+<div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    <p>When we can&rsquo;t send the request/receive the response, you don&rsquo;t have sufficient permissions or an error occurred</p>
+
+</div>
 
                       </div>
                       <div class="declaration">
@@ -1710,14 +1903,20 @@ TODO: Work on improving the updatefailure.  We don&rsquo;t handle writerrrors. T
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Creates an <code>Index</code> in this <code><a href="../Classes/Collection.html">Collection</a></code> on the specified keys.</p>
+
+<div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    When we can&rsquo;t send the request/receive the response, you don&rsquo;t have sufficient permissions or an error occurred
+
+</div>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">Collection</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">createIndex</span><span class="p">(</span><span class="n">with</span> <span class="nv">keys</span><span class="p">:</span> <span class="p">[(</span><span class="nv">key</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="k">as</span><span class="nv">cending</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">)],</span> <span class="n">named</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">filter</span><span class="p">:</span> <span class="kt">Document</span><span class="p">?,</span> <span class="nv">buildInBackground</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">,</span> <span class="nv">unique</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">)</span> <span class="k">throws</span></code></pre>
 
                         </div>
                       </div>
@@ -1737,7 +1936,13 @@ TODO: Work on improving the updatefailure.  We don&rsquo;t handle writerrrors. T
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Creates an index using the given parameters</p>
+                        <p>Creates multiple indexes as specified</p>
+
+<div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    When we can&rsquo;t send the request/receive the response, you don&rsquo;t have sufficient permissions or an error occurred
+
+</div>
 
                       </div>
                       <div class="declaration">
@@ -1765,8 +1970,13 @@ TODO: Work on improving the updatefailure.  We don&rsquo;t handle writerrrors. T
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Remove the index specified
-Warning: Write-locks the database whilst this process is executed
-- parameter index: The index name (as specified when creating the index) that will removed. <code>*</code> for all indexes</p>
+Warning: Write-locks the database whilst this process is executed</p>
+
+<div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    <p>When we can&rsquo;t send the request/receive the response, you don&rsquo;t have sufficient permissions or an error occurred</p>
+
+</div>
 
                       </div>
                       <div class="declaration">
@@ -1814,8 +2024,7 @@ Warning: Write-locks the database whilst this process is executed
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>TODO: Make this work?
-Lists all indexes for this collection
-- returns: A Cursor pointing to the Index results</p>
+Lists all indexes for this collection</p>
 
                       </div>
                       <div class="declaration">
@@ -1847,8 +2056,15 @@ Lists all indexes for this collection
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Uses the aggregation pipeline to process documents into aggregated results.
-See <a href="https://docs.mongodb.org/manual/reference/operator/aggregation-pipeline/">the MongoDB docs on the aggregation pipeline</a> for more information.</p>
+                        <p>Uses the aggregation pipeline to process documents into aggregated results.</p>
+
+<p>See <a href="https://docs.mongodb.org/manual/reference/operator/aggregation-pipeline/">the MongoDB docs on the aggregation pipeline</a> for more information.</p>
+
+<div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    <p>When we can&rsquo;t send the request/receive the response, you don&rsquo;t have sufficient permissions or an error occurred</p>
+
+</div>
 
                       </div>
                       <div class="declaration">
@@ -1931,6 +2147,11 @@ See <a href="https://docs.mongodb.org/manual/reference/operator/aggregation-pipe
                           </tbody>
                         </table>
                       </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A <code><a href="../Classes/Cursor.html">Cursor</a></code> pointing to the found <code><a href="../Extensions/Document.html">Document</a></code>s</p>
+
+                      </div>
                     </section>
                   </div>
                 </li>
@@ -1947,9 +2168,19 @@ See <a href="https://docs.mongodb.org/manual/reference/operator/aggregation-pipe
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Makes the collection capped
-Warning: Data loss can and probably will occur
-It will only contain the first data inserted until the cap is reached</p>
+                        <p>Makes the collection capped</p>
+
+<p><strong>Warning: Data loss can and probably will occur</strong></p>
+
+<p>It will only contain the first data inserted until the cap is reached</p>
+
+<p>For more information: <a href="https://docs.mongodb.com/manual/reference/command/convertToCapped/#dbcmd.convertToCapped">https://docs.mongodb.com/manual/reference/command/convertToCapped/#dbcmd.convertToCapped</a></p>
+
+<div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    When we can&rsquo;t send the request/receive the response, you don&rsquo;t have sufficient permissions or an error occurred
+
+</div>
 
                       </div>
                       <div class="declaration">
@@ -1976,8 +2207,17 @@ It will only contain the first data inserted until the cap is reached</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Tells the MongoDB server to re-index this collection
-Warning: Very heavy</p>
+                        <p>Tells the MongoDB server to re-index this collection</p>
+
+<p><strong>Warning: Very heavy</strong></p>
+
+<p>For more information: <a href="https://docs.mongodb.com/manual/reference/command/reIndex/#dbcmd.reIndex">https://docs.mongodb.com/manual/reference/command/reIndex/#dbcmd.reIndex</a></p>
+
+<div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    When we can&rsquo;t send the request/receive the response, you don&rsquo;t have sufficient permissions or an error occurred
+
+</div>
 
                       </div>
                       <div class="declaration">
@@ -2004,8 +2244,17 @@ Warning: Very heavy</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Tells the MongoDB server to make this collection more compact
-Warning: Very heavy</p>
+                        <p>Tells the MongoDB server to make this collection more compact</p>
+
+<p><strong>Warning: Very heavy</strong></p>
+
+<p>For more information: <a href="https://docs.mongodb.com/manual/reference/command/compact/#dbcmd.compact">https://docs.mongodb.com/manual/reference/command/compact/#dbcmd.compact</a></p>
+
+<div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    <p>When we can&rsquo;t send the request/receive the response, you don&rsquo;t have sufficient permissions or an error occurred</p>
+
+</div>
 
                       </div>
                       <div class="declaration">
@@ -2015,6 +2264,26 @@ Warning: Very heavy</p>
                           <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">compact</span><span class="p">(</span><span class="n">forced</span> <span class="nv">force</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span> <span class="k">throws</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>force</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Force the server to do this</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
                       </div>
                     </section>
                   </div>
@@ -2034,6 +2303,14 @@ Warning: Very heavy</p>
                       <div class="abstract">
                         <p>Clones this collection to another place and caps it</p>
 
+<p>For additional information: <a href="https://docs.mongodb.com/manual/reference/command/cloneCollectionAsCapped/#dbcmd.cloneCollectionAsCapped">https://docs.mongodb.com/manual/reference/command/cloneCollectionAsCapped/#dbcmd.cloneCollectionAsCapped</a></p>
+
+<div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    <p>When we can&rsquo;t send the request/receive the response, you don&rsquo;t have sufficient permissions or an error occurred</p>
+
+</div>
+
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -2043,6 +2320,39 @@ Warning: Very heavy</p>
 
                         </div>
                       </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>otherCollection</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The new <code>Collection</code> name</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>capped</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The cap to apply</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
                     </section>
                   </div>
                 </li>
@@ -2051,7 +2361,7 @@ Warning: Very heavy</p>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2016 <a class="link" href="" target="_blank" rel="external">Robbert Brandsma &amp; Joannis Orlandos</a>. All rights reserved. (Last updated: 2016-05-13)</p>
+          <p>&copy; 2016 <a class="link" href="" target="_blank" rel="external">Robbert Brandsma &amp; Joannis Orlandos</a>. All rights reserved. (Last updated: 2016-05-14)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.6.0</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

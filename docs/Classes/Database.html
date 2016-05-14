@@ -14,7 +14,7 @@
     <a title="Database Class Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">MongoKitten Docs</a> (64% documented)</p>
+        <p><a href="../index.html">MongoKitten Docs</a> (89% documented)</p>
         <p class="header-right"><a href="https://github.com/PlanTeam/MongoKitten"><img src="../img/gh.png"/>View on GitHub</a></p>
         <p class="header-right"><a href="dash-feed://http%3A%2F%2Fplanteam%2Egithub%2Eio%2FMongoKitten%2FMongoKitten%2Exml"><img src="../img/dash.png"/>Install in Dash</a></p>
       </div>
@@ -78,13 +78,13 @@
             <a href="../Functions.html">Functions</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="../Functions.html#/s:ZF11MongoKittenop1nFVS_8AQTQueryS0_">!(_:)</a>
+                <a href="../Functions.html#/s:ZF11MongoKittenop1nFVS_5QueryS0_">!(_:)</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Functions.html#/s:ZF11MongoKittenoi2neERR">!=(_:_:)</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Functions.html#/s:ZF11MongoKittenoi2aaFTVS_8AQTQueryS0__S0_">&amp;&amp;(_:_:)</a>
+                <a href="../Functions.html#/s:ZF11MongoKittenoi2aaFTVS_5QueryS0__S0_">&amp;&amp;(_:_:)</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Functions.html#/s:ZF11MongoKittenoi2aeERR">&amp;=(_:_:)</a>
@@ -105,7 +105,7 @@
                 <a href="../Functions.html#/s:ZF11MongoKittenoi2geERR">&gt;=(_:_:)</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Functions.html#/s:ZF11MongoKittenoi2ooFTVS_8AQTQueryS0__S0_">||(_:_:)</a>
+                <a href="../Functions.html#/s:ZF11MongoKittenoi2ooFTVS_5QueryS0__S0_">||(_:_:)</a>
               </li>
             </ul>
           </li>
@@ -113,13 +113,13 @@
             <a href="../Protocols.html">Protocols</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="../Protocols/AQTValue.html">AQTValue</a>
-              </li>
-              <li class="nav-group-task">
                 <a href="../Protocols/MongoTCP.html">MongoTCP</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Protocols/Query.html">Query</a>
+                <a href="../Protocols/QueryProtocol.html">QueryProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/ValueProtocol.html">ValueProtocol</a>
               </li>
             </ul>
           </li>
@@ -127,13 +127,13 @@
             <a href="../Structs.html">Structs</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="../Structs/AQTQuery.html">AQTQuery</a>
-              </li>
-              <li class="nav-group-task">
                 <a href="../Structs/DeleteFlags.html">DeleteFlags</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Structs/InsertFlags.html">InsertFlags</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Query.html">Query</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Structs/QueryFlags.html">QueryFlags</a>
@@ -155,7 +155,8 @@
 
                 </div>
               </div>
-            <p>A Mongo Database. Cannot be publically initialized. But you can get a database object by subscripting a Server with a String</p>
+            <p>A Mongo Database. Cannot be publically initialized.
+But you can get a database object by subscripting <code><a href="../Classes/Server.html">Server</a></code> with a <code>String</code> as the database name</p>
 
           </section>
           <section class="section task-group-section">
@@ -174,7 +175,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The server that this Database is a part of</p>
+                        <p>The <code><a href="../Classes/Server.html">Server</a></code> that this Database is a part of</p>
 
                       </div>
                       <div class="declaration">
@@ -201,9 +202,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>This subscript is used to get a collection by providing a name as a String
-- parameter collection: The collection/bucket to return
-- returns: The requested collection in this database</p>
+                        <p>Get a <code><a href="../Classes/Collection.html">Collection</a></code> by providing a collection name as a <code>String</code></p>
 
                       </div>
                       <div class="declaration">
@@ -309,9 +308,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Initialise this database object
-- parameter database: The database to use
-- parameter server: The server on which this database exists</p>
+                        <p>Initialise this database object</p>
 
                       </div>
                       <div class="declaration">
@@ -347,7 +344,7 @@
                               </td>
                               <td>
                                 <div>
-                                  <p>The server on which this database exists</p>
+                                  <p>The <code>Server</code> on which this database exists</p>
 
                                 </div>
                               </td>
@@ -371,9 +368,15 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>All information about the collecitons in this Database
-- parameter matching: The filter to apply when searching for this information
-- returns: A cursor to the resulting documents with collection info</p>
+                        <p>All information about the <code><a href="../Classes/Collection.html">Collection</a></code>s in this <code><a href="../Classes/Database.html">Database</a></code></p>
+
+<p>For more information: <a href="https://docs.mongodb.com/manual/reference/command/listCollections/#dbcmd.listCollections">https://docs.mongodb.com/manual/reference/command/listCollections/#dbcmd.listCollections</a></p>
+
+<div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    <p>When we can&rsquo;t send the request/receive the response, you don&rsquo;t have sufficient permissions or an error occurred</p>
+
+</div>
 
                       </div>
                       <div class="declaration">
@@ -425,8 +428,13 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Gets the collections in this database
-- parameter matching: The filter to apply when looking for Collections</p>
+                        <p>Gets the <code><a href="../Classes/Collection.html">Collection</a></code>s in this <code><a href="../Classes/Database.html">Database</a></code></p>
+
+<div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    <p>When we can&rsquo;t send the request/receive the response, you don&rsquo;t have sufficient permissions or an error occurred</p>
+
+</div>
 
                       </div>
                       <div class="declaration">
@@ -457,6 +465,11 @@
                           </tbody>
                         </table>
                       </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A <code><a href="../Classes/Cursor.html">Cursor</a></code> to all <code><a href="../Classes/Collection.html">Collection</a></code>s in this <code><a href="../Classes/Database.html">Database</a></code></p>
+
+                      </div>
                     </section>
                   </div>
                 </li>
@@ -467,9 +480,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:FC11MongoKitten8Database6createERR"></a>
-                    <a name="//apple_ref/swift/Method/create(_:password:roles:customData:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FC11MongoKitten8Database6createERR">create(_:password:roles:customData:)</a>
+                    <a name="/s:FC11MongoKitten8Database10createUserERR"></a>
+                    <a name="//apple_ref/swift/Method/createUser(_:password:roles:customData:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC11MongoKitten8Database10createUserERR">createUser(_:password:roles:customData:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -477,19 +490,25 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Creates a new user
-Warning: Use an SSL socket to create someone for security sake!
-Warning: The standard library doesn&rsquo;t have SSL
-- parameter user: The user&rsquo;s username
-- parameter password: The plaintext password
-- parameter customData: The optional custom information to store</p>
+                        <p>Creates a new user</p>
+
+<p>Warning: Use an SSL socket to create someone for security sake!
+Warning: The standard library doesn&rsquo;t have SSL</p>
+
+<p>For additional information: <a href="https://docs.mongodb.com/manual/reference/command/createUser/#dbcmd.createUser">https://docs.mongodb.com/manual/reference/command/createUser/#dbcmd.createUser</a></p>
+
+<div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    <p>When we can&rsquo;t send the request/receive the response, you don&rsquo;t have sufficient permissions or an error occurred</p>
+
+</div>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">create</span><span class="p">(</span><span class="nv">user</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">password</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">roles</span><span class="p">:</span> <span class="kt">Document</span><span class="p">,</span> <span class="nv">customData</span><span class="p">:</span> <span class="kt">Document</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span> <span class="k">throws</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">createUser</span><span class="p">(</span><span class="n">_</span> <span class="nv">user</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">password</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">roles</span><span class="p">:</span> <span class="kt">Document</span><span class="p">,</span> <span class="nv">customData</span><span class="p">:</span> <span class="kt">Document</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span> <span class="k">throws</span></code></pre>
 
                         </div>
                       </div>
@@ -526,6 +545,19 @@ Warning: The standard library doesn&rsquo;t have SSL
                             <tr>
                               <td>
                                 <code>
+                                <em>roles</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The roles document as specified in the additional information</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
                                 <em>customData</em>
                                 </code>
                               </td>
@@ -555,11 +587,15 @@ Warning: The standard library doesn&rsquo;t have SSL
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Updates a user in this database with a new password, roles and optional set of custom data
-- parameter user: The user to udpate
-- parameter password: The new password
-- parameter roles: The roles to grant
-- parameter customData: The optional custom data you&rsquo;ll give him</p>
+                        <p>Updates a user in this database with a new password, roles and optional set of custom data</p>
+
+<p>For additional information: <a href="https://docs.mongodb.com/manual/reference/command/updateUser/#dbcmd.updateUser">https://docs.mongodb.com/manual/reference/command/updateUser/#dbcmd.updateUser</a></p>
+
+<div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    <p>When we can&rsquo;t send the request/receive the response, you don&rsquo;t have sufficient permissions or an error occurred</p>
+
+</div>
 
                       </div>
                       <div class="declaration">
@@ -645,8 +681,15 @@ Warning: The standard library doesn&rsquo;t have SSL
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Drops the specified user from this database
-- parameter user: The username from the user to drop</p>
+                        <p>Removes the specified user from this database</p>
+
+<p>For additional information: <a href="https://docs.mongodb.com/manual/reference/command/dropUser/#dbcmd.dropUser">https://docs.mongodb.com/manual/reference/command/dropUser/#dbcmd.dropUser</a></p>
+
+<div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    <p>When we can&rsquo;t send the request/receive the response, you don&rsquo;t have sufficient permissions or an error occurred</p>
+
+</div>
 
                       </div>
                       <div class="declaration">
@@ -695,6 +738,14 @@ Warning: The standard library doesn&rsquo;t have SSL
                       <div class="abstract">
                         <p>Removes all users from this database</p>
 
+<p>For additional information: <a href="https://docs.mongodb.com/manual/reference/command/dropAllUsersFromDatabase/#dbcmd.dropAllUsersFromDatabase">https://docs.mongodb.com/manual/reference/command/dropAllUsersFromDatabase/#dbcmd.dropAllUsersFromDatabase</a></p>
+
+<div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    When we can&rsquo;t send the request/receive the response, you don&rsquo;t have sufficient permissions or an error occurred
+
+</div>
+
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -720,9 +771,15 @@ Warning: The standard library doesn&rsquo;t have SSL
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Grants roles to a user in this database
-- parameter roles: The roles to grants
-- parameter to: The user&rsquo;s username to grant the roles to</p>
+                        <p>Grants roles to a user in this database</p>
+
+<p>For additional information: <a href="https://docs.mongodb.com/manual/reference/command/grantRolesToUser/#dbcmd.grantRolesToUser">https://docs.mongodb.com/manual/reference/command/grantRolesToUser/#dbcmd.grantRolesToUser</a></p>
+
+<div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    <p>When we can&rsquo;t send the request/receive the response, you don&rsquo;t have sufficient permissions or an error occurred</p>
+
+</div>
 
                       </div>
                       <div class="declaration">
@@ -753,7 +810,7 @@ Warning: The standard library doesn&rsquo;t have SSL
                             <tr>
                               <td>
                                 <code>
-                                <em>to</em>
+                                <em>user</em>
                                 </code>
                               </td>
                               <td>
@@ -782,7 +839,15 @@ Warning: The standard library doesn&rsquo;t have SSL
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Drops this database and collections</p>
+                        <p>Drops this database and it&rsquo;s collections</p>
+
+<p>For additional information: <a href="https://docs.mongodb.com/manual/reference/command/dropDatabase/#dbcmd.dropDatabase">https://docs.mongodb.com/manual/reference/command/dropDatabase/#dbcmd.dropDatabase</a></p>
+
+<div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    When we can&rsquo;t send the request/receive the response, you don&rsquo;t have sufficient permissions or an error occurred
+
+</div>
 
                       </div>
                       <div class="declaration">
@@ -815,9 +880,15 @@ Warning: The standard library doesn&rsquo;t have SSL
 command, this method is used primarily for creating new collections that use specific
 options. For example, you use <code>createCollection()</code> to create a capped collection, or to
 create a new collection that uses document validation. <code>createCollection()</code> is also used to
-pre-allocate space for an ordinary collection.</p>
+pre-allocate space for an ordinary collection</p>
 
-<p>DbCommand reference: <a href="https://docs.mongodb.com/manual/reference/command/create/">https://docs.mongodb.com/manual/reference/command/create/</a></p>
+<p>For more information and a full list of options: <a href="https://docs.mongodb.com/manual/reference/command/create/">https://docs.mongodb.com/manual/reference/command/create/</a></p>
+
+<div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    <p>When we can&rsquo;t send the request/receive the response, you don&rsquo;t have sufficient permissions or an error occurred</p>
+
+</div>
 
                       </div>
                       <div class="declaration">
@@ -853,7 +924,7 @@ pre-allocate space for an ordinary collection.</p>
                               </td>
                               <td>
                                 <div>
-                                  <p>Optionally, configuration options for creating this collection. See <a href="https://docs.mongodb.com/manual/reference/method/db.createCollection/">https://docs.mongodb.com/manual/reference/method/db.createCollection/</a> for a list of valid options.</p>
+                                  <p>Optionally, configuration options for creating this collection.</p>
 
                                 </div>
                               </td>
@@ -877,9 +948,13 @@ pre-allocate space for an ordinary collection.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Copies this database and collections to another name
-- parameter to: The new database name
-- parameter as: The optional user credentials that you&rsquo;ll use to authenticate in the new DB</p>
+                        <p>Copies this <code><a href="../Classes/Database.html">Database</a></code> and <code><a href="../Classes/Collection.html">Collection</a></code>s to another <code><a href="../Classes/Database.html">Database</a></code></p>
+
+<div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    <p>When we can&rsquo;t send the request/receive the response, you don&rsquo;t have sufficient permissions or an error occurred</p>
+
+</div>
 
                       </div>
                       <div class="declaration">
@@ -897,7 +972,7 @@ pre-allocate space for an ordinary collection.</p>
                             <tr>
                               <td>
                                 <code>
-                                <em>to</em>
+                                <em>database</em>
                                 </code>
                               </td>
                               <td>
@@ -910,7 +985,7 @@ pre-allocate space for an ordinary collection.</p>
                             <tr>
                               <td>
                                 <code>
-                                <em>as</em>
+                                <em>user</em>
                                 </code>
                               </td>
                               <td>
@@ -929,9 +1004,9 @@ pre-allocate space for an ordinary collection.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:FC11MongoKitten8Database5cloneFzTSS4fromSS9filteringGSqPS_5Query___T_"></a>
+                    <a name="/s:FC11MongoKitten8Database5cloneFzTSS4fromSS9filteringGSqVS_5Query__T_"></a>
                     <a name="//apple_ref/swift/Method/clone(_:from:filtering:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FC11MongoKitten8Database5cloneFzTSS4fromSS9filteringGSqPS_5Query___T_">clone(_:from:filtering:)</a>
+                    <a class="token" href="#/s:FC11MongoKitten8Database5cloneFzTSS4fromSS9filteringGSqVS_5Query__T_">clone(_:from:filtering:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -940,10 +1015,15 @@ pre-allocate space for an ordinary collection.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Clones collection in the namespace from a server to this database
-Optionally filters data you don&rsquo;t want
-- parameter namespace: The remote namespace
-- parameter from: The server URI you&rsquo;re copying from
-- parameter filtering: The query you&rsquo;re using to filter this</p>
+Optionally filters data you don&rsquo;t want</p>
+
+<p>For additional information: <a href="https://docs.mongodb.com/manual/reference/command/cloneCollection/#dbcmd.cloneCollection">https://docs.mongodb.com/manual/reference/command/cloneCollection/#dbcmd.cloneCollection</a></p>
+
+<div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    <p>When we can&rsquo;t send the request/receive the response, you don&rsquo;t have sufficient permissions or an error occurred</p>
+
+</div>
 
                       </div>
                       <div class="declaration">
@@ -974,7 +1054,7 @@ Optionally filters data you don&rsquo;t want
                             <tr>
                               <td>
                                 <code>
-                                <em>from</em>
+                                <em>server</em>
                                 </code>
                               </td>
                               <td>
@@ -987,7 +1067,7 @@ Optionally filters data you don&rsquo;t want
                             <tr>
                               <td>
                                 <code>
-                                <em>filtering</em>
+                                <em>filter</em>
                                 </code>
                               </td>
                               <td>
@@ -1017,10 +1097,15 @@ Optionally filters data you don&rsquo;t want
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Clones collection in the namespace from a server to this database
-Optionally filters data you don&rsquo;t want
-- parameter namespace: The remote namespace
-- parameter from: The server URI you&rsquo;re copying from
-- parameter filtering: The document filter you&rsquo;re using to filter this</p>
+Optionally filters data you don&rsquo;t want</p>
+
+<p>For additional information: <a href="https://docs.mongodb.com/manual/reference/command/cloneCollection/#dbcmd.cloneCollection">https://docs.mongodb.com/manual/reference/command/cloneCollection/#dbcmd.cloneCollection</a></p>
+
+<div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    <p>When we can&rsquo;t send the request/receive the response, you don&rsquo;t have sufficient permissions or an error occurred</p>
+
+</div>
 
                       </div>
                       <div class="declaration">
@@ -1093,10 +1178,15 @@ Optionally filters data you don&rsquo;t want
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Clones a collection in this database to another name in this database and caps it
-- parameter collection: The collection to clone
-- parameter to: The new name to clone it to
-- parameter capped: The new cap</p>
+                        <p>Clones a collection in this database to another name in this database and caps it</p>
+
+<p>For additional information: <a href="https://docs.mongodb.com/manual/reference/command/cloneCollectionAsCapped/#dbcmd.cloneCollectionAsCapped">https://docs.mongodb.com/manual/reference/command/cloneCollectionAsCapped/#dbcmd.cloneCollectionAsCapped</a></p>
+
+<div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    <p>When we can&rsquo;t send the request/receive the response, you don&rsquo;t have sufficient permissions or an error occurred</p>
+
+</div>
 
                       </div>
                       <div class="declaration">
@@ -1127,7 +1217,7 @@ Optionally filters data you don&rsquo;t want
                             <tr>
                               <td>
                                 <code>
-                                <em>to</em>
+                                <em>otherCollection</em>
                                 </code>
                               </td>
                               <td>
@@ -1161,7 +1251,7 @@ Optionally filters data you don&rsquo;t want
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2016 <a class="link" href="" target="_blank" rel="external">Robbert Brandsma &amp; Joannis Orlandos</a>. All rights reserved. (Last updated: 2016-05-13)</p>
+          <p>&copy; 2016 <a class="link" href="" target="_blank" rel="external">Robbert Brandsma &amp; Joannis Orlandos</a>. All rights reserved. (Last updated: 2016-05-14)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.6.0</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
