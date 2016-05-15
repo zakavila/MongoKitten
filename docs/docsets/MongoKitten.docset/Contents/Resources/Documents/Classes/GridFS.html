@@ -14,7 +14,7 @@
     <a title="GridFS Class Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">MongoKitten Docs</a> (89% documented)</p>
+        <p><a href="../index.html">MongoKitten Docs</a> (90% documented)</p>
         <p class="header-right"><a href="https://github.com/PlanTeam/MongoKitten"><img src="../img/gh.png"/>View on GitHub</a></p>
         <p class="header-right"><a href="dash-feed://http%3A%2F%2Fplanteam%2Egithub%2Eio%2FMongoKitten%2FMongoKitten%2Exml"><img src="../img/dash.png"/>Install in Dash</a></p>
       </div>
@@ -157,6 +157,8 @@
               </div>
             <p>A GridFS instance similar to a collection</p>
 
+<p>Conforms to the GridFS standard as specified here: <a href="https://docs.mongodb.org/manual/core/gridfs/">https://docs.mongodb.org/manual/core/gridfs/</a></p>
+
           </section>
           <section class="section task-group-section">
             <div class="task-group">
@@ -174,9 +176,13 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Initializes a GridFS Collection (bucket) in a given database
-- parameter in: In which database does this GridFS bucket reside
-- parameter named: The optional name of this GridFS bucket (by default <q>fs</q>)</p>
+                        <p>Initializes a GridFS <code><a href="../Classes/Collection.html">Collection</a></code> (bucket) in a given database</p>
+
+<div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    <p>When we can&rsquo;t send the request/receive the response, you don&rsquo;t have sufficient permissions or an error occurred or when it can&rsquo;t create it&rsquo;s indexes</p>
+
+</div>
 
                       </div>
                       <div class="declaration">
@@ -236,9 +242,13 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Finds using all files matching this ObjectID
-- parameter byID: The ID to look for
-- returns: A cursor pointing to all resulting files</p>
+                        <p>Finds using all files matching this ObjectID</p>
+
+<div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    <p>When we can&rsquo;t send the request/receive the response, you don&rsquo;t have sufficient permissions or an error occurred</p>
+
+</div>
 
                       </div>
                       <div class="declaration">
@@ -290,9 +300,13 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Finds using all files file matching this filename
-- parameter filter: The filename to look for
-- returns: A cursor pointing to all resulting files</p>
+                        <p>Finds using all files file matching this filename</p>
+
+<div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    <p>When we can&rsquo;t send the request/receive the response, you don&rsquo;t have sufficient permissions or an error occurred</p>
+
+</div>
 
                       </div>
                       <div class="declaration">
@@ -344,9 +358,13 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Finds using all files matching this MD5 hash
-- parameter filter: The hash to look for
-- returns: A cursor pointing to all resulting files</p>
+                        <p>Finds using all files matching this MD5 hash</p>
+
+<div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    <p>When we can&rsquo;t send the request/receive the response, you don&rsquo;t have sufficient permissions or an error occurred</p>
+
+</div>
 
                       </div>
                       <div class="declaration">
@@ -398,9 +416,13 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Finds the first file matching this ObjectID
-- parameter byID: The hash to look for
-- returns: The resulting file</p>
+                        <p>Finds the first file matching this ObjectID</p>
+
+<div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    <p>When we can&rsquo;t send the request/receive the response, you don&rsquo;t have sufficient permissions or an error occurred</p>
+
+</div>
 
                       </div>
                       <div class="declaration">
@@ -452,9 +474,13 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Finds the first file matching this filename
-- parameter byName: The filename to look for
-- returns: The resulting file</p>
+                        <p>Finds the first file matching this filename</p>
+
+<div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    <p>When we can&rsquo;t send the request/receive the response, you don&rsquo;t have sufficient permissions or an error occurred</p>
+
+</div>
 
                       </div>
                       <div class="declaration">
@@ -506,9 +532,13 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Finds the first file matching this MD5 hash
-- parameter byHash: The hash to look for
-- returns: The resulting file</p>
+                        <p>Finds the first file matching this MD5 hash</p>
+
+<div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    <p>When we can&rsquo;t send the request/receive the response, you don&rsquo;t have sufficient permissions or an error occurred</p>
+
+</div>
 
                       </div>
                       <div class="declaration">
@@ -550,9 +580,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:FC11MongoKitten6GridFS4findERR"></a>
+                    <a name="/s:FC11MongoKitten6GridFS4findFzT8matchingPS_13QueryProtocol__GCS_6CursorCS0_4File_"></a>
                     <a name="//apple_ref/swift/Method/find(matching:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FC11MongoKitten6GridFS4findERR">find(matching:)</a>
+                    <a class="token" href="#/s:FC11MongoKitten6GridFS4findFzT8matchingPS_13QueryProtocol__GCS_6CursorCS0_4File_">find(matching:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -560,16 +590,20 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Finds using a matching filter
-- parameter filter: The filter to use
-- returns: A cursor pointing to all resulting files</p>
+                        <p>Finds using a matching filter</p>
+
+<div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    <p>When we can&rsquo;t send the request/receive the response, you don&rsquo;t have sufficient permissions or an error occurred</p>
+
+</div>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">find</span><span class="p">(</span><span class="n">matching</span> <span class="nv">filter</span><span class="p">:</span> <span class="kt">Document</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Cursor</span><span class="o">&lt;</span><span class="kt">File</span><span class="o">&gt;</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">find</span><span class="p">(</span><span class="n">matching</span> <span class="nv">filter</span><span class="p">:</span> <span class="kt">QueryProtocol</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Cursor</span><span class="o">&lt;</span><span class="kt">File</span><span class="o">&gt;</span></code></pre>
 
                         </div>
                       </div>
@@ -738,7 +772,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2016 <a class="link" href="" target="_blank" rel="external">Robbert Brandsma &amp; Joannis Orlandos</a>. All rights reserved. (Last updated: 2016-05-14)</p>
+          <p>&copy; 2016 <a class="link" href="" target="_blank" rel="external">Robbert Brandsma &amp; Joannis Orlandos</a>. All rights reserved. (Last updated: 2016-05-15)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.6.0</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

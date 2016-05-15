@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Operation Enum Reference</title>
+    <title>FindAndModifyOperation Enum Reference</title>
     <link rel="stylesheet" type="text/css" href="../../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../../css/highlight.css" />
     <meta charset='utf-8'>
@@ -10,8 +10,8 @@
     
   </head>
   <body>
-    <a name="//apple_ref/swift/Enum/Operation" class="dashAnchor"></a>
-    <a title="Operation Enum Reference"></a>
+    <a name="//apple_ref/swift/Enum/FindAndModifyOperation" class="dashAnchor"></a>
+    <a title="FindAndModifyOperation Enum Reference"></a>
     <header>
       <div class="content-wrapper">
         <p><a href="../../index.html">MongoKitten Docs</a> (90% documented)</p>
@@ -23,7 +23,7 @@
       <p id="breadcrumbs">
         <a href="../../index.html">MongoKitten Reference</a>
         <img id="carat" src="../../img/carat.png" />
-        Operation Enum Reference
+        FindAndModifyOperation Enum Reference
       </p>
     </div>
     <div class="content-wrapper">
@@ -148,14 +148,16 @@
       <article class="main-content">
         <section>
           <section class="section">
-            <h1>Operation</h1>
+            <h1>FindAndModifyOperation</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">Operation</span></code></pre>
+                  <pre class="highlight"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">FindAndModifyOperation</span></code></pre>
 
                 </div>
               </div>
-            <p>What kind of operation the <code><a href="../../Classes/Collection.html#/s:C11MongoKitten10Collection8Callback">Callback</a></code> will be applied to</p>
+            <p><code>findAndModify</code> only has two operations that can be used. Update and Delete</p>
+
+<p>To make these types of operations easily accessible in <code>findAndModify</code> this enum exists</p>
 
           </section>
           <section class="section task-group-section">
@@ -164,9 +166,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:FOC11MongoKitten10Collection9Operation6insertFMS1_S1_"></a>
-                    <a name="//apple_ref/swift/Element/insert" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FOC11MongoKitten10Collection9Operation6insertFMS1_S1_">insert</a>
+                    <a name="/s:FOC11MongoKitten10Collection22FindAndModifyOperation6removeFMS1_S1_"></a>
+                    <a name="//apple_ref/swift/Element/remove" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FOC11MongoKitten10Collection22FindAndModifyOperation6removeFMS1_S1_">remove</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -174,14 +176,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Insert operations</p>
+                        <p>Remove the found <code><a href="../../Extensions/Document.html">Document</a></code></p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="k">case</span> <span class="n">insert</span></code></pre>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n">remove</span></code></pre>
 
                         </div>
                       </div>
@@ -195,40 +197,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:FOC11MongoKitten10Collection9Operation4findFMS1_S1_"></a>
-                    <a name="//apple_ref/swift/Element/find" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FOC11MongoKitten10Collection9Operation4findFMS1_S1_">find</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">Operation</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:FOC11MongoKitten10Collection9Operation6updateFMS1_S1_"></a>
+                    <a name="/s:FOC11MongoKitten10Collection22FindAndModifyOperation6updateERR"></a>
                     <a name="//apple_ref/swift/Element/update" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FOC11MongoKitten10Collection9Operation6updateFMS1_S1_">update</a>
+                    <a class="token" href="#/s:FOC11MongoKitten10Collection22FindAndModifyOperation6updateERR">update</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -236,47 +207,62 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Update operations</p>
+                        <p>Update the found <code><a href="../../Extensions/Document.html">Document</a></code> with the provided <code><a href="../../Extensions/Document.html">Document</a></code></p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="k">case</span> <span class="n">update</span></code></pre>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="nf">update</span><span class="p">(</span><span class="nv">with</span><span class="p">:</span> <span class="kt">Document</span><span class="p">,</span> <span class="nv">returnModified</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">,</span> <span class="nv">upserting</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
-                    </section>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:FOC11MongoKitten10Collection9Operation6deleteFMS1_S1_"></a>
-                    <a name="//apple_ref/swift/Element/delete" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FOC11MongoKitten10Collection9Operation6deleteFMS1_S1_">delete</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Delete operations</p>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>with</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Updated the found <code>Document</code> with this <code>Document</code></p>
 
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="k">case</span> <span class="n">delete</span></code></pre>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>returnModified</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Return the modified <code>Document</code>?</p>
 
-                        </div>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>upserting</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Insert if it doesn&rsquo;t exist yet</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
                       </div>
                     </section>
                   </div>
