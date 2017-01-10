@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Stage Struct Reference</title>
+    <link rel="stylesheet" type="text/css" href="../../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../../js/jquery.min.js" defer></script>
+    <script src="../../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Struct/Stage" class="dashAnchor"></a>
+    <a title="Stage Struct Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../../index.html">MongoKitten Docs</a> (100% documented)</p>
+        <p class="header-right"><a href="https://github.com/OpenKitten/MongoKitten"><img src="../../img/gh.png"/>View on GitHub</a></p>
+        <p class="header-right"><a href="dash-feed://http%3A%2F%2Fopenkitten%2Egithub%2Eio%2FMongoKitten%2FMongoKitten%2Exml"><img src="../../img/dash.png"/>Install in Dash</a></p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../../index.html">MongoKitten Reference</a>
+        <img id="carat" src="../../img/carat.png" />
+        Stage Struct Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../../Classes/Collection.html">Collection</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Classes/Collection/FindAndModifyOperation.html">– FindAndModifyOperation</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Classes/Cursor.html">Cursor</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Classes/Database.html">Database</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Classes/GridFS.html">GridFS</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Classes/GridFS/File.html">– File</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Classes/SCRAMClient.html">SCRAMClient</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Classes/Server.html">Server</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../../Global Variables.html">Global Variables</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../../Global Variables.html#/s:v11MongoKitten19DefaultSSLTCPClientPMPS_8MongoTCP_">DefaultSSLTCPClient</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Global Variables.html#/s:v11MongoKitten16DefaultTCPClientPMPS_8MongoTCP_">DefaultTCPClient</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../../Enums.html">Enums</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../../Enums/AQT.html">AQT</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Enums/AQT/AQTType.html">– AQTType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Enums/AccumulatedGroupExpression.html">AccumulatedGroupExpression</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Enums/AuthenticationMechanism.html">AuthenticationMechanism</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Enums/Expression.html">Expression</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Enums/IndexParameter.html">IndexParameter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Enums/IndexParameter/TextIndexVersion.html">– TextIndexVersion</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Enums/MongoAuthenticationError.html">MongoAuthenticationError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Enums/MongoError.html">MongoError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Enums/SCRAMError.html">SCRAMError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Enums/SortOrder.html">SortOrder</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../../Extensions/Binary.html">Binary</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Extensions/Bool.html">Bool</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Extensions/Date.html">Date</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Extensions/Document.html">Document</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Extensions/Double.html">Double</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Extensions/Int.html">Int</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Extensions/Int32.html">Int32</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Extensions/Int64.html">Int64</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Extensions/JavascriptCode.html">JavascriptCode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Extensions/Null.html">Null</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Extensions/ObjectId.html">ObjectId</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Extensions/RegularExpression.html">RegularExpression</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Extensions/Socks.html">Socks</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Extensions/String.html">String</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Extensions/Subject.html">Subject</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Extensions/TLS.html">TLS</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../../Functions.html">Functions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../../Functions.html#/s:F11MongoKittenop1nFVS_5QueryS0_">!(_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Functions.html#/s:F11MongoKittenoi2neFTSSP4BSON16ValueConvertible__VS_5Query">!=(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Functions.html#/s:F11MongoKittenoi2aaFTVS_5QueryS0__S0_">&amp;&amp;(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Functions.html#/s:F11MongoKittenoi2aeFTVS_5QueryS0__V4BSON8Document">&amp;=(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Functions.html#/s:F11MongoKittenoi1lFTSSP4BSON16ValueConvertible__VS_5Query">&lt;(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Functions.html#/s:F11MongoKittenoi2leFTSSP4BSON16ValueConvertible__VS_5Query">&lt;=(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Functions.html#/s:F11MongoKittenoi2eeFTSSP4BSON16ValueConvertible__VS_5Query">==(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Functions.html#/s:F11MongoKittenoi1gFTSSP4BSON16ValueConvertible__VS_5Query">&gt;(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Functions.html#/s:F11MongoKittenoi2geFTSSP4BSON16ValueConvertible__VS_5Query">&gt;=(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Functions.html#/s:F11MongoKittenoi2ooFTVS_5QueryS0__S0_">||(_:_:)</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../../Protocols/CustomValueConvertible.html">CustomValueConvertible</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Protocols/ExpressionRepresentable.html">ExpressionRepresentable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Protocols/MongoTCP.html">MongoTCP</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../../Structs.html">Structs</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../../Structs/AggregationPipeline.html">AggregationPipeline</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Structs/AggregationPipeline/Stage.html">– Stage</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Structs/ClientSettings.html">ClientSettings</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Structs/DBRef.html">DBRef</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Structs/MongoCredentials.html">MongoCredentials</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Structs/MongoHost.html">MongoHost</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Structs/Point.html">Point</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Structs/Position.html">Position</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Structs/Projection.html">Projection</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Structs/Projection/ProjectionExpression.html">– ProjectionExpression</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Structs/Query.html">Query</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Structs/QueryFlags.html">QueryFlags</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Structs/SSLSettings.html">SSLSettings</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Structs/Sort.html">Sort</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../../Typealiases.html">Typealiases</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../../Typealiases.html#/s:11MongoKitten17RegularExpression">RegularExpression</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>Stage</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">Stage</span><span class="p">:</span> <span class="kt">ValueConvertible</span></code></pre>
+
+                </div>
+              </div>
+            <p>A Pipeline stage. Pipelines pass their data of the collection through every stage. The last stage defines the output.</p>
+
+<p>The input are all Documents in the collection.</p>
+
+<p>The input of stage 2 is the output of stage 3 and so on..</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FVV11MongoKitten19AggregationPipeline5Stage17makeBSONPrimitiveFT_P4BSON13BSONPrimitive_"></a>
+                    <a name="//apple_ref/swift/Method/makeBSONPrimitive()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FVV11MongoKitten19AggregationPipeline5Stage17makeBSONPrimitiveFT_P4BSON13BSONPrimitive_">makeBSONPrimitive()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Allows embedding this stage inside another Document</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">makeBSONPrimitive</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">BSONPrimitive</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FVV11MongoKitten19AggregationPipeline5Stage12makeDocumentFT_V4BSON8Document"></a>
+                    <a name="//apple_ref/swift/Method/makeDocument()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FVV11MongoKitten19AggregationPipeline5Stage12makeDocumentFT_V4BSON8Document">makeDocument()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The Document that this stage consists of</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">makeDocument</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Document</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZFVV11MongoKitten19AggregationPipeline5Stage10projectingFVS_10ProjectionS1_"></a>
+                    <a name="//apple_ref/swift/Method/projecting(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZFVV11MongoKitten19AggregationPipeline5Stage10projectingFVS_10ProjectionS1_">projecting(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A projection stage passes only the projected fields to the next stage.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">projecting</span><span class="p">(</span><span class="n">_</span> <span class="nv">projection</span><span class="p">:</span> <span class="kt"><a href="../../Structs/Projection.html">Projection</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Stage</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZFVV11MongoKitten19AggregationPipeline5Stage8matchingFVS_5QueryS1_"></a>
+                    <a name="//apple_ref/swift/Method/matching(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZFVV11MongoKitten19AggregationPipeline5Stage8matchingFVS_5QueryS1_">matching(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A match stage only passed the documents that match the query to the next stage</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">matching</span><span class="p">(</span><span class="n">_</span> <span class="nv">query</span><span class="p">:</span> <span class="kt"><a href="../../Structs/Query.html">Query</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Stage</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZFVV11MongoKitten19AggregationPipeline5Stage8matchingFV4BSON8DocumentS1_"></a>
+                    <a name="//apple_ref/swift/Method/matching(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZFVV11MongoKitten19AggregationPipeline5Stage8matchingFV4BSON8DocumentS1_">matching(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A match stage only passed the documents that match the query to the next stage</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">matching</span><span class="p">(</span><span class="n">_</span> <span class="nv">query</span><span class="p">:</span> <span class="kt">Document</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Stage</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZFVV11MongoKitten19AggregationPipeline5Stage6sampleFT6sizeOfSi_S1_"></a>
+                    <a name="//apple_ref/swift/Method/sample(sizeOf:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZFVV11MongoKitten19AggregationPipeline5Stage6sampleFT6sizeOfSi_S1_">sample(sizeOf:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Takes a sample with the size of <code>size</code>. These randomly selected Documents will be passed to the next stage.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">sample</span><span class="p">(</span><span class="n">sizeOf</span> <span class="nv">size</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Stage</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZFVV11MongoKitten19AggregationPipeline5Stage8skippingFSiS1_"></a>
+                    <a name="//apple_ref/swift/Method/skipping(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZFVV11MongoKitten19AggregationPipeline5Stage8skippingFSiS1_">skipping(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This will skip the specified number of input Documents and leave them out. The rest will be passed to the next stage.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">skipping</span><span class="p">(</span><span class="n">_</span> <span class="nv">skip</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Stage</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZFVV11MongoKitten19AggregationPipeline5Stage9limitedToFSiS1_"></a>
+                    <a name="//apple_ref/swift/Method/limitedTo(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZFVV11MongoKitten19AggregationPipeline5Stage9limitedToFSiS1_">limitedTo(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This will limit the results to the specified number.</p>
+
+<p>The first Documents will be selected.</p>
+
+<p>Anything after that will be discarted and will not be sent to the next stage.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">limitedTo</span><span class="p">(</span><span class="n">_</span> <span class="nv">limit</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Stage</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZFVV11MongoKitten19AggregationPipeline5Stage8sortedByFVS_4SortS1_"></a>
+                    <a name="//apple_ref/swift/Method/sortedBy(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZFVV11MongoKitten19AggregationPipeline5Stage8sortedByFVS_4SortS1_">sortedBy(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Sorts the input Documents by the specified <code><a href="../../Structs/Sort.html">Sort</a></code> object and passed them in the newly sorted order to the next stage.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">sortedBy</span><span class="p">(</span><span class="n">_</span> <span class="nv">sort</span><span class="p">:</span> <span class="kt"><a href="../../Structs/Sort.html">Sort</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Stage</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZFVV11MongoKitten19AggregationPipeline5Stage8groupingFT13groupDocumentV4BSON8Document_S1_"></a>
+                    <a name="//apple_ref/swift/Method/grouping(groupDocument:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZFVV11MongoKitten19AggregationPipeline5Stage8groupingFT13groupDocumentV4BSON8Document_S1_">grouping(groupDocument:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Groups the input Documents by the specified expression and outputs a Document to the next stage for each distinct grouping.</p>
+
+<p>This form accepts a Document for more flexiblity.</p>
+
+<p><a href="https://docs.mongodb.com/manual/reference/operator/aggregation/group/">https://docs.mongodb.com/manual/reference/operator/aggregation/group/</a></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">grouping</span><span class="p">(</span><span class="nv">groupDocument</span><span class="p">:</span> <span class="kt">Document</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Stage</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZFVV11MongoKitten19AggregationPipeline5Stage8groupingFTPS_23ExpressionRepresentable_8computedGVs10DictionarySSOS_26AccumulatedGroupExpression__S1_"></a>
+                    <a name="//apple_ref/swift/Method/grouping(_:computed:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZFVV11MongoKitten19AggregationPipeline5Stage8groupingFTPS_23ExpressionRepresentable_8computedGVs10DictionarySSOS_26AccumulatedGroupExpression__S1_">grouping(_:computed:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Groups the input Documents by the specified expression and outputs a Document to the next stage for each distinct grouping.</p>
+
+<p>This form accepts predefined options and works for almost all scenarios.</p>
+
+<p><a href="https://docs.mongodb.com/manual/reference/operator/aggregation/group/">https://docs.mongodb.com/manual/reference/operator/aggregation/group/</a></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">grouping</span><span class="p">(</span><span class="n">_</span> <span class="nv">id</span><span class="p">:</span> <span class="kt"><a href="../../Protocols/ExpressionRepresentable.html">ExpressionRepresentable</a></span><span class="p">,</span> <span class="n">computed</span> <span class="nv">computedFields</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">:</span> <span class="kt"><a href="../../Enums/AccumulatedGroupExpression.html">AccumulatedGroupExpression</a></span><span class="p">]</span> <span class="o">=</span> <span class="p">[:])</span> <span class="o">-&gt;</span> <span class="kt">Stage</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZFVV11MongoKitten19AggregationPipeline5Stage6unwindFT6atPathSS17includeArrayIndexGSqSS_26preserveNullAndEmptyArraysGSqSb__S1_"></a>
+                    <a name="//apple_ref/swift/Method/unwind(atPath:includeArrayIndex:preserveNullAndEmptyArrays:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZFVV11MongoKitten19AggregationPipeline5Stage6unwindFT6atPathSS17includeArrayIndexGSqSS_26preserveNullAndEmptyArraysGSqSb__S1_">unwind(atPath:includeArrayIndex:preserveNullAndEmptyArrays:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Deconstructs an Array at the given path (key).</p>
+
+<p><a href="https://docs.mongodb.com/manual/reference/operator/aggregation/unwind/#pipe._S_unwind">https://docs.mongodb.com/manual/reference/operator/aggregation/unwind/#pipe._S_unwind</a></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">unwind</span><span class="p">(</span><span class="n">atPath</span> <span class="nv">path</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">includeArrayIndex</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">preserveNullAndEmptyArrays</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Stage</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZFVV11MongoKitten19AggregationPipeline5Stage6lookupFT14fromCollectionSS10localFieldSS12foreignFieldSS2asSS_S1_"></a>
+                    <a name="//apple_ref/swift/Method/lookup(fromCollection:localField:foreignField:as:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZFVV11MongoKitten19AggregationPipeline5Stage6lookupFT14fromCollectionSS10localFieldSS12foreignFieldSS2asSS_S1_">lookup(fromCollection:localField:foreignField:as:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Performs a left outer join to an unsharded collection in the same database</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">lookup</span><span class="p">(</span><span class="n">fromCollection</span> <span class="nv">from</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">localField</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">foreignField</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">as</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Stage</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZFVV11MongoKitten19AggregationPipeline5Stage6lookupFT14fromCollectionCS_10Collection10localFieldSS12foreignFieldSS2asSS_S1_"></a>
+                    <a name="//apple_ref/swift/Method/lookup(fromCollection:localField:foreignField:as:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZFVV11MongoKitten19AggregationPipeline5Stage6lookupFT14fromCollectionCS_10Collection10localFieldSS12foreignFieldSS2asSS_S1_">lookup(fromCollection:localField:foreignField:as:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Performs a left outer join to an unsharded collection in the same database</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">lookup</span><span class="p">(</span><span class="n">fromCollection</span> <span class="nv">from</span><span class="p">:</span> <span class="kt"><a href="../../Classes/Collection.html">Collection</a></span><span class="p">,</span> <span class="nv">localField</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">foreignField</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">as</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Stage</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZFVV11MongoKitten19AggregationPipeline5Stage11writeOutputFT12toCollectionCS_10Collection_S1_"></a>
+                    <a name="//apple_ref/swift/Method/writeOutput(toCollection:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZFVV11MongoKitten19AggregationPipeline5Stage11writeOutputFT12toCollectionCS_10Collection_S1_">writeOutput(toCollection:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Writes the resulting Documents to the provided Collection</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">writeOutput</span><span class="p">(</span><span class="n">toCollection</span> <span class="nv">collection</span><span class="p">:</span> <span class="kt"><a href="../../Classes/Collection.html">Collection</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Stage</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZFVV11MongoKitten19AggregationPipeline5Stage11writeOutputFT17toCollectionNamedSS_S1_"></a>
+                    <a name="//apple_ref/swift/Method/writeOutput(toCollectionNamed:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZFVV11MongoKitten19AggregationPipeline5Stage11writeOutputFT17toCollectionNamedSS_S1_">writeOutput(toCollectionNamed:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Writes the resulting Documents to the provided Collection</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">writeOutput</span><span class="p">(</span><span class="n">toCollectionNamed</span> <span class="nv">collectionName</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Stage</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZFVV11MongoKitten19AggregationPipeline5Stage5facetFGVs10DictionarySSS0__S1_"></a>
+                    <a name="//apple_ref/swift/Method/facet(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZFVV11MongoKitten19AggregationPipeline5Stage5facetFGVs10DictionarySSS0__S1_">facet(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Takes the input Documents and passes them through multiple Aggregation Pipelines. Every pipeline result will be placed at the provided key.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">facet</span><span class="p">(</span><span class="n">_</span> <span class="nv">facet</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">:</span> <span class="kt"><a href="../../Structs/AggregationPipeline.html">AggregationPipeline</a></span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kt">Stage</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZFVV11MongoKitten19AggregationPipeline5Stage8countingFT13insertedAtKeySS_S1_"></a>
+                    <a name="//apple_ref/swift/Method/counting(insertedAtKey:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZFVV11MongoKitten19AggregationPipeline5Stage8countingFT13insertedAtKeySS_S1_">counting(insertedAtKey:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Counts the amounts of Documents that have been inputted. Places the result at the provided key.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">counting</span><span class="p">(</span><span class="n">insertedAtKey</span> <span class="nv">key</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Stage</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZFVV11MongoKitten19AggregationPipeline5Stage11replaceRootFT14withExpressionPS_23ExpressionRepresentable__S1_"></a>
+                    <a name="//apple_ref/swift/Method/replaceRoot(withExpression:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZFVV11MongoKitten19AggregationPipeline5Stage11replaceRootFT14withExpressionPS_23ExpressionRepresentable__S1_">replaceRoot(withExpression:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Takes an embedded Document resulting from the provided expression and replaces the entire Document with this result.</p>
+
+<p>You can take an embedded Document at a lower level of this Document and make it the new root.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">replaceRoot</span><span class="p">(</span><span class="n">withExpression</span> <span class="nv">expression</span><span class="p">:</span> <span class="kt"><a href="../../Protocols/ExpressionRepresentable.html">ExpressionRepresentable</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Stage</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZFVV11MongoKitten19AggregationPipeline5Stage12addingFieldsFGVs10DictionarySSPS_23ExpressionRepresentable__S1_"></a>
+                    <a name="//apple_ref/swift/Method/addingFields(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZFVV11MongoKitten19AggregationPipeline5Stage12addingFieldsFGVs10DictionarySSPS_23ExpressionRepresentable__S1_">addingFields(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Adds fields to the inputted Documents and sends these new Documents to the next stage.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">addingFields</span><span class="p">(</span><span class="n">_</span> <span class="nv">fields</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">:</span> <span class="kt"><a href="../../Protocols/ExpressionRepresentable.html">ExpressionRepresentable</a></span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kt">Stage</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2017 <a class="link" href="" target="_blank" rel="external">Robbert Brandsma &amp; Joannis Orlandos</a>. All rights reserved. (Last updated: 2017-01-10)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.3</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>
