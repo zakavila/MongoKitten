@@ -88,6 +88,12 @@
                 <a href="../Enums/Expression.html">Expression</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Enums/GeoJSONError.html">GeoJSONError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/GeoJsonObjectType.html">GeoJsonObjectType</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Enums/IndexParameter.html">IndexParameter</a>
               </li>
               <li class="nav-group-task">
@@ -97,13 +103,22 @@
                 <a href="../Enums/MongoAuthenticationError.html">MongoAuthenticationError</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Enums/MongoCRS.html">MongoCRS</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Enums/MongoError.html">MongoError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/ReadConcern.html">ReadConcern</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Enums/SCRAMError.html">SCRAMError</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Enums/SortOrder.html">SortOrder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/WriteConcern.html">WriteConcern</a>
               </li>
             </ul>
           </li>
@@ -205,6 +220,9 @@
                 <a href="../Protocols/ExpressionRepresentable.html">ExpressionRepresentable</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Protocols/Geometry.html">Geometry</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Protocols/MongoTCP.html">MongoTCP</a>
               </li>
             </ul>
@@ -219,10 +237,34 @@
                 <a href="../Structs/AggregationPipeline/Stage.html">– Stage</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Structs/BuildInfo.html">BuildInfo</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Structs/ClientSettings.html">ClientSettings</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Structs/Collation.html">Collation</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Collation/IgnorableCharacters.html">– IgnorableCharacters</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Collation/Alternate.html">– Alternate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Collation/Strength.html">– Strength</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/CoordinateReferenceSystem.html">CoordinateReferenceSystem</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Structs/DBRef.html">DBRef</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/GeoNearOption.html">GeoNearOption</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/LineString.html">LineString</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Structs/MongoCredentials.html">MongoCredentials</a>
@@ -231,7 +273,22 @@
                 <a href="../Structs/MongoHost.html">MongoHost</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Structs/MultiLineString.html">MultiLineString</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/MultiPoint.html">MultiPoint</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/MultiPolygon.html">MultiPolygon</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Structs/Point.html">Point</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Polygon.html">Polygon</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/PolygonCoordinates.html">PolygonCoordinates</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Structs/Position.html">Position</a>
@@ -253,6 +310,9 @@
               </li>
               <li class="nav-group-task">
                 <a href="../Structs/Sort.html">Sort</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Version.html">Version</a>
               </li>
             </ul>
           </li>
@@ -392,6 +452,87 @@ But you can get a database object by subscripting <code><a href="../Classes/Serv
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/s:vC11MongoKitten8Database12writeConcernGSqOS_12WriteConcern_"></a>
+                    <a name="//apple_ref/swift/Property/writeConcern" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC11MongoKitten8Database12writeConcernGSqOS_12WriteConcern_">writeConcern</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Sets or gets the default write concern at the database level</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">writeConcern</span><span class="p">:</span> <span class="kt"><a href="../Enums/WriteConcern.html">WriteConcern</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC11MongoKitten8Database11readConcernGSqOS_11ReadConcern_"></a>
+                    <a name="//apple_ref/swift/Property/readConcern" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC11MongoKitten8Database11readConcernGSqOS_11ReadConcern_">readConcern</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Sets or gets the default read concern at the database level</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">readConcern</span><span class="p">:</span> <span class="kt"><a href="../Enums/ReadConcern.html">ReadConcern</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC11MongoKitten8Database9collationGSqVS_9Collation_"></a>
+                    <a name="//apple_ref/swift/Property/collation" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC11MongoKitten8Database9collationGSqVS_9Collation_">collation</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Sets or gets the default collation at the database level</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">collation</span><span class="p">:</span> <span class="kt"><a href="../Structs/Collation.html">Collation</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/s:FC11MongoKitten8DatabasecFT5namedSS8atServerCS_6Server_S0_"></a>
                     <a name="//apple_ref/swift/Method/init(named:atServer:)" class="dashAnchor"></a>
                     <a class="token" href="#/s:FC11MongoKitten8DatabasecFT5namedSS8atServerCS_6Server_S0_">init(named:atServer:)</a>
@@ -471,7 +612,7 @@ But you can get a database object by subscripting <code><a href="../Classes/Serv
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="n">mongoURL</span> <span class="nv">url</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">usingTcpDriver</span> <span class="nv">driver</span><span class="p">:</span> <span class="kt"><a href="../Protocols/MongoTCP.html">MongoTCP</a></span><span class="o">.</span><span class="k">Type</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="n">maxConnectionsPerServer</span> <span class="nv">maxConnections</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">10</span><span class="p">)</span> <span class="k">throws</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="n">mongoURL</span> <span class="nv">url</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">usingTcpDriver</span> <span class="nv">driver</span><span class="p">:</span> <span class="kt"><a href="../Protocols/MongoTCP.html">MongoTCP</a></span><span class="o">.</span><span class="k">Type</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="n">maxConnectionsPerServer</span> <span class="nv">maxConnections</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">100</span><span class="p">)</span> <span class="k">throws</span></code></pre>
 
                         </div>
                       </div>
@@ -505,6 +646,71 @@ But you can get a database object by subscripting <code><a href="../Classes/Serv
                     </section>
                   </div>
                 </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC11MongoKitten8Database7executeFzT9dbCommandV4BSON8Document5untilSd7writingSb_GSaS2__"></a>
+                    <a name="//apple_ref/swift/Method/execute(dbCommand:until:writing:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC11MongoKitten8Database7executeFzT9dbCommandV4BSON8Document5untilSd7writingSb_GSaS2__">execute(dbCommand:until:writing:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Executes a command <code>Document</code> on this database using a query message</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">execute</span><span class="p">(</span><span class="n">dbCommand</span> <span class="nv">document</span><span class="p">:</span> <span class="kt">Document</span><span class="p">,</span> <span class="n">until</span> <span class="nv">timeout</span><span class="p">:</span> <span class="kt">TimeInterval</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="nv">writing</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">true</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt">Document</span><span class="p">]</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>command</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The command <code>Document</code> to execute</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>timeout</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The timeout in seconds for listening for a response</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A <code>Message</code> containing the response</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
               </ul>
             </div>
             <div class="task-group">
@@ -512,9 +718,9 @@ But you can get a database object by subscripting <code><a href="../Classes/Serv
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:FC11MongoKitten8Database16createCollectionFzT5namedSS7optionsGSqV4BSON8Document__T_"></a>
-                    <a name="//apple_ref/swift/Method/createCollection(named:options:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FC11MongoKitten8Database16createCollectionFzT5namedSS7optionsGSqV4BSON8Document__T_">createCollection(named:options:)</a>
+                    <a name="/s:FC11MongoKitten8Database16createCollectionFzT5namedSS11validatedByGSqVS_5Query_7optionsGSqV4BSON8Document__CS_10Collection"></a>
+                    <a name="//apple_ref/swift/Method/createCollection(named:validatedBy:options:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC11MongoKitten8Database16createCollectionFzT5namedSS11validatedByGSqVS_5Query_7optionsGSqV4BSON8Document__CS_10Collection">createCollection(named:validatedBy:options:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -543,7 +749,7 @@ pre-allocate space for an ordinary collection</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">createCollection</span><span class="p">(</span><span class="n">named</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">options</span><span class="p">:</span> <span class="kt">Document</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span> <span class="k">throws</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">createCollection</span><span class="p">(</span><span class="n">named</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">validatedBy</span> <span class="nv">validator</span><span class="p">:</span> <span class="kt"><a href="../Structs/Query.html">Query</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">options</span><span class="p">:</span> <span class="kt">Document</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/Collection.html">Collection</a></span></code></pre>
 
                         </div>
                       </div>
@@ -579,6 +785,11 @@ pre-allocate space for an ordinary collection</p>
                             </tr>
                           </tbody>
                         </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The created collection</p>
+
                       </div>
                     </section>
                   </div>
@@ -1471,7 +1682,7 @@ Warning: The standard library doesn&rsquo;t have SSL</p>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2017 <a class="link" href="" target="_blank" rel="external">Robbert Brandsma &amp; Joannis Orlandos</a>. All rights reserved. (Last updated: 2017-01-10)</p>
+          <p>&copy; 2017 <a class="link" href="" target="_blank" rel="external">Joannis Orlandos, Laurent Gaches and Robbert Brandsma</a>. All rights reserved. (Last updated: 2017-01-25)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.3</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

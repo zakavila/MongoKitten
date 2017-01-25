@@ -88,6 +88,12 @@
                 <a href="../Enums/Expression.html">Expression</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Enums/GeoJSONError.html">GeoJSONError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/GeoJsonObjectType.html">GeoJsonObjectType</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Enums/IndexParameter.html">IndexParameter</a>
               </li>
               <li class="nav-group-task">
@@ -97,13 +103,22 @@
                 <a href="../Enums/MongoAuthenticationError.html">MongoAuthenticationError</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Enums/MongoCRS.html">MongoCRS</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Enums/MongoError.html">MongoError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/ReadConcern.html">ReadConcern</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Enums/SCRAMError.html">SCRAMError</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Enums/SortOrder.html">SortOrder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/WriteConcern.html">WriteConcern</a>
               </li>
             </ul>
           </li>
@@ -205,6 +220,9 @@
                 <a href="../Protocols/ExpressionRepresentable.html">ExpressionRepresentable</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Protocols/Geometry.html">Geometry</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Protocols/MongoTCP.html">MongoTCP</a>
               </li>
             </ul>
@@ -219,10 +237,34 @@
                 <a href="../Structs/AggregationPipeline/Stage.html">– Stage</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Structs/BuildInfo.html">BuildInfo</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Structs/ClientSettings.html">ClientSettings</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Structs/Collation.html">Collation</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Collation/IgnorableCharacters.html">– IgnorableCharacters</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Collation/Alternate.html">– Alternate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Collation/Strength.html">– Strength</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/CoordinateReferenceSystem.html">CoordinateReferenceSystem</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Structs/DBRef.html">DBRef</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/GeoNearOption.html">GeoNearOption</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/LineString.html">LineString</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Structs/MongoCredentials.html">MongoCredentials</a>
@@ -231,7 +273,22 @@
                 <a href="../Structs/MongoHost.html">MongoHost</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Structs/MultiLineString.html">MultiLineString</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/MultiPoint.html">MultiPoint</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/MultiPolygon.html">MultiPolygon</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Structs/Point.html">Point</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Polygon.html">Polygon</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/PolygonCoordinates.html">PolygonCoordinates</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Structs/Position.html">Position</a>
@@ -254,6 +311,9 @@
               <li class="nav-group-task">
                 <a href="../Structs/Sort.html">Sort</a>
               </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Version.html">Version</a>
+              </li>
             </ul>
           </li>
           <li class="nav-group-name">
@@ -272,16 +332,70 @@
             <h1>Point</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">Point</span><span class="p">:</span> <span class="kt">Geometry</span></code></pre>
+                  <pre class="highlight"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">Point</span><span class="p">:</span> <span class="kt"><a href="../Protocols/Geometry.html">Geometry</a></span></code></pre>
 
                 </div>
               </div>
-            <p>A single point for a geospatial query</p>
+            <p>A representation of a GeoJSON Point.</p>
 
           </section>
           <section class="section task-group-section">
             <div class="task-group">
               <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vV11MongoKitten5Point10coordinateVS_8Position"></a>
+                    <a name="//apple_ref/swift/Property/coordinate" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vV11MongoKitten5Point10coordinateVS_8Position">coordinate</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The GeoJSON coordinates of this point.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">coordinate</span><span class="p">:</span> <span class="kt"><a href="../Structs/Position.html">Position</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vV11MongoKitten5Point4typeOS_17GeoJsonObjectType"></a>
+                    <a name="//apple_ref/swift/Property/type" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vV11MongoKitten5Point4typeOS_17GeoJsonObjectType">type</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The type of object</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">type</span><span class="p">:</span> <span class="kt"><a href="../Enums/GeoJsonObjectType.html">GeoJsonObjectType</a></span> <span class="o">=</span> <span class="o">.</span><span class="n">point</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
                 <li class="item">
                   <div>
                     <code>
@@ -295,7 +409,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Creates a point from a position on the map</p>
+                        <p>Creates a point with the given coordinate</p>
 
                       </div>
                       <div class="declaration">
@@ -311,10 +425,99 @@
                 </li>
               </ul>
             </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FV11MongoKitten5Point17makeBSONPrimitiveFT_P4BSON13BSONPrimitive_"></a>
+                    <a name="//apple_ref/swift/Method/makeBSONPrimitive()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FV11MongoKitten5Point17makeBSONPrimitiveFT_P4BSON13BSONPrimitive_">makeBSONPrimitive()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Converts this object to an embeddable BSONPrimtive</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">makeBSONPrimitive</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">BSONPrimitive</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZFV11MongoKitten5Pointoi2eeFTS0_S0__Sb"></a>
+                    <a name="//apple_ref/swift/Method/==(_:_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZFV11MongoKitten5Pointoi2eeFTS0_S0__Sb">==(_:_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Compares two points to be equal to each other</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="o">==</span> <span class="p">(</span><span class="nv">lhs</span><span class="p">:</span> <span class="kt">Point</span><span class="p">,</span> <span class="nv">rhs</span><span class="p">:</span> <span class="kt">Point</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vV11MongoKitten5Point9hashValueSi"></a>
+                    <a name="//apple_ref/swift/Property/hashValue" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vV11MongoKitten5Point9hashValueSi">hashValue</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Makes a point hashable, thus usable as a key in a dictionary</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">hashValue</span><span class="p">:</span> <span class="kt">Int</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2017 <a class="link" href="" target="_blank" rel="external">Robbert Brandsma &amp; Joannis Orlandos</a>. All rights reserved. (Last updated: 2017-01-10)</p>
+          <p>&copy; 2017 <a class="link" href="" target="_blank" rel="external">Joannis Orlandos, Laurent Gaches and Robbert Brandsma</a>. All rights reserved. (Last updated: 2017-01-25)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.3</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

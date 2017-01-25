@@ -88,6 +88,12 @@
                 <a href="../Enums/Expression.html">Expression</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Enums/GeoJSONError.html">GeoJSONError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/GeoJsonObjectType.html">GeoJsonObjectType</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Enums/IndexParameter.html">IndexParameter</a>
               </li>
               <li class="nav-group-task">
@@ -97,13 +103,22 @@
                 <a href="../Enums/MongoAuthenticationError.html">MongoAuthenticationError</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Enums/MongoCRS.html">MongoCRS</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Enums/MongoError.html">MongoError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/ReadConcern.html">ReadConcern</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Enums/SCRAMError.html">SCRAMError</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Enums/SortOrder.html">SortOrder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/WriteConcern.html">WriteConcern</a>
               </li>
             </ul>
           </li>
@@ -205,6 +220,9 @@
                 <a href="../Protocols/ExpressionRepresentable.html">ExpressionRepresentable</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Protocols/Geometry.html">Geometry</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Protocols/MongoTCP.html">MongoTCP</a>
               </li>
             </ul>
@@ -219,10 +237,34 @@
                 <a href="../Structs/AggregationPipeline/Stage.html">– Stage</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Structs/BuildInfo.html">BuildInfo</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Structs/ClientSettings.html">ClientSettings</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Structs/Collation.html">Collation</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Collation/IgnorableCharacters.html">– IgnorableCharacters</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Collation/Alternate.html">– Alternate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Collation/Strength.html">– Strength</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/CoordinateReferenceSystem.html">CoordinateReferenceSystem</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Structs/DBRef.html">DBRef</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/GeoNearOption.html">GeoNearOption</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/LineString.html">LineString</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Structs/MongoCredentials.html">MongoCredentials</a>
@@ -231,7 +273,22 @@
                 <a href="../Structs/MongoHost.html">MongoHost</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Structs/MultiLineString.html">MultiLineString</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/MultiPoint.html">MultiPoint</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/MultiPolygon.html">MultiPolygon</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Structs/Point.html">Point</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Polygon.html">Polygon</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/PolygonCoordinates.html">PolygonCoordinates</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Structs/Position.html">Position</a>
@@ -253,6 +310,9 @@
               </li>
               <li class="nav-group-task">
                 <a href="../Structs/Sort.html">Sort</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Version.html">Version</a>
               </li>
             </ul>
           </li>
@@ -565,6 +625,37 @@
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/s:FO11MongoKitten3AQT15containsElementFMS0_FT3keySS5matchS0__S0_"></a>
+                    <a name="//apple_ref/swift/Element/containsElement" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FO11MongoKitten3AQT15containsElementFMS0_FT3keySS5matchS0__S0_">containsElement</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Whether a subdocument in the array within the <code>key</code> matches one of the queries/filters</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="nf">containsElement</span><span class="p">(</span><span class="nv">key</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">match</span><span class="p">:</span> <span class="kt">AQT</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/s:FO11MongoKitten3AQT3andFMS0_FGSaS0__S0_"></a>
                     <a name="//apple_ref/swift/Element/and" class="dashAnchor"></a>
                     <a class="token" href="#/s:FO11MongoKitten3AQT3andFMS0_FGSaS0__S0_">and</a>
@@ -813,6 +904,37 @@
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/s:FO11MongoKitten3AQT6existsFMS0_FT3keySS_S0_"></a>
+                    <a name="//apple_ref/swift/Element/exists" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FO11MongoKitten3AQT6existsFMS0_FT3keySS_S0_">exists</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Value at this key exists, even if it is <code>Null</code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="nf">exists</span><span class="p">(</span><span class="nv">key</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/s:FO11MongoKitten3AQT4nearFMS0_FT3keySS5pointVS_5Point11maxDistanceSd11minDistanceSd_S0_"></a>
                     <a name="//apple_ref/swift/Element/near" class="dashAnchor"></a>
                     <a class="token" href="#/s:FO11MongoKitten3AQT4nearFMS0_FT3keySS5pointVS_5Point11maxDistanceSd11minDistanceSd_S0_">near</a>
@@ -849,10 +971,118 @@
                 </li>
               </ul>
             </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FO11MongoKitten3AQT9geoWithinFMS0_FT3keySS7polygonVS_7Polygon_S0_"></a>
+                    <a name="//apple_ref/swift/Element/geoWithin" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FO11MongoKitten3AQT9geoWithinFMS0_FT3keySS7polygonVS_7Polygon_S0_">geoWithin</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Match all documents containing a <code>key</code> with geospatial data that exists entirely within the specified <code><a href="../Structs/Polygon.html">Polygon</a></code>.
+- <code>key</code> the field name
+- <code>polygon</code> the GeoJSON Polygon
+- SeeAlso : <a href="https://docs.mongodb.com/manual/reference/operator/query/geoWithin/">https://docs.mongodb.com/manual/reference/operator/query/geoWithin/</a></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="nf">geoWithin</span><span class="p">(</span><span class="nv">key</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">polygon</span><span class="p">:</span> <span class="kt"><a href="../Structs/Polygon.html">Polygon</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FO11MongoKitten3AQT13geoIntersectsFMS0_FT3keySS8geometryPS_8Geometry__S0_"></a>
+                    <a name="//apple_ref/swift/Element/geoIntersects" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FO11MongoKitten3AQT13geoIntersectsFMS0_FT3keySS8geometryPS_8Geometry__S0_">geoIntersects</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Match all documents containing a <code>key</code> with geospatial data that intersects with the specified shape.
+- <code>key</code> the field name
+- <code>geometry</code> the GeoJSON Geometry
+- SeeAlso : <a href="https://docs.mongodb.com/manual/reference/operator/query/geoIntersects/">https://docs.mongodb.com/manual/reference/operator/query/geoIntersects/</a></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="nf">geoIntersects</span><span class="p">(</span><span class="nv">key</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">geometry</span><span class="p">:</span> <span class="kt"><a href="../Protocols/Geometry.html">Geometry</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FO11MongoKitten3AQT10nearSphereFMS0_FT3keySS5pointVS_5Point11maxDistanceSd11minDistanceSd_S0_"></a>
+                    <a name="//apple_ref/swift/Element/nearSphere" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FO11MongoKitten3AQT10nearSphereFMS0_FT3keySS5pointVS_5Point11maxDistanceSd11minDistanceSd_S0_">nearSphere</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Match all documents containing a <code>key</code> with geospatial data that is near the specified GeoJSON point using spherical geometry.</p>
+
+<p><li><code>point</code> the GeoJSON Point</li>
+<li><code>maxDistance</code> : the maximum distance from the <code>point</code>, in meters</li>
+<li><p><code>minDistance</code> : the minimum distance from the <code>point</code>, in meters</p></li>
+<div class="aside aside-see-also">
+    <p class="aside-title">See also</p>
+    <p>SeeAlso : <a href="https://docs.mongodb.com/manual/reference/operator/query/nearSphere/"><a href="https://docs.mongodb.com/manual/reference/operator/query/nearSphere/">https://docs.mongodb.com/manual/reference/operator/query/nearSphere/</a></a></p></p>
+
+<p></div></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="nf">nearSphere</span><span class="p">(</span><span class="nv">key</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">point</span><span class="p">:</span> <span class="kt"><a href="../Structs/Point.html">Point</a></span><span class="p">,</span><span class="nv">maxDistance</span><span class="p">:</span> <span class="kt">Double</span><span class="p">,</span> <span class="nv">minDistance</span><span class="p">:</span> <span class="kt">Double</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2017 <a class="link" href="" target="_blank" rel="external">Robbert Brandsma &amp; Joannis Orlandos</a>. All rights reserved. (Last updated: 2017-01-10)</p>
+          <p>&copy; 2017 <a class="link" href="" target="_blank" rel="external">Joannis Orlandos, Laurent Gaches and Robbert Brandsma</a>. All rights reserved. (Last updated: 2017-01-25)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.3</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

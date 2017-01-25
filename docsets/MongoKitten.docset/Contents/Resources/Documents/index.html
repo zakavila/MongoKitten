@@ -87,6 +87,12 @@
                 <a href="Enums/Expression.html">Expression</a>
               </li>
               <li class="nav-group-task">
+                <a href="Enums/GeoJSONError.html">GeoJSONError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/GeoJsonObjectType.html">GeoJsonObjectType</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="Enums/IndexParameter.html">IndexParameter</a>
               </li>
               <li class="nav-group-task">
@@ -96,13 +102,22 @@
                 <a href="Enums/MongoAuthenticationError.html">MongoAuthenticationError</a>
               </li>
               <li class="nav-group-task">
+                <a href="Enums/MongoCRS.html">MongoCRS</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="Enums/MongoError.html">MongoError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/ReadConcern.html">ReadConcern</a>
               </li>
               <li class="nav-group-task">
                 <a href="Enums/SCRAMError.html">SCRAMError</a>
               </li>
               <li class="nav-group-task">
                 <a href="Enums/SortOrder.html">SortOrder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/WriteConcern.html">WriteConcern</a>
               </li>
             </ul>
           </li>
@@ -204,6 +219,9 @@
                 <a href="Protocols/ExpressionRepresentable.html">ExpressionRepresentable</a>
               </li>
               <li class="nav-group-task">
+                <a href="Protocols/Geometry.html">Geometry</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="Protocols/MongoTCP.html">MongoTCP</a>
               </li>
             </ul>
@@ -218,10 +236,34 @@
                 <a href="Structs/AggregationPipeline/Stage.html">– Stage</a>
               </li>
               <li class="nav-group-task">
+                <a href="Structs/BuildInfo.html">BuildInfo</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="Structs/ClientSettings.html">ClientSettings</a>
               </li>
               <li class="nav-group-task">
+                <a href="Structs/Collation.html">Collation</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/Collation/IgnorableCharacters.html">– IgnorableCharacters</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/Collation/Alternate.html">– Alternate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/Collation/Strength.html">– Strength</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/CoordinateReferenceSystem.html">CoordinateReferenceSystem</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="Structs/DBRef.html">DBRef</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/GeoNearOption.html">GeoNearOption</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/LineString.html">LineString</a>
               </li>
               <li class="nav-group-task">
                 <a href="Structs/MongoCredentials.html">MongoCredentials</a>
@@ -230,7 +272,22 @@
                 <a href="Structs/MongoHost.html">MongoHost</a>
               </li>
               <li class="nav-group-task">
+                <a href="Structs/MultiLineString.html">MultiLineString</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/MultiPoint.html">MultiPoint</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/MultiPolygon.html">MultiPolygon</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="Structs/Point.html">Point</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/Polygon.html">Polygon</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/PolygonCoordinates.html">PolygonCoordinates</a>
               </li>
               <li class="nav-group-task">
                 <a href="Structs/Position.html">Position</a>
@@ -253,6 +310,9 @@
               <li class="nav-group-task">
                 <a href="Structs/Sort.html">Sort</a>
               </li>
+              <li class="nav-group-task">
+                <a href="Structs/Version.html">Version</a>
+              </li>
             </ul>
           </li>
           <li class="nav-group-name">
@@ -269,9 +329,10 @@
         <section>
           <section class="section">
             
-            <a href='#mongokitten' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h1 id='mongokitten'>MongoKitten</h1>
+            <p>Please leave a star to show your support for the project.</p>
+<a href='#mongokitten' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h1 id='mongokitten'>MongoKitten</h1>
 
-<p><a href="https://swift.org"><img src="https://img.shields.io/badge/swift-3.0-orange.svg" alt="Swift 3.0"></a>
+<p><a href="https://swift.org"><img src="https://img.shields.io/badge/swift-3.0.1-orange.svg" alt="Swift 3.0.1"></a>
 <img src="https://img.shields.io/github/license/openkitten/mongokitten.svg" alt="License">
 <a href="https://travis-ci.org/OpenKitten/MongoKitten"><img src="https://api.travis-ci.org/OpenKitten/MongoKitten.svg?branch=mongokitten3" alt="Build Status"></a></p>
 
@@ -288,27 +349,39 @@
 
 <p><code>.Package(url: &quot;https://github.com/OpenKitten/MongoKitten.git&quot;, majorVersion: 3)</code></p>
 
+<p>Or add this to join the <a href="https://github.com/OpenKitten/MongoKitten/releases/tag/3.1.0-beta">MongoKitten 3.1 beta</a>:</p>
+
+<p><code>.Package(url: &quot;https://github.com/OpenKitten/MongoKitten.git&quot;, &quot;3.1.0-beta&quot;)</code></p>
+
 <p>And <code>import MongoKitten</code> in your project.</p>
 <a href='#supported-features' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='supported-features'>Supported Features</h2>
 
 <ul>
-<li>SSL (MongoKitten 3)</li>
-<li>Sharded Clusters (MongoKitten 3)</li>
-<li>Replica Sets (MongoKitten 3)</li>
-<li>DBRefs (MongoKitten 3)</li>
+<li>All basic CRUD operations</li>
+<li>SSL</li>
+<li>Sharded Clusters</li>
+<li>Replica Sets</li>
+<li>Geospatial queries (3.1)</li>
+<li>Read/Write concerns (3.1)</li>
+<li>Collation (3.1)</li>
+<li>User management</li>
+<li>Indexes</li>
+<li>DBRef</li>
 <li>GridFS</li>
-<li>Aggregates</li>
-<li>All basic MongoDB features</li>
+<li>Aggregation pipelines</li>
+<li>Much more</li>
 </ul>
 <a href='#requirements' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='requirements'>Requirements</h2>
 
-<p>A MongoDB server (local or online) running MongoDB 2.6 or above.</p>
+<ul>
+<li>A MongoDB server (local or online) running MongoDB 2.6 or above.</li>
+<li>Swift 3.x.x</li>
+</ul>
 <a href='#learn' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='learn'>Learn</h2>
 
-<p>We host all our documentation <a href="http://docs.openkitten.org">here</a>.</p>
-<a href='#supporters' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='supporters'>Supporters</h2>
+<p><a href="http://docs.openkitten.org">We host all our tutorials here</a></p>
 
-<p>To keep this project up and running we have <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=265MBC3CZFN7Y">a donation page set up here.</a> If you add your email address we&rsquo;ll contact you and we&rsquo;ll put your photo underneath here.</p>
+<p><a href="http://mongokitten.openkitten.org">And we host the MongoKitten documentation including dash docset here</a></p>
 <a href='#license' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='license'>License</h2>
 
 <p>MongoKitten is licensed under the MIT license.</p>
@@ -316,7 +389,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2017 <a class="link" href="" target="_blank" rel="external">Robbert Brandsma &amp; Joannis Orlandos</a>. All rights reserved. (Last updated: 2017-01-10)</p>
+          <p>&copy; 2017 <a class="link" href="" target="_blank" rel="external">Joannis Orlandos, Laurent Gaches and Robbert Brandsma</a>. All rights reserved. (Last updated: 2017-01-25)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.3</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
