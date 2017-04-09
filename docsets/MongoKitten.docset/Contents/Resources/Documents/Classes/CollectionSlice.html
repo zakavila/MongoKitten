@@ -1,0 +1,1163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>CollectionSlice Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Class/CollectionSlice" class="dashAnchor"></a>
+    <a title="CollectionSlice Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">MongoKitten Docs</a> (96% documented)</p>
+        <p class="header-right"><a href="https://github.com/OpenKitten/MongoKitten"><img src="../img/gh.png"/>View on GitHub</a></p>
+        <p class="header-right"><a href="dash-feed://http%3A%2F%2Fopenkitten%2Egithub%2Eio%2FMongoKitten%2FMongoKitten%2Exml"><img src="../img/dash.png"/>Install in Dash</a></p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">MongoKitten Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        CollectionSlice Class Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/Collection.html">Collection</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Collection/ReturnedDocument.html">– ReturnedDocument</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CollectionSlice.html">CollectionSlice</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Cursor.html">Cursor</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Database.html">Database</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/GridFS.html">GridFS</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/GridFS/File.html">– File</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Server.html">Server</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enums</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/AQT.html">AQT</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/AQT/AQTType.html">– AQTType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/AccumulatedGroupExpression.html">AccumulatedGroupExpression</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/AuthenticationError.html">AuthenticationError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/AuthenticationMechanism.html">AuthenticationMechanism</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/CursorStrategy.html">CursorStrategy</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/Expression.html">Expression</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/IndexParameter.html">IndexParameter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/IndexParameter/TextIndexVersion.html">– TextIndexVersion</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/MongoError.html">MongoError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/ReadConcern.html">ReadConcern</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/SortOrder.html">SortOrder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/WriteConcern.html">WriteConcern</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Extensions/Binary.html">Binary</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Bool.html">Bool</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Date.html">Date</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Document.html">Document</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Double.html">Double</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Int.html">Int</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Int32.html">Int32</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/JavascriptCode.html">JavascriptCode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Null.html">Null</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/ObjectId.html">ObjectId</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/RegularExpression.html">RegularExpression</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/String.html">String</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/ValueConvertible.html">ValueConvertible</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Functions.html">Functions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F11MongoKittenop1nFVS_5QueryS0_">!(_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F11MongoKittenoi2neFTSSGSqP4BSON9Primitive___VS_5Query">!=(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F11MongoKittenoi2aaFTVS_5QueryS0__S0_">&amp;&amp;(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F11MongoKittenoi2aeFTRVS_5QueryS0__T_">&amp;=(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F11MongoKittenoi1pFTVS_10ProjectionS0__S0_">+(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F11MongoKittenoi1pFTVS_4SortS0__S0_">+(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F11MongoKittenoi1lFTSSP4BSON9Primitive__VS_5Query">&lt;(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F11MongoKittenoi2leFTSSP4BSON9Primitive__VS_5Query">&lt;=(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F11MongoKittenoi2eeFTSSGSqP4BSON9Primitive___VS_5Query">==(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F11MongoKittenoi1gFTSSP4BSON9Primitive__VS_5Query">&gt;(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F11MongoKittenoi2geFTSSP4BSON9Primitive__VS_5Query">&gt;=(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F11MongoKittenoi2ooFTVS_5QueryS0__S0_">||(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F11MongoKittenoi3ooeFTRVS_5QueryS0__T_">||=(_:_:)</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/ExpressionRepresentable.html">ExpressionRepresentable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/Logger.html">Logger</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Structs.html">Structs</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Structs/AggregationOptions.html">AggregationOptions</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/AggregationPipeline.html">AggregationPipeline</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/AggregationPipeline/Stage.html">– Stage</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/BuildInfo.html">BuildInfo</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ClientSettings.html">ClientSettings</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Collation.html">Collation</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Collation/IgnorableCharacters.html">– IgnorableCharacters</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Collation/Alternate.html">– Alternate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Collation/Strength.html">– Strength</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/DBRef.html">DBRef</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/GeoNearOptions.html">GeoNearOptions</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/InsertErrors.html">InsertErrors</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/InsertErrors/InsertError.html">– InsertError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/MongoCredentials.html">MongoCredentials</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/MongoHost.html">MongoHost</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/NotLogger.html">NotLogger</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/PrintLogger.html">PrintLogger</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Projection.html">Projection</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Projection/ProjectionExpression.html">– ProjectionExpression</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Query.html">Query</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/QueryFlags.html">QueryFlags</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/RemoveError.html">RemoveError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/RemoveError/WriteError.html">– WriteError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/SSLSettings.html">SSLSettings</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Sort.html">Sort</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/UpdateError.html">UpdateError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/UpdateError/WriteError.html">– WriteError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Version.html">Version</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>CollectionSlice</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">CollectionSlice</span><span class="o">&lt;</span><span class="kt">Element</span><span class="o">&gt;</span> <span class="p">:</span> <span class="kt">CollectionQueryable</span><span class="p">,</span> <span class="kt">Sequence</span><span class="p">,</span> <span class="kt">IteratorProtocol</span></code></pre>
+
+                </div>
+              </div>
+            <p>A subset of data in Collection</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC11MongoKitten15CollectionSlice6filterGSqVS_5Query_"></a>
+                    <a name="//apple_ref/swift/Property/filter" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC11MongoKitten15CollectionSlice6filterGSqVS_5Query_">filter</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The filter applied to operations in this slice</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">internal(set)</span> <span class="k">var</span> <span class="nv">filter</span><span class="p">:</span> <span class="kt"><a href="../Structs/Query.html">Query</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC11MongoKitten15CollectionSlice4sortGSqVS_4Sort_"></a>
+                    <a name="//apple_ref/swift/Property/sort" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC11MongoKitten15CollectionSlice4sortGSqVS_4Sort_">sort</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The sort specification used to get this cursor</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">internal(set)</span> <span class="k">var</span> <span class="nv">sort</span><span class="p">:</span> <span class="kt"><a href="../Structs/Sort.html">Sort</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC11MongoKitten15CollectionSlice10projectionGSqVS_10Projection_"></a>
+                    <a name="//apple_ref/swift/Property/projection" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC11MongoKitten15CollectionSlice10projectionGSqVS_10Projection_">projection</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The projection specification used to get this cursor</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">internal(set)</span> <span class="k">var</span> <span class="nv">projection</span><span class="p">:</span> <span class="kt"><a href="../Structs/Projection.html">Projection</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC11MongoKitten15CollectionSlice4skipGSqSi_"></a>
+                    <a name="//apple_ref/swift/Property/skip" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC11MongoKitten15CollectionSlice4skipGSqSi_">skip</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The skip used to get this cursor</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">internal(set)</span> <span class="k">var</span> <span class="nv">skip</span><span class="p">:</span> <span class="kt">Int</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC11MongoKitten15CollectionSlice5limitGSqSi_"></a>
+                    <a name="//apple_ref/swift/Property/limit" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC11MongoKitten15CollectionSlice5limitGSqSi_">limit</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The limit used to get this cursor</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">internal(set)</span> <span class="k">var</span> <span class="nv">limit</span><span class="p">:</span> <span class="kt">Int</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC11MongoKitten15CollectionSlice6cursorGCS_6Cursorx_"></a>
+                    <a name="//apple_ref/swift/Property/cursor" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC11MongoKitten15CollectionSlice6cursorGCS_6Cursorx_">cursor</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The cursor that points to the data</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">private(set)</span> <span class="k">var</span> <span class="nv">cursor</span><span class="p">:</span> <span class="kt"><a href="../Classes/Cursor.html">Cursor</a></span><span class="o">&lt;</span><span class="kt">Element</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC11MongoKitten15CollectionSlice4nextFT_GSqx_"></a>
+                    <a name="//apple_ref/swift/Method/next()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC11MongoKitten15CollectionSlice4nextFT_GSqx_">next()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The next found <code>Element</code> in the collection</p>
+
+<p>WARNING: Will return nil if unable to query the database</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">next</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Element</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC11MongoKitten15CollectionSlice12makeIteratorFT_GVs11AnyIteratorx_"></a>
+                    <a name="//apple_ref/swift/Method/makeIterator()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC11MongoKitten15CollectionSlice12makeIteratorFT_GVs11AnyIteratorx_">makeIterator()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Iterates over all found <code>Element</code>s in the collection</p>
+
+<p>WARNING: Will return nil if unable to query the database</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">makeIterator</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">AnyIterator</span><span class="o">&lt;</span><span class="kt">Element</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC11MongoKitten15CollectionSlice5resetFzT_T_"></a>
+                    <a name="//apple_ref/swift/Method/reset()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC11MongoKitten15CollectionSlice5resetFzT_T_">reset()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Resets the cursor&rsquo;s position to the beginning</p>
+
+<div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    When unable to send the request/receive the response, the authenticated user doesn&rsquo;t have sufficient permissions or an error occurred
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">reset</span><span class="p">()</span> <span class="k">throws</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC11MongoKitten15CollectionSlice5countFzT8limitingGSqSi_8skippingGSqSi_11readConcernGSqOS_11ReadConcern_9collationGSqVS_9Collation_9timingOutGSqO8Dispatch20DispatchTimeInterval__Si"></a>
+                    <a name="//apple_ref/swift/Method/count(limiting:skipping:readConcern:collation:timingOut:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC11MongoKitten15CollectionSlice5countFzT8limitingGSqSi_8skippingGSqSi_11readConcernGSqOS_11ReadConcern_9collationGSqVS_9Collation_9timingOutGSqO8Dispatch20DispatchTimeInterval__Si">count(limiting:skipping:readConcern:collation:timingOut:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Counts the amount of <code>Element</code>s matching the <code><a href="../Classes/CollectionSlice.html#/s:vC11MongoKitten15CollectionSlice6filterGSqVS_5Query_">filter</a></code>. Stops counting when the <code><a href="../Classes/CollectionSlice.html#/s:vC11MongoKitten15CollectionSlice5limitGSqSi_">limit</a></code> it reached</p>
+
+<p>For more information: <a href="https://docs.mongodb.com/manual/reference/command/count/#dbcmd.count">https://docs.mongodb.com/manual/reference/command/count/#dbcmd.count</a></p>
+
+<div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    <p>When unable to send the request/receive the response, the authenticated user doesn&rsquo;t have sufficient permissions or an error occurred</p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">count</span><span class="p">(</span><span class="n">limiting</span> <span class="nv">limit</span><span class="p">:</span> <span class="kt">Int</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="n">skipping</span> <span class="nv">skip</span><span class="p">:</span> <span class="kt">Int</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">readConcern</span><span class="p">:</span> <span class="kt"><a href="../Enums/ReadConcern.html">ReadConcern</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">collation</span><span class="p">:</span> <span class="kt"><a href="../Structs/Collation.html">Collation</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="n">timingOut</span> <span class="nv">afterTimeout</span><span class="p">:</span> <span class="kt">DispatchTimeInterval</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Int</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>filter</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>If specified limits the returned amount to anything matching this query</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>limit</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Limits the amount of scanned <code>Document</code>s as specified</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>skip</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The amount of Documents to skip before counting</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>readConcern</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The read concern to apply to this operation</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>collation</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The collation to apply to string comparisons</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The amount of matching <code>Element</code>s (without consideration of initialization success)</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC11MongoKitten15CollectionSlice7findOneFzT7sortingGSqVS_4Sort_10projectingGSqVS_10Projection_11readConcernGSqOS_11ReadConcern_9collationGSqVS_9Collation_8skippingGSqSi__GSqx_"></a>
+                    <a name="//apple_ref/swift/Method/findOne(sorting:projecting:readConcern:collation:skipping:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC11MongoKitten15CollectionSlice7findOneFzT7sortingGSqVS_4Sort_10projectingGSqVS_10Projection_11readConcernGSqOS_11ReadConcern_9collationGSqVS_9Collation_8skippingGSqSi__GSqx_">findOne(sorting:projecting:readConcern:collation:skipping:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Finds <code>Element</code>s in this collection</p>
+
+<p>Can be used to execute DBCommands in MongoDB 2.6 and below</p>
+
+<p>For more information: <a href="https://docs.mongodb.com/manual/reference/command/find/#dbcmd.find">https://docs.mongodb.com/manual/reference/command/find/#dbcmd.find</a></p>
+
+<div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    <p>When unable to send the request/receive the response, the authenticated user doesn&rsquo;t have sufficient permissions or an error occurred</p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">findOne</span><span class="p">(</span><span class="n">sorting</span> <span class="nv">sort</span><span class="p">:</span> <span class="kt"><a href="../Structs/Sort.html">Sort</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="n">projecting</span> <span class="nv">projection</span><span class="p">:</span> <span class="kt"><a href="../Structs/Projection.html">Projection</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">readConcern</span><span class="p">:</span> <span class="kt"><a href="../Enums/ReadConcern.html">ReadConcern</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">collation</span><span class="p">:</span> <span class="kt"><a href="../Structs/Collation.html">Collation</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="n">skipping</span> <span class="nv">skip</span><span class="p">:</span> <span class="kt">Int</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Element</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>sort</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The Sort Specification used to sort the found Documents</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>projection</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The Projection Specification used to filter which fields to return</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>skip</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The amount of Documents to skip before returning the matching Documents</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>readConcern</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The read concern to apply to this find operation</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>collation</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The collation to use when comparing strings</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The found <code>Element</code></p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC11MongoKitten15CollectionSlice5firstGSqx_"></a>
+                    <a name="//apple_ref/swift/Property/first" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC11MongoKitten15CollectionSlice5firstGSqx_">first</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The first found <code>Element</code> in the collection</p>
+
+<p>WARNING: Will return nil if unable to query the database</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">first</span><span class="p">:</span> <span class="kt">Element</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC11MongoKitten15CollectionSlice4findFzT7sortingGSqVS_4Sort_10projectingGSqVS_10Projection_11readConcernGSqOS_11ReadConcern_9collationGSqVS_9Collation_8skippingGSqSi_9limitedToGSqSi_13withBatchSizeSi_GS0_x_"></a>
+                    <a name="//apple_ref/swift/Method/find(sorting:projecting:readConcern:collation:skipping:limitedTo:withBatchSize:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC11MongoKitten15CollectionSlice4findFzT7sortingGSqVS_4Sort_10projectingGSqVS_10Projection_11readConcernGSqOS_11ReadConcern_9collationGSqVS_9Collation_8skippingGSqSi_9limitedToGSqSi_13withBatchSizeSi_GS0_x_">find(sorting:projecting:readConcern:collation:skipping:limitedTo:withBatchSize:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Finds <code>Element</code>s in this <code><a href="../Classes/Collection.html">Collection</a></code></p>
+
+<p>Can be used to execute DBCommands in MongoDB 2.6 and below. Be careful!</p>
+
+<p>For more information: <a href="https://docs.mongodb.com/manual/reference/command/find/#dbcmd.find">https://docs.mongodb.com/manual/reference/command/find/#dbcmd.find</a></p>
+
+<div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    <p>When unable to send the request/receive the response, the authenticated user doesn&rsquo;t have sufficient permissions or an error occurred</p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">find</span><span class="p">(</span><span class="n">sorting</span> <span class="nv">sort</span><span class="p">:</span> <span class="kt"><a href="../Structs/Sort.html">Sort</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="n">projecting</span> <span class="nv">projection</span><span class="p">:</span> <span class="kt"><a href="../Structs/Projection.html">Projection</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">readConcern</span><span class="p">:</span> <span class="kt"><a href="../Enums/ReadConcern.html">ReadConcern</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">collation</span><span class="p">:</span> <span class="kt"><a href="../Structs/Collation.html">Collation</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="n">skipping</span> <span class="nv">skip</span><span class="p">:</span> <span class="kt">Int</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="n">limitedTo</span> <span class="nv">limit</span><span class="p">:</span> <span class="kt">Int</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="n">withBatchSize</span> <span class="nv">batchSize</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">100</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">CollectionSlice</span><span class="o">&lt;</span><span class="kt">Element</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>sort</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The Sort Specification used to sort the found Documents</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>projection</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The Projection Specification used to filter which fields to return</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>skip</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The amount of Documents to skip before returning the matching Documents</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>readConcern</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The read concern to apply to this find operation</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>collation</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The collation to use when comparing strings</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>limit</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The maximum amount of matching documents to return</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>batchSize</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The initial amount of Documents to return.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A cursor pointing to the found <code>Element</code>s</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC11MongoKitten15CollectionSlice6updateFzT2toV4BSON8Document12writeConcernGSqOS_12WriteConcern_15stoppingOnErrorGSqSb__Si"></a>
+                    <a name="//apple_ref/swift/Method/update(to:writeConcern:stoppingOnError:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC11MongoKitten15CollectionSlice6updateFzT2toV4BSON8Document12writeConcernGSqOS_12WriteConcern_15stoppingOnErrorGSqSb__Si">update(to:writeConcern:stoppingOnError:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Updates all selected <code>Element</code>s using a counterpart update <code>Document</code>.</p>
+
+<p>In most cases the <code>$set</code> operator is useful for updating only parts of a <code>Document</code>
+As described here: <a href="https://docs.mongodb.com/manual/reference/operator/update/set/#up._S_set">https://docs.mongodb.com/manual/reference/operator/update/set/#up._S_set</a></p>
+
+<p>For more information about this command: <a href="https://docs.mongodb.com/manual/reference/command/update/#dbcmd.update">https://docs.mongodb.com/manual/reference/command/update/#dbcmd.update</a></p>
+
+<div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    <p>When unable to send the request/receive the response, the authenticated user doesn&rsquo;t have sufficient permissions or an error occurred</p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">update</span><span class="p">(</span><span class="n">to</span> <span class="nv">document</span><span class="p">:</span> <span class="kt">Document</span><span class="p">,</span> <span class="nv">writeConcern</span><span class="p">:</span> <span class="kt"><a href="../Enums/WriteConcern.html">WriteConcern</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="n">stoppingOnError</span> <span class="nv">ordered</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Int</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>document</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The Document specification to update these <code>Element</code>s with</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>writeConcern</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The <code>WriteConcern</code> used for this operation</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>ordered</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>If true, stop updating when one operation fails - defaults to true</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC11MongoKitten15CollectionSlice6removeFzT8limitingSi12writeConcernGSqOS_12WriteConcern_15stoppingOnErrorGSqSb__Si"></a>
+                    <a name="//apple_ref/swift/Method/remove(limiting:writeConcern:stoppingOnError:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC11MongoKitten15CollectionSlice6removeFzT8limitingSi12writeConcernGSqOS_12WriteConcern_15stoppingOnErrorGSqSb__Si">remove(limiting:writeConcern:stoppingOnError:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Removes all <code>Document</code>s matching the <code><a href="../Classes/CollectionSlice.html#/s:vC11MongoKitten15CollectionSlice6filterGSqVS_5Query_">filter</a></code> until the <code><a href="../Classes/CollectionSlice.html#/s:vC11MongoKitten15CollectionSlice5limitGSqSi_">limit</a></code> is reached</p>
+
+<p>For more information: <a href="https://docs.mongodb.com/manual/reference/command/delete/#dbcmd.delete">https://docs.mongodb.com/manual/reference/command/delete/#dbcmd.delete</a></p>
+
+<div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    <p>When unable to send the request/receive the response, the authenticated user doesn&rsquo;t have sufficient permissions or an error occurred</p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">remove</span><span class="p">(</span><span class="n">limiting</span> <span class="nv">limit</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="nv">writeConcern</span><span class="p">:</span> <span class="kt"><a href="../Enums/WriteConcern.html">WriteConcern</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="n">stoppingOnError</span> <span class="nv">ordered</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Int</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>limit</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Limits the amount of removed <code>Element</code>s</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>writeConcern</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The <code>WriteConcern</code> used for this operation</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>stoppingOnError</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>If true, stop removing when one operation fails - defaults to true</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC11MongoKitten15CollectionSlice7flatMapurFzT9transformFzxGSqqd____GS0_qd___"></a>
+                    <a name="//apple_ref/swift/Method/flatMap(transform:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC11MongoKitten15CollectionSlice7flatMapurFzT9transformFzxGSqqd____GS0_qd___">flatMap(transform:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Flatmaps the containing type of this CollectionSlice lazily to another type</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">flatMap</span><span class="o">&lt;</span><span class="kt">B</span><span class="o">&gt;</span><span class="p">(</span><span class="nv">transform</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">Element</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="p">(</span><span class="kt">B</span><span class="p">?))</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">CollectionSlice</span><span class="o">&lt;</span><span class="kt">B</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2017 <a class="link" href="" target="_blank" rel="external">Joannis Orlandos, Laurent Gaches and Robbert Brandsma</a>. All rights reserved. (Last updated: 2017-04-09)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.3</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>
