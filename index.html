@@ -13,7 +13,7 @@
     <a title="MongoKitten  Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="index.html">MongoKitten Docs</a> (96% documented)</p>
+        <p><a href="index.html">MongoKitten Docs</a> (91% documented)</p>
         <p class="header-right"><a href="https://github.com/OpenKitten/MongoKitten"><img src="img/gh.png"/>View on GitHub</a></p>
         <p class="header-right"><a href="dash-feed://http%3A%2F%2Fopenkitten%2Egithub%2Eio%2FMongoKitten%2FMongoKitten%2Exml"><img src="img/dash.png"/>Install in Dash</a></p>
       </div>
@@ -45,6 +45,9 @@
               </li>
               <li class="nav-group-task">
                 <a href="Classes/Database.html">Database</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/ExplainedCollection.html">ExplainedCollection</a>
               </li>
               <li class="nav-group-task">
                 <a href="Classes/GridFS.html">GridFS</a>
@@ -234,6 +237,15 @@
                 <a href="Structs/DBRef.html">DBRef</a>
               </li>
               <li class="nav-group-task">
+                <a href="Structs/Explaination.html">Explaination</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/Explaination/QueryPlanner.html">– QueryPlanner</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/Explaination/ExecutionStats.html">– ExecutionStats</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="Structs/GeoNearOptions.html">GeoNearOptions</a>
               </li>
               <li class="nav-group-task">
@@ -298,23 +310,19 @@
             <p>Please leave a star to show your support for the project.</p>
 <a href='#mongokitten' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h1 id='mongokitten'>MongoKitten</h1>
 
-<p><a href="https://swift.org"><img src="https://img.shields.io/badge/swift-3.0.1-orange.svg" alt="Swift 3.0.1"></a>
+<p><a href="https://swift.org"><img src="https://img.shields.io/badge/swift-3.1.0-green.svg" alt="Swift 3.1.0"></a>
 <img src="https://img.shields.io/github/license/openkitten/mongokitten.svg" alt="License">
 <a href="https://travis-ci.org/OpenKitten/MongoKitten"><img src="https://travis-ci.org/OpenKitten/MongoKitten.svg?branch=mongokitten31" alt="Build Status"></a></p>
 
-<p>Native MongoDB driver for Swift, written in Swift. This library does not wrap around the mongoc driver. It uses:</p>
-
-<ul>
-<li>Our own <a href="https://github.com/OpenKitten/BSON">BSON</a> library, which is also 100% native Swift</li>
-<li>Our own <a href="https://github.com/OpenKitten/CryptoKitten">MD5, SHA1, SCRAM and PBKDF2 libraries</a> in 100% Swift (currently included in the package)</li>
-<li>Optional support for SSL/TLS using LibreSSL</li>
-</ul>
+<p>Native MongoDB driver for Swift, written in Swift. This library does not wrap around the mongoc driver.</p>
 <a href='#requirements' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='requirements'>Requirements</h2>
 
 <ul>
 <li>A MongoDB server (local or online) running MongoDB 2.6 or above. (MongoDB 3.2 or 3.4 is recommmended)</li>
 <li>Swift 3.1</li>
 </ul>
+
+<p>Linux requries the OpenSSL library to be installed.</p>
 <a href='#setting-up-mongodb' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='setting-up-mongodb'>Setting up MongoDB</h2>
 
 <p>Install MongoDB for <a href="https://docs.mongodb.com/master/tutorial/install-mongodb-on-ubuntu/">Ubuntu</a>, <a href="https://docs.mongodb.com/master/tutorial/install-mongodb-on-os-x/">macOS</a> or <a href="https://docs.mongodb.com/master/administration/install-on-linux/">any other supported Linux Distro</a>.</p>
@@ -324,9 +332,12 @@
 
 <p>Add this to your dependencies:</p>
 
-<p><code>.Package(url: &quot;https://github.com/OpenKitten/MongoKitten.git&quot;, &quot;4.0.0-vaportls&quot;)</code></p>
+<p><code>.Package(url: &quot;https://github.com/OpenKitten/MongoKitten.git&quot;, majorVersion: 4)</code></p>
 
 <p>And <code>import MongoKitten</code> in your project.</p>
+<a href='#building' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='building'>Building</h2>
+
+<p><code>swift build -c release</code></p>
 <a href='#supported-features' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='supported-features'>Supported Features</h2>
 
 <ul>
@@ -351,9 +362,9 @@
 </ul>
 <a href='#learn' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='learn'>Learn</h2>
 
-<p><a href="http://tutorials.openkitten.org">We host all our tutorials here</a></p>
+<p><a href="https://www.reddit.com/r/swift/comments/65bvre/a_rapidly_growing_list_of_mongokittenswift_guides/">Many articles on medium are listed here</a> <a href="http://beta.openkitten.org">and here</a>.</p>
 
-<p><a href="http://docs.openkitten.org/mongokitten/">And we host the MongoKitten documentation including dash docset here</a></p>
+<p><a href="http://mongokitten.openkitten.org/">We host the MongoKitten documentation including dash docset here</a>.</p>
 <a href='#support' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='support'>Support</h2>
 
 <p><a href="https://opencollective.com/mongokitten">We&rsquo;re accepting donations for our project here</a></p>
@@ -366,7 +377,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2017 <a class="link" href="" target="_blank" rel="external">Joannis Orlandos, Laurent Gaches and Robbert Brandsma</a>. All rights reserved. (Last updated: 2017-04-09)</p>
+          <p>&copy; 2017 <a class="link" href="" target="_blank" rel="external">Joannis Orlandos, Laurent Gaches and Robbert Brandsma</a>. All rights reserved. (Last updated: 2017-05-18)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.3</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

@@ -13,7 +13,7 @@
     <a title="Structs  Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="index.html">MongoKitten Docs</a> (96% documented)</p>
+        <p><a href="index.html">MongoKitten Docs</a> (91% documented)</p>
         <p class="header-right"><a href="https://github.com/OpenKitten/MongoKitten"><img src="img/gh.png"/>View on GitHub</a></p>
         <p class="header-right"><a href="dash-feed://http%3A%2F%2Fopenkitten%2Egithub%2Eio%2FMongoKitten%2FMongoKitten%2Exml"><img src="img/dash.png"/>Install in Dash</a></p>
       </div>
@@ -45,6 +45,9 @@
               </li>
               <li class="nav-group-task">
                 <a href="Classes/Database.html">Database</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/ExplainedCollection.html">ExplainedCollection</a>
               </li>
               <li class="nav-group-task">
                 <a href="Classes/GridFS.html">GridFS</a>
@@ -232,6 +235,15 @@
               </li>
               <li class="nav-group-task">
                 <a href="Structs/DBRef.html">DBRef</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/Explaination.html">Explaination</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/Explaination/QueryPlanner.html">– QueryPlanner</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/Explaination/ExecutionStats.html">– ExecutionStats</a>
               </li>
               <li class="nav-group-task">
                 <a href="Structs/GeoNearOptions.html">GeoNearOptions</a>
@@ -676,6 +688,30 @@
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/s:V11MongoKitten12Explaination"></a>
+                    <a name="//apple_ref/swift/Struct/Explaination" class="dashAnchor"></a>
+                    <a class="token" href="#/s:V11MongoKitten12Explaination">Explaination</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="Structs/Explaination.html" class="slightly-smaller">See more</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/s:V11MongoKitten19AggregationPipeline"></a>
                     <a name="//apple_ref/swift/Struct/AggregationPipeline" class="dashAnchor"></a>
                     <a class="token" href="#/s:V11MongoKitten19AggregationPipeline">AggregationPipeline</a>
@@ -815,6 +851,34 @@
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/s:V11MongoKitten14ClientSettings"></a>
+                    <a name="//apple_ref/swift/Struct/ClientSettings" class="dashAnchor"></a>
+                    <a class="token" href="#/s:V11MongoKitten14ClientSettings">ClientSettings</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Various settings to control the behavior of a MongoClient.</p>
+
+                        <a href="Structs/ClientSettings.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ClientSettings</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/s:V11MongoKitten9MongoHost"></a>
                     <a name="//apple_ref/swift/Struct/MongoHost" class="dashAnchor"></a>
                     <a class="token" href="#/s:V11MongoKitten9MongoHost">MongoHost</a>
@@ -868,34 +932,6 @@
                     </section>
                   </div>
                 </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:V11MongoKitten14ClientSettings"></a>
-                    <a name="//apple_ref/swift/Struct/ClientSettings" class="dashAnchor"></a>
-                    <a class="token" href="#/s:V11MongoKitten14ClientSettings">ClientSettings</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Various settings to control the behavior of a MongoClient.</p>
-
-                        <a href="Structs/ClientSettings.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ClientSettings</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
               </ul>
             </div>
             <div class="task-group">
@@ -933,7 +969,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2017 <a class="link" href="" target="_blank" rel="external">Joannis Orlandos, Laurent Gaches and Robbert Brandsma</a>. All rights reserved. (Last updated: 2017-04-09)</p>
+          <p>&copy; 2017 <a class="link" href="" target="_blank" rel="external">Joannis Orlandos, Laurent Gaches and Robbert Brandsma</a>. All rights reserved. (Last updated: 2017-05-18)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.3</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
