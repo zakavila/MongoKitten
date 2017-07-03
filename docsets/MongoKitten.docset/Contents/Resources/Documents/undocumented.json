@@ -1,138 +1,376 @@
 {
   "warnings": [
     {
-      "file": "/Users/joannis/Documents/OpenKitten/MongoKitten/Sources/MongoKitten/Collection/Collection.swift",
-      "line": 585,
-      "symbol": "Collection.aggregate(_:readConcern:collation:options:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/joannis/Documents/OpenKitten/MongoKitten/Sources/MongoKitten/Database/Database+Administration.swift",
-      "line": 94,
+      "file": "/Users/joannisorlandos/Documents/OpenKitten/MongoKitten/Sources/MongoKitten/Database/Database+Administration.swift",
+      "line": 107,
       "symbol": "Database.getCollectionInfos(matching:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/joannis/Documents/OpenKitten/MongoKitten/Sources/MongoKitten/Helpers/LogKitten.swift",
+      "file": "/Users/joannisorlandos/Documents/OpenKitten/MongoKitten/Sources/MongoKitten/Helpers/Logging.swift",
       "line": null,
       "symbol": "Logger",
       "symbol_kind": "source.lang.swift.decl.extension",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/joannis/Documents/OpenKitten/MongoKitten/Sources/MongoKitten/Helpers/LogKitten.swift",
+      "file": "/Users/joannisorlandos/Documents/OpenKitten/MongoKitten/Sources/MongoKitten/Helpers/Logging.swift",
       "line": 3,
       "symbol": "Logger",
       "symbol_kind": "source.lang.swift.decl.protocol",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/joannis/Documents/OpenKitten/MongoKitten/Sources/MongoKitten/Helpers/LogKitten.swift",
+      "file": "/Users/joannisorlandos/Documents/OpenKitten/MongoKitten/Sources/MongoKitten/Helpers/Logging.swift",
       "line": 4,
       "symbol": "Logger.verbose(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/joannis/Documents/OpenKitten/MongoKitten/Sources/MongoKitten/Helpers/LogKitten.swift",
+      "file": "/Users/joannisorlandos/Documents/OpenKitten/MongoKitten/Sources/MongoKitten/Helpers/Logging.swift",
       "line": 5,
       "symbol": "Logger.debug(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/joannis/Documents/OpenKitten/MongoKitten/Sources/MongoKitten/Helpers/LogKitten.swift",
+      "file": "/Users/joannisorlandos/Documents/OpenKitten/MongoKitten/Sources/MongoKitten/Helpers/Logging.swift",
       "line": 6,
       "symbol": "Logger.info(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/joannis/Documents/OpenKitten/MongoKitten/Sources/MongoKitten/Helpers/LogKitten.swift",
+      "file": "/Users/joannisorlandos/Documents/OpenKitten/MongoKitten/Sources/MongoKitten/Helpers/Logging.swift",
       "line": 7,
       "symbol": "Logger.warning(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/joannis/Documents/OpenKitten/MongoKitten/Sources/MongoKitten/Helpers/LogKitten.swift",
+      "file": "/Users/joannisorlandos/Documents/OpenKitten/MongoKitten/Sources/MongoKitten/Helpers/Logging.swift",
       "line": 8,
       "symbol": "Logger.error(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/joannis/Documents/OpenKitten/MongoKitten/Sources/MongoKitten/Helpers/LogKitten.swift",
+      "file": "/Users/joannisorlandos/Documents/OpenKitten/MongoKitten/Sources/MongoKitten/Helpers/Logging.swift",
       "line": 9,
       "symbol": "Logger.fatal(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/joannis/Documents/OpenKitten/MongoKitten/Sources/MongoKitten/Helpers/LogKitten.swift",
-      "line": 46,
+      "file": "/Users/joannisorlandos/Documents/OpenKitten/MongoKitten/Sources/MongoKitten/Helpers/Logging.swift",
+      "line": 52,
       "symbol": "NotLogger.init()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/joannis/Documents/OpenKitten/MongoKitten/Sources/MongoKitten/Helpers/LogKitten.swift",
-      "line": 69,
+      "file": "/Users/joannisorlandos/Documents/OpenKitten/MongoKitten/Sources/MongoKitten/Helpers/Logging.swift",
+      "line": 75,
       "symbol": "PrintLogger.init()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/joannis/Documents/OpenKitten/MongoKitten/Sources/MongoKitten/Querying/Cursor.swift",
-      "line": 16,
+      "file": "/Users/joannisorlandos/Documents/OpenKitten/MongoKitten/Sources/MongoKitten/Querying/Cursor.swift",
+      "line": 17,
       "symbol": "CursorStrategy",
       "symbol_kind": "source.lang.swift.decl.enum",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/joannis/Documents/OpenKitten/MongoKitten/Sources/MongoKitten/Querying/Cursor.swift",
-      "line": 17,
+      "file": "/Users/joannisorlandos/Documents/OpenKitten/MongoKitten/Sources/MongoKitten/Querying/Cursor.swift",
+      "line": 18,
       "symbol": "CursorStrategy.lazy",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/joannis/Documents/OpenKitten/MongoKitten/Sources/MongoKitten/Querying/Cursor.swift",
-      "line": 18,
+      "file": "/Users/joannisorlandos/Documents/OpenKitten/MongoKitten/Sources/MongoKitten/Querying/Cursor.swift",
+      "line": 19,
       "symbol": "CursorStrategy.aggressive",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/joannis/Documents/OpenKitten/MongoKitten/Sources/MongoKitten/Querying/Cursor.swift",
-      "line": 19,
+      "file": "/Users/joannisorlandos/Documents/OpenKitten/MongoKitten/Sources/MongoKitten/Querying/Cursor.swift",
+      "line": 20,
       "symbol": "CursorStrategy.intelligent",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/joannis/Documents/OpenKitten/MongoKitten/Sources/MongoKitten/Querying/Cursor.swift",
-      "line": 47,
+      "file": "/Users/joannisorlandos/Documents/OpenKitten/MongoKitten/Sources/MongoKitten/Querying/Cursor.swift",
+      "line": 50,
       "symbol": "Cursor.strategy",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/joannis/Documents/OpenKitten/MongoKitten/Sources/MongoKitten/Querying/Cursor.swift",
-      "line": 140,
-      "symbol": "Cursor.flatMap(transform:)",
+      "file": "/Users/joannisorlandos/Documents/OpenKitten/MongoKitten/Sources/MongoKitten/Querying/Explain.swift",
+      "line": 14,
+      "symbol": "Explaination",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/joannisorlandos/Documents/OpenKitten/MongoKitten/Sources/MongoKitten/Querying/Explain.swift",
+      "line": 15,
+      "symbol": "Explaination.QueryPlanner",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/joannisorlandos/Documents/OpenKitten/MongoKitten/Sources/MongoKitten/Querying/Explain.swift",
+      "line": 16,
+      "symbol": "Explaination.QueryPlanner.Stage",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/joannisorlandos/Documents/OpenKitten/MongoKitten/Sources/MongoKitten/Querying/Explain.swift",
+      "line": 17,
+      "symbol": "Explaination.QueryPlanner.Stage.StageType",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/joannisorlandos/Documents/OpenKitten/MongoKitten/Sources/MongoKitten/Querying/Explain.swift",
+      "line": 18,
+      "symbol": "Explaination.QueryPlanner.Stage.StageType.collectionScan",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/joannisorlandos/Documents/OpenKitten/MongoKitten/Sources/MongoKitten/Querying/Explain.swift",
+      "line": 19,
+      "symbol": "Explaination.QueryPlanner.Stage.StageType.indexScan",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/joannisorlandos/Documents/OpenKitten/MongoKitten/Sources/MongoKitten/Querying/Explain.swift",
+      "line": 20,
+      "symbol": "Explaination.QueryPlanner.Stage.StageType.fetch",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/joannisorlandos/Documents/OpenKitten/MongoKitten/Sources/MongoKitten/Querying/Explain.swift",
+      "line": 21,
+      "symbol": "Explaination.QueryPlanner.Stage.StageType.shardMerge",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/joannisorlandos/Documents/OpenKitten/MongoKitten/Sources/MongoKitten/Querying/Explain.swift",
+      "line": 24,
+      "symbol": "Explaination.QueryPlanner.Stage.Children",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/joannisorlandos/Documents/OpenKitten/MongoKitten/Sources/MongoKitten/Querying/Explain.swift",
+      "line": 25,
+      "symbol": "Explaination.QueryPlanner.Stage.Children.single",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/joannisorlandos/Documents/OpenKitten/MongoKitten/Sources/MongoKitten/Querying/Explain.swift",
+      "line": 26,
+      "symbol": "Explaination.QueryPlanner.Stage.Children.multiple",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/joannisorlandos/Documents/OpenKitten/MongoKitten/Sources/MongoKitten/Querying/Explain.swift",
+      "line": 29,
+      "symbol": "Explaination.QueryPlanner.Stage.type",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/joannisorlandos/Documents/OpenKitten/MongoKitten/Sources/MongoKitten/Querying/Explain.swift",
+      "line": 30,
+      "symbol": "Explaination.QueryPlanner.Stage.children",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/joannisorlandos/Documents/OpenKitten/MongoKitten/Sources/MongoKitten/Querying/Explain.swift",
+      "line": 59,
+      "symbol": "Explaination.QueryPlanner.namespace",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/joannisorlandos/Documents/OpenKitten/MongoKitten/Sources/MongoKitten/Querying/Explain.swift",
+      "line": 60,
+      "symbol": "Explaination.QueryPlanner.winningPlan",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/joannisorlandos/Documents/OpenKitten/MongoKitten/Sources/MongoKitten/Querying/Explain.swift",
+      "line": 72,
+      "symbol": "Explaination.ExecutionStats",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/joannisorlandos/Documents/OpenKitten/MongoKitten/Sources/MongoKitten/Querying/Explain.swift",
+      "line": 73,
+      "symbol": "Explaination.ExecutionStats.Stage",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/joannisorlandos/Documents/OpenKitten/MongoKitten/Sources/MongoKitten/Querying/Explain.swift",
+      "line": 74,
+      "symbol": "Explaination.ExecutionStats.Stage.StageType",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/joannisorlandos/Documents/OpenKitten/MongoKitten/Sources/MongoKitten/Querying/Explain.swift",
+      "line": 75,
+      "symbol": "Explaination.ExecutionStats.Stage.StageType.collectionScan",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/joannisorlandos/Documents/OpenKitten/MongoKitten/Sources/MongoKitten/Querying/Explain.swift",
+      "line": 76,
+      "symbol": "Explaination.ExecutionStats.Stage.StageType.indexScan",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/joannisorlandos/Documents/OpenKitten/MongoKitten/Sources/MongoKitten/Querying/Explain.swift",
+      "line": 77,
+      "symbol": "Explaination.ExecutionStats.Stage.StageType.fetch",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/joannisorlandos/Documents/OpenKitten/MongoKitten/Sources/MongoKitten/Querying/Explain.swift",
+      "line": 78,
+      "symbol": "Explaination.ExecutionStats.Stage.StageType.shardMerge",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/joannisorlandos/Documents/OpenKitten/MongoKitten/Sources/MongoKitten/Querying/Explain.swift",
+      "line": 81,
+      "symbol": "Explaination.ExecutionStats.Stage.Children",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/joannisorlandos/Documents/OpenKitten/MongoKitten/Sources/MongoKitten/Querying/Explain.swift",
+      "line": 82,
+      "symbol": "Explaination.ExecutionStats.Stage.Children.single",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/joannisorlandos/Documents/OpenKitten/MongoKitten/Sources/MongoKitten/Querying/Explain.swift",
+      "line": 85,
+      "symbol": "Explaination.ExecutionStats.Stage.type",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/joannisorlandos/Documents/OpenKitten/MongoKitten/Sources/MongoKitten/Querying/Explain.swift",
+      "line": 86,
+      "symbol": "Explaination.ExecutionStats.Stage.inputStage",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/joannisorlandos/Documents/OpenKitten/MongoKitten/Sources/MongoKitten/Querying/Explain.swift",
+      "line": 122,
+      "symbol": "Explaination.queryPlanner",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/joannisorlandos/Documents/OpenKitten/MongoKitten/Sources/MongoKitten/Querying/Explain.swift",
+      "line": 123,
+      "symbol": "Explaination.executionStats",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/joannisorlandos/Documents/OpenKitten/MongoKitten/Sources/MongoKitten/Querying/Explain.swift",
+      "line": 135,
+      "symbol": "ExplainedCollection",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/joannisorlandos/Documents/OpenKitten/MongoKitten/Sources/MongoKitten/Querying/Explain.swift",
+      "line": 199,
+      "symbol": "ExplainedCollection.aggregate(_:readConcern:collation:options:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/joannis/Documents/OpenKitten/MongoKitten/Sources/MongoKitten/Server/Server.swift",
-      "line": 68,
-      "symbol": "Server.cursorStrategy",
+      "file": "/Users/joannisorlandos/Documents/OpenKitten/MongoKitten/Sources/MongoKitten/Querying/Explain.swift",
+      "line": 203,
+      "symbol": "ExplainedCollection.aggregate(_:readConcern:collation:options:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/joannisorlandos/Documents/OpenKitten/MongoKitten/Sources/MongoKitten/Querying/Explain.swift",
+      "line": 236,
+      "symbol": "ExplainedCollection.count(_:limiting:skipping:readConcern:collation:timeout:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/joannisorlandos/Documents/OpenKitten/MongoKitten/Sources/MongoKitten/Querying/Explain.swift",
+      "line": 265,
+      "symbol": "ExplainedCollection.update(updates:writeConcern:ordered:timeout:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/joannisorlandos/Documents/OpenKitten/MongoKitten/Sources/MongoKitten/Querying/Explain.swift",
+      "line": 301,
+      "symbol": "ExplainedCollection.remove(removals:writeConcern:ordered:timeout:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/joannisorlandos/Documents/OpenKitten/MongoKitten/Sources/MongoKitten/Querying/Explain.swift",
+      "line": 335,
+      "symbol": "ExplainedCollection.find(_:sortedBy:projecting:readConcern:collation:skipping:limitedTo:withBatchSize:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/joannisorlandos/Documents/OpenKitten/MongoKitten/Sources/MongoKitten/Server/Server.swift",
+      "line": 52,
+      "symbol": "Server.whenExplaining",
       "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/joannisorlandos/Documents/OpenKitten/MongoKitten/Sources/MongoKitten/Server/Server.swift",
+      "line": 905,
+      "symbol": "Server.ping()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     }
   ],
-  "source_directory": "/Users/joannis/Documents/OpenKitten/MongoKitten"
+  "source_directory": "/Users/joannisorlandos/Documents/OpenKitten/MongoKitten"
 }
