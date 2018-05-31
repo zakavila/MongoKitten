@@ -1,6 +1,6 @@
 import NIO
 
-public struct FindOperation: MongoDBCommand {
+public struct FindCommand: MongoDBCommand {
     typealias Reply = CursorReply
     
     internal var namespace: Namespace {
@@ -54,10 +54,10 @@ public final class FindCursor: QueryCursor {
     
     public var batchSize = 101
     public let collection: Collection
-    private var operation: FindOperation
+    private var operation: FindCommand
     public private(set) var didExecute = false
     
-    public init(operation: FindOperation, on collection: Collection) {
+    public init(operation: FindCommand, on collection: Collection) {
         self.operation = operation
         self.collection = collection
     }
