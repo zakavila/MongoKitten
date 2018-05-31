@@ -29,7 +29,7 @@ class CRUDTests : XCTestCase {
 //        }.wait()
 //    }
     
-    func createTestData(n: Int, in collection: MongoCollection) -> EventLoopFuture<Void> {
+    func createTestData(n: Int, in collection: MongoKitten.Collection) -> EventLoopFuture<Void> {
         func nextDocument(index: Int) -> Document {
             return [
                 "_id": collection.objectIdGenerator.generate(),
@@ -73,7 +73,6 @@ class CRUDTests : XCTestCase {
         }.forEachFuture { dog, owner in
             print("dog", dog)
             print("owner", owner)
-
         }.wait()
         
         try dogs.find().forEach { doc in
@@ -176,46 +175,36 @@ class CRUDTests : XCTestCase {
 //        XCTAssertEqual(owners, ["Joannis", "Robbert", "Test0", "Test1"])
 //    }
     
-//    func testPipelineUsage() throws {
-//        let pets = try connection.then { connection -> EventLoopFuture<Int> in
-//            let pets = connection["test"]["pets"]
-//
-//            // TODO: Real pet names?
-//            let a = pets.addPet(named: "A", owner: "Joannis")
-//            let b = pets.addPet(named: "B", owner: "Joannis")
-//            let c = pets.addPet(named: "C", owner: "Robbert")
-//            let d = pets.addPet(named: "D", owner: "Robbert")
-//            let e = pets.addPet(named: "E", owner: "Test0")
-//            let f = pets.addPet(named: "F", owner: "Test1")
-//
-//            let inserts = a.and(b).and(c).and(d).and(e).and(f)
-//
-//            return inserts.then { _ in
-//                do {
-//                    let query: Query = "owner" == "Joannis" || "owner" == "Robbert"
-//                    let pipeline = try Pipeline().match(query).count(writingInto: "pets")
-//
-//                    return pets.aggregate(pipeline)
-//                } catch {
-//                    return connection.eventLoop.newFailedFuture(error: error)
-//                }
-//            }
-//        }.wait()
-//
-//        XCTAssertEqual(pets, 4)
-//    }
+    func testPipelineUsage() throws {
+        let pets = connection["test"]["test"]
+
+        // TODO: Real pet names?
+        try pets.addPet(named: "A", owner: "Joannis")
+        try pets.addPet(named: "B", owner: "Joannis")
+        try pets.addPet(named: "C", owner: "Robbert")
+        try pets.addPet(named: "D", owner: "Robbert")
+        try pets.addPet(named: "E", owner: "Test0")
+        try pets.addPet(named: "F", owner: "Test1")
+
+        let query: Query = "owner" == "Joannis" || "owner" == "Robbert"
+        let pipeline = try Pipeline().match(query).count(writingInto: "pets")
+
+        let foundPets = try pets.aggregate(pipeline).wait()
+
+        XCTAssertEqual(foundPets, 4)
+    }
 }
 
-//extension MongoCollection {
-//    func addPet(named name: String, owner: String) -> EventLoopFuture<Void> {
-//        return self.insert([
-//            "_id": self.objectIdGenerator.generate(),
-//            "name": name,
-//            "owner": owner
-//        ]).map { _ in }
-//    }
-//}
-//
+extension MongoKitten.Collection {
+    func addPet(named name: String, owner: String) throws {
+        _ = try self.insert([
+            "_id": self.objectIdGenerator.generate(),
+            "name": name,
+            "owner": owner
+        ]).wait()
+    }
+}
+
 //extension EventLoopFuture where T == Cursor<Document> {
 //    func testRange(startingAt start: Int64 = 10, count: Int64 = 10) -> EventLoopFuture<Void> {
 //        return self.then { cursor in

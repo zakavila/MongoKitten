@@ -43,11 +43,11 @@ public final class Collection {
     }
     
     public func find(_ query: Query = [:]) -> FindCursor {
-        return FindCursor(operation: FindOperation(filter: query, on: self), on: self)
+        return FindCursor(operation: FindCommand(filter: query, on: self), on: self)
     }
     
     public func findOne(_ query: Query = [:]) -> EventLoopFuture<Document?> {
-        var operation = FindOperation(filter: query, on: self)
+        var operation = FindCommand(filter: query, on: self)
         operation.limit = 1
         
         return FindCursor(operation: operation, on: self).execute().then { cursor in
@@ -112,14 +112,15 @@ public final class Collection {
         return distinct.execute(on: connection)
     }
     
-//    public func aggregate(_ pipeline: Pipeline<[Document]>) -> Cursor<Document> {
-//        let command = AggregateCommand(pipeline: pipeline, in: self)
-//        return command.execute(on: connection)
-//    }
-//
-//    public func aggregate<O>(_ pipeline: Pipeline<O>) -> O.Output {
-//        let command = AggregateCommand(pipeline: pipeline, in: self)
-//
-//        return command.execute(on: connection).thenThrowing(pipeline.transform)
-//    }
+    public func aggregate(_ pipeline: Pipeline<AggregateCursor>) -> AggregateCursor {
+        let command = AggregateCommand(pipeline: pipeline, in: self)
+        return AggregateCursor(operation: command, on: self)
+    }
+
+    public func aggregate<O>(_ pipeline: Pipeline<O>) -> EventLoopFuture<O> {
+        let command = AggregateCommand(pipeline: pipeline, in: self)
+        return AggregateCursor(operation: command, on: self).execute().then { cursor in
+            return pipeline.transform(cursor)
+        }
+    }
 }
