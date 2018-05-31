@@ -112,7 +112,7 @@ public final class Collection {
         return distinct.execute(on: connection)
     }
     
-    public func aggregate(_ pipeline: Pipeline<AggregateCursor>) -> AggregateCursor {
+    public func aggregate(_ pipeline: Pipeline<FinalizedCursor<AggregateCursor>>) -> AggregateCursor {
         let command = AggregateCommand(pipeline: pipeline, in: self)
         return AggregateCursor(operation: command, on: self)
     }

@@ -82,9 +82,14 @@ public func && (lhs: Query, rhs: Query) -> Query {
     case (.and(var a), .and(let b)):
         a.append(contentsOf: b)
         return Query(aqt: .and(a))
-    case (.nothing, let query), (let query, .nothing):
+    case (.nothing, let query):
         return Query(aqt: query)
-    case (.and(var a), let other), (let other, .and(var a)):
+    case (let query, .nothing):
+        return Query(aqt: query)
+    case (.and(var a), let other):
+        a.append(other)
+        return Query(aqt: .and(a))
+    case (let other, .and(var a)):
         a.append(other)
         return Query(aqt: .and(a))
     default:
