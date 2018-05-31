@@ -77,6 +77,10 @@ extension Pipeline where Output == FinalizedCursor<AggregateCursor> {
         return try self.adding(stage: SortStage(sort: sort))
     }
     
+    public func group(_ document: Document) throws -> Pipeline<FinalizedCursor<AggregateCursor>> {
+        return try self.adding(stage: GroupStage(document: document))
+    }
+    
     public func count(writingInto outputField: String) throws -> Pipeline<Int> {
         return try self.adding(stage: CountStage(writingInto: outputField))
     }
@@ -120,6 +124,20 @@ public struct SortStage: PipelineStage {
     }
     
     public var sort: Sort
+}
+
+public struct GroupStage: PipelineStage {
+    public typealias Output = FinalizedCursor<AggregateCursor>
+    
+    public enum CodingKeys: String, CodingKey {
+        case group = "$group"
+    }
+    
+    private var group: Document
+    
+    public init(document: Document) {
+        self.group = document
+    }
 }
 
 public struct CountStage: PipelineStage {
