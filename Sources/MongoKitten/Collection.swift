@@ -106,7 +106,8 @@ public final class Collection {
     }
     
     // TODO: Discuss `filter` vs `query` as argument name
-    public func distinct(onKey key: String, filter: Query? = nil) -> EventLoopFuture<[Primitive]> {
+    // TODO: Does `where` fit here?
+    public func distinct(onKey key: String, where filter: Query? = nil) -> EventLoopFuture<[Primitive]> {
         var distinct = DistinctCommand(onKey: key, into: self)
         distinct.query = filter
         return distinct.execute(on: connection)

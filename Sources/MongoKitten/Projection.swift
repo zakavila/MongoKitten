@@ -31,6 +31,10 @@ public struct Projection: Encodable {
         }
     }
     
+    public mutating func rename(_ field: String, to newName: String) {
+        self.document[newName] = "$\(field)"
+    }
+    
     public mutating func projectFirstElement(forArray field: String) {
         self.document[field + ".$"] = 1 as Int32
     }
