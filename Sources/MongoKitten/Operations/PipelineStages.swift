@@ -62,11 +62,11 @@ extension Pipeline where Output == FinalizedCursor<AggregateCursor> {
     }
     
     public func limit(_ limit: Int) throws -> Pipeline<FinalizedCursor<AggregateCursor>> {
-        return try self.adding(stage: LimitStage(limit: 1))
+        return try self.adding(stage: LimitStage(limit: limit))
     }
     
     public func skip(_ skip: Int) throws -> Pipeline<FinalizedCursor<AggregateCursor>> {
-        return try self.adding(stage: SkipStage(skip: 1))
+        return try self.adding(stage: SkipStage(skip: skip))
     }
     
     public func project(_ projection: Projection) throws -> Pipeline<FinalizedCursor<AggregateCursor>> {
