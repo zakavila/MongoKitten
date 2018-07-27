@@ -23,13 +23,26 @@ let package = Package(
     ],
     targets: [
         .target(
+            name: "_MongoKittenCrypto",
+            dependencies: []),
+        .target(
             name: "MongoKitten",
-            dependencies: ["BSON", "NIO"]),
+            dependencies: ["BSON", "NIO", "_MongoKittenCrypto"]),
         .target(
             name: "GridFS",
-            dependencies: ["BSON", "MongoKitten", "NIO"]),
+            dependencies: ["BSON", "MongoKitten", "NIO", "_MongoKittenCrypto"]),
         .testTarget(
             name: "MongoKittenTests",
             dependencies: ["MongoKitten"]),
     ]
 )
+
+if #available(macOS 10.14, iOS 12, *) {
+    package.dependencies.append(
+        .package(url: "https://github.com/apple/swift-nio-transport-services.git", from: "0.1.0")
+    )
+
+    if let index = package.targets.firstIndex(where: { $0.name == "MongoKitten" }) {
+        package.targets[index].dependencies.append("NIOTransportServices")
+    }
+}
