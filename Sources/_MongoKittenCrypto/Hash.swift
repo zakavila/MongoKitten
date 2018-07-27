@@ -13,11 +13,23 @@ extension Hash {
     public mutating func hash(_ data: UnsafeBufferPointer<UInt8>) -> [UInt8] {
         var offset = 0
         let limit = data.count
+        let chunkSize = Self.chunkSize
         
         while offset < limit {
-            self.update(from: data.baseAddress!.advanced(by: offset))
+            let diff = limit &- offset
             
-            offset = offset &+ Self.chunkSize
+            if diff < chunkSize {
+                let padding = [UInt8](repeating: 0, count: chunkSize &- diff)
+                let data = data + padding
+                
+                data.withUnsafeBufferPointer { buffer in
+                    self.update(from: buffer.baseAddress!.advanced(by: offset))
+                }
+            } else {
+                self.update(from: data.baseAddress!.advanced(by: offset))
+            }
+            
+            offset = offset &+ chunkSize
         }
         
         let result = self.hash
