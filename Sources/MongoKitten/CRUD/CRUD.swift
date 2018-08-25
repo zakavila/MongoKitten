@@ -190,7 +190,7 @@ extension CollectionQueryable {
                     errors.append(InsertErrors.InsertError(writeErrors: writeErrors))
                 }
                 
-                guard Int(reply.documents.first?["ok"]) == 1 else {
+                guard Int(reply.documents.first?["n"]) == documents.count else {
                     throw throwErrors()
                 }
             } else {
